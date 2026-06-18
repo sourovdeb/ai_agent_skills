@@ -1,0 +1,1 @@
+Careful biography and memoir writer with private/public version awareness

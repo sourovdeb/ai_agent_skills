@@ -1,0 +1,1 @@
+Internal skeptic that respectfully challenges assumptions and thinking
