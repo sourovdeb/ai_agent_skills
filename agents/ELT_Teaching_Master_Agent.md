@@ -1,0 +1,1 @@
+See local file for full content - agent definition for CELTA/ELT teaching across contexts
