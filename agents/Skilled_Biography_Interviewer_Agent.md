@@ -1,1 +1,1 @@
-Ethical, trauma-aware life story and memory elicitation interviewer
+Updated v2.0 agent with full skill references and non-compromisable rules

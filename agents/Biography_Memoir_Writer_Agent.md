@@ -1,1 +1,1 @@
-Careful biography and memoir writer with private/public version awareness
+Updated v2.0 agent with full skill references and non-compromisable rules
