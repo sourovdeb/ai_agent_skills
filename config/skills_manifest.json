@@ -1,0 +1,141 @@
+{
+  "manifest_version": "1.0",
+  "updated": "2026-07-04",
+  "description": "Machine-readable registry of agent skills in this repository. Each entry points to the skill's SKILL.md definition and, where present, its evals/evals.json (schema documented in 'JSON Schemas.MD.md').",
+  "domains": [
+    "productivity",
+    "legal",
+    "medical",
+    "psychology",
+    "interviewing",
+    "writing",
+    "developer-workflow",
+    "research-knowledge",
+    "security",
+    "teaching",
+    "meta"
+  ],
+  "skills": [
+    {
+      "name": "pragmatic-productivity",
+      "domain": "productivity",
+      "path": "skills/pragmatic-productivity/SKILL.md",
+      "evals": "skills/pragmatic-productivity/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Practical non-generic workflows: capture-and-triage, weekly review, calendar defense, energy routing, procrastination breaker, project shutdown.",
+      "safety_gates": []
+    },
+    {
+      "name": "legal-analysis-compliance",
+      "domain": "legal",
+      "path": "skills/legal-analysis-compliance/SKILL.md",
+      "evals": "skills/legal-analysis-compliance/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "IRAC-plus analysis, jurisdiction-first rule, deadline flagging, citation labeling, contract risk ranking, compliance mapping, UPL boundary.",
+      "safety_gates": ["unauthorized-practice-of-law boundary", "no invented citations", "deadline-first flagging", "escalation matrix to licensed counsel"]
+    },
+    {
+      "name": "medical-information-advisor",
+      "domain": "medical",
+      "path": "skills/medical-information-advisor/SKILL.md",
+      "evals": "skills/medical-information-advisor/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Red-flag triage first, evidence-graded explanation, appointment preparation, medication literacy, escalation through proper channels.",
+      "safety_gates": ["red-flag triage runs before all other content", "no diagnosis, dosing, or drug selection", "never argues against care-seeking", "evidence grading labels"]
+    },
+    {
+      "name": "empathic-listening-psychology",
+      "domain": "psychology",
+      "path": "skills/empathic-listening-psychology/SKILL.md",
+      "evals": "skills/empathic-listening-psychology/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Listening-before-fixing enforcement: reflective listening, validation, OARS, conversation arc, crisis-aware escalation.",
+      "safety_gates": ["no advice in first response", "not-therapy boundary with therapist routing", "crisis protocol with direct safety inquiry and resources"]
+    },
+    {
+      "name": "structured-interviewer",
+      "domain": "interviewing",
+      "path": "skills/structured-interviewer/SKILL.md",
+      "evals": "skills/structured-interviewer/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Structured-interview design (behavioral questions, BARS scorecards), probing technique, bias-controlled evaluation, mock-interview coaching, research elicitation.",
+      "safety_gates": ["bias checklist before candidate decisions"]
+    },
+    {
+      "name": "cambridge-writer",
+      "domain": "writing",
+      "path": "skills/cambridge-writer/SKILL.md",
+      "evals": "skills/cambridge-writer/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Argument-first prose at a demanding academic standard: contestable thesis, steel-manned counter-arguments, three-pass edit, register control.",
+      "safety_gates": ["evidence discipline: no unattributed claims"]
+    },
+    {
+      "name": "investigative-psychology",
+      "domain": "psychology",
+      "path": "skills/investigative-psychology/SKILL.md",
+      "status": "active",
+      "summary": "Investigative research auditing psychology, neuroscience, and pharmaceutical claims. Complements empathic-listening-psychology (research vs. support)."
+    },
+    {
+      "name": "content-research-writer",
+      "domain": "writing",
+      "path": "skills/content-research-writer/SKILL.md",
+      "status": "active",
+      "summary": "Citation generation and research documentation. Complements cambridge-writer (mechanics vs. craft)."
+    },
+    {
+      "name": "deep-brainstorm",
+      "domain": "research-knowledge",
+      "path": "skills/deep-brainstorm/SKILL.md",
+      "status": "active",
+      "summary": "Multi-method structured ideation with concreteness gate."
+    },
+    {
+      "name": "invoice-file-organizer",
+      "domain": "productivity",
+      "path": "skills/invoice-file-organizer/SKILL.md",
+      "status": "active",
+      "summary": "Financial document categorization."
+    },
+    {
+      "name": "skill-creator",
+      "domain": "meta",
+      "path": "skills/skill-creator/SKILL.md",
+      "status": "active",
+      "summary": "Creates and packages new agent skills; owns the evals.json schema."
+    }
+  ],
+  "agents": [
+    {
+      "name": "Daily_Living_Productivity_Agent",
+      "path": "agents/Daily_Living_Productivity_Agent.md",
+      "status": "stub",
+      "note": "One-line description only; full instructions now covered by skills/pragmatic-productivity."
+    },
+    {
+      "name": "Legal_Regulatory_Dossier_Agent",
+      "path": "agents/Legal_Regulatory_Dossier_Agent.md",
+      "status": "stub",
+      "note": "One-line description only; analytical core now covered by skills/legal-analysis-compliance."
+    },
+    {
+      "name": "Skilled_Biography_Interviewer_Agent",
+      "path": "agents/Skilled_Biography_Interviewer_Agent.md",
+      "status": "stub",
+      "note": "Biography-specific; general technique now covered by skills/structured-interviewer."
+    },
+    {
+      "name": "Biography_Memoir_Writer_Agent",
+      "path": "agents/Biography_Memoir_Writer_Agent.md",
+      "status": "stub",
+      "note": "Genre-specific; general prose craft now covered by skills/cambridge-writer."
+    }
+  ]
+}

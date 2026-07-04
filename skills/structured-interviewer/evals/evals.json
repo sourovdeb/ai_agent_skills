@@ -1,0 +1,38 @@
+{
+  "skill_name": "structured-interviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to interview candidates for a senior customer support lead next week. Build me the interview.",
+      "expected_output": "4-6 role-derived competencies, two behavioral questions per competency with pre-written probes, a BARS scorecard with concrete 1/3/5 anchors, one work-sample element, and calibration instructions for multiple interviewers.",
+      "expectations": [
+        "Competencies are derived from the role's failure modes, not a generic list",
+        "Every question is behavioral (past-tense) with at least 3 follow-up probes",
+        "The scorecard has behaviorally anchored descriptions for low, middle, and high ratings",
+        "Independent scoring before group discussion is specified"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Give me a mock interview for a product manager role. Be realistic, don't go easy on me.",
+      "expected_output": "A realistic structured mock: one question at a time, STAR extraction with probing for missing quadrants, verification probes on vague answers, followed by strengths-gaps-rewrites feedback quoting the candidate's actual answers.",
+      "expectations": [
+        "Questions are asked one at a time with follow-up probes on the actual answers",
+        "Vague or inflated answers receive verification probes for numbers, names, or failure detail",
+        "Feedback quotes the candidate's own words and provides improved rewrites",
+        "A story-bank recommendation mapped to competencies is included"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a user research script to find out if freelancers would pay for my invoicing app idea.",
+      "expected_output": "A script that asks about specific past invoicing behavior and spending, avoids all 'would you use/pay' hypotheticals, and follows a funnel from broad workflow questions to specific verification.",
+      "expectations": [
+        "No question asks the participant to predict future behavior or hypothetical willingness to pay",
+        "Questions target specific past instances, such as the last time they invoiced a client",
+        "Questions about money target actual past spending on solving the problem",
+        "The script includes a closing question inviting what was not asked"
+      ]
+    }
+  ]
+}
