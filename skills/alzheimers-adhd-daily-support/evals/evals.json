@@ -1,0 +1,23 @@
+{
+  "skill_name": "alzheimers-adhd-daily-support",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My mom has dementia and keeps asking where her mother is, but her mother has been gone for 20 years. Every time I remind her, she gets upset all over again. I don't know if I should keep correcting her.",
+      "expected_output": "Recommends validation-therapy approach (respond to the underlying emotion rather than correcting the fact), explains why repeated correction causes repeated grief, and gives a concrete alternative phrasing to try.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have ADHD and I own like four planners but I never actually check any of them. What am I doing wrong?",
+      "expected_output": "Reframes this as an externalization/point-of-performance problem rather than a discipline failure, suggests concrete techniques (reminders placed where the action happens, visual timers, body doubling) instead of 'just use a planner more consistently'.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My dad with Alzheimer's wandered out of the house last week and we found him three blocks away. We're scared to death. What should we actually do?",
+      "expected_output": "Addresses immediate safety (wearable ID linked to an emergency response service, door alarms/sensors) and acknowledges caregiver fear, without suggesting medication changes directly.",
+      "files": []
+    }
+  ]
+}

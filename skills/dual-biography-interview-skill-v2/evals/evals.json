@@ -1,0 +1,11 @@
+{
+  "skill_name": "dual-biography-interview-skill-v2",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to interview my grandfather once and end up with both a full private record for the family and a shorter version we can publish for his 90th birthday, without making him sit through two interviews.",
+      "expected_output": "Recommends interviewing once for full completeness, applying reliability and publication tags together during/after the session, and producing two distinct outputs from the same tagged material rather than suggesting two separate interviews.",
+      "files": []
+    }
+  ]
+}

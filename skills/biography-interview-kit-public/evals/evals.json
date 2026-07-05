@@ -1,0 +1,17 @@
+{
+  "skill_name": "biography-interview-kit-public",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're putting together a printed family history book for a reunion, and I want to interview my aunt about growing up during a really hard time for the family financially. Some of it involves my late uncle who isn't around to give his side.",
+      "expected_output": "Sets the publishing boundary explicitly before the session, still allows probing hard material rather than sanitizing the interview itself, flags the need to consider how the late uncle is portrayed, and separates 'said in interview' from 'goes in the published version'.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you just give me a 'nice version' of my parents' divorce story to ask my mom about, so it's ready for the book?",
+      "expected_output": "Pushes back on asking for a pre-sanitized version during the interview itself, recommending getting the real account first and applying the publication filter afterward with the narrator's sign-off.",
+      "files": []
+    }
+  ]
+}

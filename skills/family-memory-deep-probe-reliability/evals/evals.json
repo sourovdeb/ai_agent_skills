@@ -1,0 +1,17 @@
+{
+  "skill_name": "family-memory-deep-probe-reliability",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My grandmother has moderate dementia but I still want to capture what memories she has left before it gets worse. How do I even approach this?",
+      "expected_output": "Recommends validation over correction, short sessions timed to her best hours, concrete objects/photos as memory triggers, and flags that new or worsening confusion should be raised with her clinician rather than assessed through the interview.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My mom and my aunt tell completely different stories about why their parents got divorced. Can you help me figure out which one is actually true?",
+      "expected_output": "Recommends interviewing each independently without relaying the other's account, tagging both with reliability codes rather than declaring one 'true', and presenting the conflict honestly in the output rather than picking a winner.",
+      "files": []
+    }
+  ]
+}

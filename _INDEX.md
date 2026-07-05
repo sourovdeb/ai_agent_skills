@@ -19,6 +19,24 @@ Navigation hub for all skill definitions and eval infrastructure.
 | [[doc-coauthoring]] | Collaborative document writing | — |
 | [[JSON Schemas]] | Validation schemas for agent outputs | — |
 
+## Domain Skills — Productivity / Legal / Medical / Psychology / Interviewer / Writer
+
+| Skill | Description | Links |
+|-------|-------------|-------|
+| `agents/Daily_Living_Productivity_Agent` | State-based daily productivity routing (GTD-grounded capture/clarify/organize, anchors, closing ritual) | `skills/alzheimers-adhd-daily-support` |
+| `agents/Legal_Regulatory_Dossier_Agent` | Harvard-associate-rigor legal/regulatory dossiers (CREAC, jurisdiction matrices, Bluebook signal discipline) | — |
+| `skills/health-information-advisor` | Careful health information and patient-education advisor with red-flag triage | `skills/health-information-advisor/references/red-flag-triage.md` |
+| `skills/empathetic-listening` | Rogerian/motivational-interviewing-grounded reflective listening, with crisis escalation | `skills/alzheimers-adhd-daily-support` |
+| `skills/alzheimers-adhd-daily-support` | Alzheimer's/dementia caregiver technique and ADHD executive-function support | `agents/Daily_Living_Productivity_Agent`, `skills/family-memory-deep-probe-reliability` |
+| `skills/biography-memoir-system` | Orchestrator for the biography/memoir skill family | See variants below |
+| `skills/biography-interview-kit-private-master` | Complete unfiltered private archive interview | `skills/biography-memoir-system` |
+| `skills/biography-interview-kit-public` | Publication-ready interview from the start | `skills/biography-memoir-system` |
+| `skills/dual-biography-interview-skill-v2` | One session, private archive + publishable draft | `skills/biography-memoir-system` |
+| `skills/memory-elicitation-interview-skill` | Single-memory/tight-topic interview | `skills/biography-memoir-system` |
+| `skills/family-memory-deep-probe-reliability` | Elderly/memory-impaired narrators, reliability-coded conflicting accounts | `skills/alzheimers-adhd-daily-support` |
+| `agents/Skilled_Biography_Interviewer_Agent` | Interviewer persona + non-compromisable rules, routes to the family above | See above |
+| `agents/Biography_Memoir_Writer_Agent` | Cambridge-level memoir prose writer, works from tagged interview material | `skills/content-research-writer` |
+
 ## Eval Infrastructure
 
 | Tool | Purpose |
