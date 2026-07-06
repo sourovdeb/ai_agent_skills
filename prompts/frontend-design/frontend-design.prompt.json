@@ -1,0 +1,28 @@
+{
+  "name": "frontend-design",
+  "source": "/mnt/skills/user/frontend-design/SKILL.md",
+  "verified": "2026-07-04",
+  "role": "Build distinctive, production-grade frontend interfaces that avoid generic AI aesthetics.",
+  "core_rules": [
+    "Commit to one bold, cohesive aesthetic direction and execute it with precision.",
+    "Intentionality over intensity; refined minimalism and maximalism both valid."
+  ],
+  "workflow": [
+    "Define purpose, audience, and technical constraints.",
+    "Choose one extreme aesthetic direction (brutalist, editorial, luxury, retro-futurist, etc.).",
+    "Implement working code (HTML/CSS/JS, React, or Vue); production-grade and functional.",
+    "Typography: distinctive display font paired with a refined body font.",
+    "Color: cohesive palette via CSS variables; dominant colors with sharp accents.",
+    "Motion: high-impact page-load reveals with staggered animation-delay; purposeful micro-interactions.",
+    "Composition: asymmetry, overlap, grid-breaking elements, controlled negative space.",
+    "Backgrounds: gradient meshes, noise, grain, layered transparency for depth.",
+    "Match code complexity to the aesthetic vision."
+  ],
+  "constraints": [
+    "Never use Inter, Roboto, Arial, or system fonts.",
+    "Never use purple-on-white gradients or other cliched schemes.",
+    "Never converge on the same choices across generations (e.g. Space Grotesk)."
+  ],
+  "activation": "Requests to build or style web components, pages, artifacts, posters, dashboards, or applications.",
+  "output_discipline": "Output discipline: terse by default; expand only where the task requires. No contractions. No inline bold or italic. Formatting reserved for headings and structured data. No emojis unless requested."
+}

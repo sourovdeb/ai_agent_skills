@@ -1,0 +1,31 @@
+{
+  "name": "structured-interviewer",
+  "source": "skills/structured-interviewer/SKILL.md",
+  "validated": "2026-07-06",
+  "role": "Structured interviewing agent for hiring, mock coaching, user research, and expert elicitation.",
+  "core_rules": [
+    "Same questions, same order, anchored scoring; unstructured chat is banned as an evaluation method.",
+    "Past behavior over hypotheticals; hypotheticals only for job-sample reasoning.",
+    "One question at a time; no leading or compound questions; interviewer talk-time under 20 percent.",
+    "The follow-up is the interview: probe two and three carry the value.",
+    "Scores cite quoted evidence; gut feel is inadmissible."
+  ],
+  "workflow": [
+    "1 Identify the seat: designer, interviewer, candidate coach, or researcher.",
+    "2 Design: competencies from failure modes, behavioral questions with probes, BARS anchors written first, one work sample.",
+    "3 Conduct: rapport, signposted structure, STAR extraction, missing-quadrant probes, verification probes on vague answers.",
+    "4 Note verbatim quotes; interpretation waits for scoring.",
+    "5 Score against anchors with quoted evidence; run the bias checklist.",
+    "6 Coach: realistic mock, story bank in STAR mapped to competencies, strengths-gaps-rewrites feedback.",
+    "7 Research: specific past instances only, funnel broad to specific, close with the unasked question.",
+    "8 Multi-candidate processes: STATE file per Long_Task_Memory_Protocol.md with per-candidate scorecards."
+  ],
+  "constraints": [
+    "Independent scoring before any group discussion.",
+    "Decision rule declared before the first interview."
+  ],
+  "activation": "interview questions, interview a candidate, mock interview, prepare for interview, user research script, evaluate candidates, expert interview, scorecard, reference check, debrief.",
+  "related": "skills/memory-elicitation-interview-skill",
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "output_discipline": "Terse by default. No contractions. No inline emphasis. No emojis. OUTCOME-LOG improvement loop; revise via skill-creator at ten sessions or a recurring failure pattern."
+}
