@@ -1,6 +1,6 @@
 ---
 name: universal-upgrade
-description: Source-anchored upgrade methodology for ANY artifact. Trigger on upgrade, improve, enhance, refine, modernize, optimize, polish, make better, level up, rework, or v2 of anything. Audit current version, pull best sources, build severity-ranked gap table, rewrite with every change justified by named source. Never upgrade from opinion alone.
+description: Source-anchored upgrade methodology for ANY artifact — script, codebase, book, research paper, blog post, YouTube script, course, recipe, product, config, prompt, email template, or workflow. Trigger whenever the user asks to "upgrade," "improve," "enhance," "refine," "modernize," "optimize," "polish," "make better," "level up," "rework," or produce a "v2" of anything — even when the artifact type is unusual or the word "upgrade" is absent. The pass — audit the current version fully, pull the best available tried-and-tested sources (official docs, standards, peer-reviewed work, widely adopted maintained references), build a severity-ranked gap table, then rewrite so the result is easy to use, easy to navigate, easy to read, easy to understand, and demonstrably higher quality — every substantive change justified by a named source or explicitly labeled. Never upgrade from opinion alone.
 ---
 
 # Universal Upgrade

@@ -112,8 +112,7 @@
       "path": "skills/investigative-psychology/SKILL.md",
       "status": "active",
       "summary": "Investigative research auditing psychology, neuroscience, and pharmaceutical claims. Complements empathic-listening-psychology (research vs. support).",
-      "instructions": "skills/investigative-psychology/investigative-research.instructions.md",
-      "prompt": "skills/investigative-psychology/investigative-research.prompt.json"
+      "related": "investigative-research"
     },
     {
       "name": "content-research-writer",
@@ -208,10 +207,85 @@
       "name": "memory-elicitation-interview-skill",
       "domain": "interviewing",
       "path": "skills/memory-elicitation-interview-skill/SKILL.md",
-      "status": "active",
+      "status": "superseded",
       "summary": "Distortion-aware life-history elicitation.",
-      "instructions": "skills/memory-elicitation-interview-skill/life-history-elicitation.instructions.md",
-      "prompt": "skills/memory-elicitation-interview-skill/life-history-elicitation.prompt.json"
+      "note": "Superseded by life-history-elicitation (2026-07-06); companion files moved there."
+    },
+    {
+      "name": "objective-first",
+      "domain": "meta",
+      "path": "skills/objective-first/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Gate before any task: Objective Card — aim, beneficiary, success criteria, non-goals, kill condition, first step.",
+      "instructions": "skills/objective-first/objective-first.instructions.md",
+      "prompt": "skills/objective-first/objective-first.prompt.json",
+      "related": [
+        "self-debate",
+        "system-design"
+      ]
+    },
+    {
+      "name": "data-analysis",
+      "domain": "research-knowledge",
+      "path": "skills/data-analysis/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Question-first analysis: data audit before statistics, effect sizes over p-values, reproducible scripts, self-debate on interpretation.",
+      "instructions": "skills/data-analysis/data-analysis.instructions.md",
+      "prompt": "skills/data-analysis/data-analysis.prompt.json",
+      "related": [
+        "objective-first",
+        "self-debate"
+      ]
+    },
+    {
+      "name": "self-debate",
+      "domain": "meta",
+      "path": "skills/self-debate/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Structured adversarial self-refinement (Toulmin steelmen, rebuttal, cross-examination, judge, synthesis); standing post-job quality pass.",
+      "instructions": "skills/self-debate/self-debate.instructions.md",
+      "prompt": "skills/self-debate/self-debate.prompt.json",
+      "related": [
+        "objective-first",
+        "deep-brainstorm"
+      ]
+    },
+    {
+      "name": "life-history-elicitation",
+      "domain": "interviewing",
+      "path": "skills/life-history-elicitation/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Distortion-aware life interviewing (Life History Calendar, McAdams, Cognitive Interview, PEACE); supersedes memory-elicitation-interview-skill.",
+      "instructions": "skills/life-history-elicitation/life-history-elicitation.instructions.md",
+      "prompt": "skills/life-history-elicitation/life-history-elicitation.prompt.json"
+    },
+    {
+      "name": "investigative-research",
+      "domain": "research-knowledge",
+      "path": "skills/investigative-research/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Sourcing and conflict-of-interest audit methodology; v1 methodology plus v2 future protocol (provenance chains, AI-contamination screen, live verification).",
+      "instructions": "skills/investigative-research/investigative-research.instructions.md",
+      "prompt": "skills/investigative-research/investigative-research.prompt.json",
+      "references": [
+        "skills/investigative-research/references/methodology.md",
+        "skills/investigative-research/references/methodology-future.md"
+      ]
+    },
+    {
+      "name": "job-search-agent",
+      "domain": "productivity",
+      "path": "skills/job-search-agent/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Multi-tool job-seeker workflow: CV and letter updates, opportunity research, Gmail cross-reference, CSV tracking, PDF export.",
+      "instructions": "skills/job-search-agent/job-search-agent.instructions.md",
+      "prompt": "skills/job-search-agent/job-search-agent.prompt.json"
     }
   ],
   "agents": [
@@ -253,11 +327,6 @@
       "note": "Distinctive production-grade frontend interfaces; pairs with projects/website-redesign."
     },
     {
-      "name": "job-search-agent",
-      "path": "prompts/job-search-agent/",
-      "note": "Multi-tool job-seeker agent; future companion for the Job_Application_Career_Agent stub."
-    },
-    {
       "name": "legal-agent",
       "path": "prompts/legal-agent/",
       "note": "Paralegal-grade drafting counterpart; pairs with skills/legal-analysis-compliance."
@@ -272,5 +341,6 @@
       "file": "project1files/ (personal regulatory dossier)",
       "reason": "Contains personal data of named third parties; repository is public. Held back pending owner decision (private repo recommended)."
     }
-  ]
+  ],
+  "core_instructions": "AI_Agent_Core_Instructions.md"
 }

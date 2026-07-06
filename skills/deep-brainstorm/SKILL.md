@@ -1,6 +1,6 @@
 ---
 name: deep-brainstorm
-description: Structured multi-perspective ideation that refuses generic output. Trigger on brainstorm, generate ideas, explore options, find approaches, think from every angle, or plan any subject. Method frame problem purge baseline diverge using SCAMPER inversion first-principles morphological matrix cross-domain analogy constraint injection pre-mortem TRIZ rotate perspectives score dual-horizon pass concreteness gate before ranking.
+description: Structured multi-perspective ideation that refuses generic output. Trigger whenever the user asks to brainstorm, generate ideas, explore options, find approaches, "think from every angle," or plan around any subject — finance, business, productivity, health, legal strategy, writing, research, content, product, or life decisions — even when the word brainstorm is absent. Method — frame the problem, purge a banned baseline of obvious ideas first, then diverge using named documented techniques (SCAMPER, inversion, first-principles, morphological matrix, cross-domain analogy, constraint injection, pre-mortem, TRIZ), rotate through stakeholder and de Bono-style perspective lenses, score every surviving idea on short-term and long-term horizons with second-order consequences, and pass a concreteness gate — first action, cost, risk, reversibility — before ranking. Chains into self-debate for refinement and socratic-self-review before publication.
 ---
 
 # Deep Brainstorm

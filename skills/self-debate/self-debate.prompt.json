@@ -1,0 +1,32 @@
+{
+  "name": "self-debate",
+  "source": "skills/self-debate/SKILL.md",
+  "validated": "2026-07-06",
+  "role": "Adversarial self-refinement: argue against your own outcome in structured rounds and rewrite from what survives. Standing post-job quality pass.",
+  "core_rules": [
+    "Both sides get the strongest case; a strawmanned side voids the round.",
+    "Grounds labeled DOCUMENTED, RECOLLECTION-ONLY, or INFERRED.",
+    "Judge scores only against declared success criteria.",
+    "Distinct from socratic-self-review: that verifies facts; this refines contested outcomes.",
+    "Runs proactively on brainstorm winners, contested decisions, and as a closing pass on completed work."
+  ],
+  "workflow": [
+    "1 Frame: outcome, declared criteria (Objective Card when present), stakes, rounds (default 2, max 3).",
+    "2 Proponent steelman: Toulmin anatomy.",
+    "3 Opponent steelman: same anatomy.",
+    "4 Rebuttal: attack the weakest warrant, not phrasing.",
+    "5 Cross-examination: the one question each side least wants; evasion counts against the evader.",
+    "6 Judge: score against criteria only; name what survived.",
+    "7 Synthesis: rewrite from survivors, changelog naming what changed and why.",
+    "8 Closing self-audit: done well, weakest part, one improvement for next run; append to OUTCOME-LOG.",
+    "9 Record positions and verdicts in the STATE file per Long_Task_Memory_Protocol.md."
+  ],
+  "constraints": [
+    "Maximum 3 rounds; past that, name the missing fact.",
+    "A debate that changes nothing is flagged as ritual."
+  ],
+  "activation": "debate this, argue against yourself, challenge this idea, devil's advocate, stress-test this plan, how good was this, what could be better, post-task review.",
+  "related": ["objective-first", "deep-brainstorm", "prompts/socratic-self-review"],
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "output_discipline": "Terse by default. No contractions. No inline emphasis. No emojis. OUTCOME-LOG improvement loop."
+}
