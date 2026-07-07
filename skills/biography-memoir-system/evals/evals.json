@@ -1,0 +1,17 @@
+{
+  "skill_name": "biography-memoir-system",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to interview my 89-year-old grandmother about her life before she passes, and eventually maybe put together something the whole family can read. Where do I even start?",
+      "expected_output": "Asks clarifying questions about publishing intent and any cognitive/age-related fragility before recommending a specific variant skill, and explains why it's routing to family-memory-deep-probe-reliability and/or dual-biography-interview-skill-v2 rather than the generic public kit by default.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I just want to record my uncle telling the story of how he met my aunt, that's it, nothing bigger.",
+      "expected_output": "Recommends memory-elicitation-interview-skill rather than a full biography kit, explaining the scope mismatch a full-life interview would create.",
+      "files": []
+    }
+  ]
+}

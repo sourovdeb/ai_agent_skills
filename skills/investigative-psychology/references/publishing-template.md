@@ -28,8 +28,8 @@ Authentication: Header X-Sourov-Key: [PROVIDED_KEY]
 
 ### API Configuration
 Admin API Endpoint: https://sourovdeb.ghost.io/ghost/api/v3/admin/
-Content API Key: 1c48f2da9ee403247d8be223fa
-Admin API Key: 6a3d023f6745b80001edb99e:391798c2fb17f35973e64e49eab42169d19caf106b6006bcfa23b1fc9978b4ae
+Content API Key: [stored in the personal API inventory skill — do not hardcode here]
+Admin API Key: [stored in the personal API inventory skill — do not hardcode here]
 
 ### Post Structure
 - title: HEADLINE

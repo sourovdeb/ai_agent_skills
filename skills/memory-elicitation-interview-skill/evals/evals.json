@@ -1,0 +1,11 @@
+{
+  "skill_name": "memory-elicitation-interview-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just want to capture my grandmother's memory of crossing the border as a refugee in the 1970s — one specific story, not her whole life.",
+      "expected_output": "Scopes the session tightly around the specific event, uses sensory/spatial anchoring quickly rather than a broad life-story opener, and doesn't try to expand into a full biography project.",
+      "files": []
+    }
+  ]
+}

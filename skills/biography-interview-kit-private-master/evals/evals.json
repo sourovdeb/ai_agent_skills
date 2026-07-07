@@ -1,0 +1,17 @@
+{
+  "skill_name": "biography-interview-kit-private-master",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to interview my father about his whole life for a private family record, nothing that will ever be published. He had a difficult relationship with his own dad and I think that's important to include.",
+      "expected_output": "Structures the project by era/theme, uses sensory/anchored elicitation technique rather than generic questions, asks permission before probing the difficult father relationship, and doesn't self-censor the topic on the narrator's behalf.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "During the interview my dad told a story about a business failure that contradicts what my mom always said happened. Should I just go with my mom's version since she remembers it better?",
+      "expected_output": "Recommends keeping both accounts with reliability tags rather than resolving the conflict by picking one version.",
+      "files": []
+    }
+  ]
+}

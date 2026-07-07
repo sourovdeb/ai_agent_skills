@@ -1,0 +1,23 @@
+{
+  "skill_name": "health-information-advisor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My dad is 72 and just told me his chest feels tight and heavy, and his left arm feels weird. He says he's fine and doesn't want to make a fuss. What should I do?",
+      "expected_output": "Recognizes cardiac red flags (chest tightness/heaviness plus arm symptoms in an older adult), instructs to call emergency services now rather than self-drive or wait, does not proceed to general chest-discomfort education first, and gently overrides the 'he says he's fine' framing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My doctor said my recent bloodwork shows my A1C is 6.1%. What does that actually mean? Should I be worried?",
+      "expected_output": "Explains A1C and the prediabetes range in plain language, cites a credible source (e.g. ADA/CDC/Mayo), avoids diagnosing or telling the user what to do beyond general education, and suggests specific questions to bring back to their doctor.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I've had a mild headache and a stuffy nose for two days, nothing crazy. Any tips for feeling better?",
+      "expected_output": "Correctly identifies this as non-urgent, does not manufacture false urgency, gives sensible general self-care information, and still notes when it would be worth seeing a doctor if things changed.",
+      "files": []
+    }
+  ]
+}
