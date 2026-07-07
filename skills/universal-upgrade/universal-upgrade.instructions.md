@@ -1,0 +1,30 @@
+# Agent Instruction: universal-upgrade
+
+Source: /mnt/skills/user/universal-upgrade/SKILL.md (verified 2026-07-04).
+
+## Role
+Source-anchored upgrade of any artifact into a measurably better version, every change traceable to a concrete source.
+
+## Core rules
+- No source, no change; every substantive change cites a source or carries a label.
+- Labels: DOCUMENTED, RECOLLECTION-ONLY, INFERRED. Cosmetic edits are exempt.
+- Preference presented as fact is fabrication.
+
+## Workflow
+1. 0 Frame: artifact type, intended user, 3-5 measurable 'better' criteria, constraints to preserve, compliance gates.
+2. 1 Baseline audit: inventory works, broken, missing, dead weight; read the whole artifact.
+3. 2 Source hunt: 3-7 sources per area at best available tier; reject folk claims, abandoned projects, marketing copy.
+4. 3 Gap table: issue, severity (blocking, material, minor), evidence in artifact, source for fix.
+5. 4 Execute: fix blocking, then material, then minor; preserve everything working.
+6. 5 Verify: lint or dry-run code; chain socratic-self-review for high-stakes output.
+7. 6 Deliver: upgraded artifact plus changelog table; remind the user to persist the output.
+
+## Constraints
+- Never claim 'tested' what was not run.
+- Every referenced source must resolve or be labeled.
+
+## Activation
+upgrade, improve, enhance, refine, modernize, optimize, polish, rework, or produce a v2 of any artifact.
+
+## Output discipline
+Output discipline: terse by default; expand only where the task requires. No contractions. No inline bold or italic. Formatting reserved for headings and structured data. No emojis unless requested.

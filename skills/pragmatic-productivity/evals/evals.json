@@ -1,0 +1,37 @@
+{
+  "skill_name": "pragmatic-productivity",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm completely overwhelmed. I have a tax filing due, a leaking faucet, 40 unread emails from my manager's project, a birthday gift to buy for Saturday, and I keep meaning to start exercising.",
+      "expected_output": "A 4D triage table (Do/Defer/Delegate/Delete) where every kept item has a concrete next action with a verb, a scheduled time, and a 15-minute first step; the deadline-bound tax item is prioritized.",
+      "expectations": [
+        "Every deferred item is rewritten as verb + object next action, not a topic",
+        "The tax filing is flagged first due to its deadline",
+        "No generic advice phrases like 'prioritize better' or 'break it into smaller steps' appear without the actual breakdown",
+        "At most 3 items are marked as this-week priorities"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Help me plan next week. My goals are to finish the client proposal, prep for a Thursday presentation, and clear my expense backlog. I have meetings 10-12 every day.",
+      "expected_output": "A weekly plan with exactly 3 outcomes phrased as completed states, deep-work blocks placed in mornings before the meeting block or in free afternoons, and shallow work batched into fixed windows.",
+      "expectations": [
+        "Goals are rewritten as verifiable outcomes, not activities",
+        "Each outcome has at least one 90-minute calendar block with a specific day and time",
+        "The hardest task is not scheduled after 3pm or immediately after the meeting block",
+        "Expense backlog is batched as shallow work, not given a deep-work block"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I've been avoiding writing my performance self-review for two weeks. It's due Friday.",
+      "expected_output": "A procrastination diagnosis (unclear/too big/fear/low value), a 10-15 minute starter version of the task written out concretely, and a scheduled slot before Friday.",
+      "expectations": [
+        "The response diagnoses which procrastination cause applies or asks one targeted question to find out",
+        "A literal first step is provided, such as the first sentence or bullet list to write",
+        "A specific day and time before the Friday deadline is proposed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "data-analysis",
+  "source": "skills/data-analysis/SKILL.md",
+  "validated": "2026-07-06",
+  "role": "Question-first analyst: defensible answers with uncertainty, a data-quality audit trail, and a script that regenerates every number.",
+  "core_rules": [
+    "No statistic before the question is locked; an analysis that changes no decision is stopped.",
+    "Data audit precedes analysis; RED defects block inference unless waived in writing.",
+    "Describe before inferring; plot before summarizing.",
+    "Effect size with interval before p-value; significant without magnitude is banned.",
+    "Causal language only with a supporting design; grouped comparisons checked for Simpson's paradox.",
+    "Every figure regenerable from a kept script; raw data never edited in place."
+  ],
+  "workflow": [
+    "1 Lock question: population, variables, comparison, timeframe, decision served; classify the ask; objective-first if aim missing.",
+    "2 Audit: provenance, shape, units, missingness structure, duplicates, impossible values, selection; severity-ranked defect table.",
+    "3 Resolve or escalate RED defects; record waivers.",
+    "4 Describe: distributions plotted first, then summaries.",
+    "5 Infer per class: effect sizes, intervals, base rates, declared comparison count, subgroup check.",
+    "6 Metric-change: segment, denominator, instrumentation, then ranked hypotheses.",
+    "7 Visualize honestly per SKILL.md and repo dataviz conventions.",
+    "8 Report: answer first with uncertainty, cannot-conclude list, defect table, recommendation.",
+    "9 Reproduce: script beside report; verify re-run matches.",
+    "10 Self-debate the interpretation: strongest alternative stated and answered.",
+    "11 Long analyses: STATE file per Long_Task_Memory_Protocol.md updated after every step."
+  ],
+  "constraints": [
+    "Never silently answer an easier question than asked.",
+    "Outlier handling only by logged rule.",
+    "State n and units everywhere; round to decision-relevant precision."
+  ],
+  "activation": "analyze this data, find patterns, why did the metric change, compare groups, clean dataset, is this significant, forecast, dashboard, CSV or spreadsheet with a vague ask.",
+  "related": ["objective-first", "self-debate", "cambridge-writer"],
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "output_discipline": "Terse by default. No contractions. No inline emphasis. No emojis. OUTCOME-LOG improvement loop; revise via skill-creator at ten sessions or a recurring failure pattern."
+}

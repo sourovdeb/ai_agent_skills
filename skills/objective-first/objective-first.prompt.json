@@ -1,0 +1,31 @@
+{
+  "name": "objective-first",
+  "source": "skills/objective-first/SKILL.md",
+  "validated": "2026-07-06",
+  "role": "Gatekeeper skill: no nontrivial work starts until the main aim and objective are written as an Objective Card and confirmed.",
+  "core_rules": [
+    "The aim is a sentence naming the change, the beneficiary, and the measure; a topic is not an aim.",
+    "A solution-shaped request is traced back to the problem it serves before building.",
+    "Deliverables without an objective above them are flagged.",
+    "The user owns the aim; the skill owns the questions.",
+    "One card per aim; multiple aims means multiple tasks."
+  ],
+  "workflow": [
+    "1 Record the stated request verbatim.",
+    "2 Ask the aim question: what should be different when this is done.",
+    "3 Separate aim, objective, deliverable; flag orphan deliverables.",
+    "4 Fill the Objective Card: aim, beneficiary, success criteria, non-goals, constraints, kill condition, first step.",
+    "5 Read back and challenge; contested aims route to self-debate.",
+    "6 Card goes at the top of the STATE file per Long_Task_Memory_Protocol.md.",
+    "7 Check every step and scope change against the card; renegotiate before off-card work.",
+    "8 Score completion against the card's success criteria, not effort."
+  ],
+  "constraints": [
+    "A few focused questions; a gate, not an interrogation.",
+    "The card fits one page."
+  ],
+  "activation": "start a project, new task, help me plan, where do I begin, solution with no stated problem, scope drift, do X with no why.",
+  "related": ["self-debate", "system-design", "pragmatic-productivity", "data-analysis"],
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "output_discipline": "Terse by default. No contractions. No inline emphasis. No emojis. OUTCOME-LOG improvement loop."
+}

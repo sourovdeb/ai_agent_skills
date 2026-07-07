@@ -1,0 +1,346 @@
+{
+  "manifest_version": "1.0",
+  "updated": "2026-07-06",
+  "description": "Machine-readable registry of agent skills in this repository. Each entry points to the skill's SKILL.md definition and, where present, its evals/evals.json (schema documented in 'JSON Schemas.MD.md').",
+  "domains": [
+    "productivity",
+    "legal",
+    "medical",
+    "psychology",
+    "interviewing",
+    "writing",
+    "developer-workflow",
+    "research-knowledge",
+    "security",
+    "teaching",
+    "meta"
+  ],
+  "skills": [
+    {
+      "name": "pragmatic-productivity",
+      "domain": "productivity",
+      "path": "skills/pragmatic-productivity/SKILL.md",
+      "evals": "skills/pragmatic-productivity/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Practical non-generic workflows: capture-and-triage, weekly review, calendar defense, energy routing, procrastination breaker, project shutdown.",
+      "safety_gates": [],
+      "instructions": "skills/pragmatic-productivity/pragmatic-productivity.instructions.md",
+      "prompt": "skills/pragmatic-productivity/pragmatic-productivity.prompt.json"
+    },
+    {
+      "name": "legal-analysis-compliance",
+      "domain": "legal",
+      "path": "skills/legal-analysis-compliance/SKILL.md",
+      "evals": "skills/legal-analysis-compliance/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "IRAC-plus analysis, jurisdiction-first rule, deadline flagging, citation labeling, contract risk ranking, compliance mapping, UPL boundary.",
+      "safety_gates": [
+        "unauthorized-practice-of-law boundary",
+        "no invented citations",
+        "deadline-first flagging",
+        "escalation matrix to licensed counsel"
+      ],
+      "instructions": "skills/legal-analysis-compliance/legal-analysis-compliance.instructions.md",
+      "prompt": "skills/legal-analysis-compliance/legal-analysis-compliance.prompt.json"
+    },
+    {
+      "name": "medical-information-advisor",
+      "domain": "medical",
+      "path": "skills/medical-information-advisor/SKILL.md",
+      "evals": "skills/medical-information-advisor/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Red-flag triage first, evidence-graded explanation, appointment preparation, medication literacy, escalation through proper channels.",
+      "safety_gates": [
+        "red-flag triage runs before all other content",
+        "no diagnosis, dosing, or drug selection",
+        "never argues against care-seeking",
+        "evidence grading labels"
+      ],
+      "instructions": "skills/medical-information-advisor/medical-information-advisor.instructions.md",
+      "prompt": "skills/medical-information-advisor/medical-information-advisor.prompt.json"
+    },
+    {
+      "name": "empathic-listening-psychology",
+      "domain": "psychology",
+      "path": "skills/empathic-listening-psychology/SKILL.md",
+      "evals": "skills/empathic-listening-psychology/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Listening-before-fixing enforcement: reflective listening, validation, OARS, conversation arc, crisis-aware escalation.",
+      "safety_gates": [
+        "no advice in first response",
+        "not-therapy boundary with therapist routing",
+        "crisis protocol with direct safety inquiry and resources"
+      ],
+      "instructions": "skills/empathic-listening-psychology/empathic-listening-psychology.instructions.md",
+      "prompt": "skills/empathic-listening-psychology/empathic-listening-psychology.prompt.json"
+    },
+    {
+      "name": "structured-interviewer",
+      "domain": "interviewing",
+      "path": "skills/structured-interviewer/SKILL.md",
+      "evals": "skills/structured-interviewer/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Structured-interview design (behavioral questions, BARS scorecards), probing technique, bias-controlled evaluation, mock-interview coaching, research elicitation.",
+      "safety_gates": [
+        "bias checklist before candidate decisions"
+      ],
+      "instructions": "skills/structured-interviewer/structured-interviewer.instructions.md",
+      "prompt": "skills/structured-interviewer/structured-interviewer.prompt.json"
+    },
+    {
+      "name": "cambridge-writer",
+      "domain": "writing",
+      "path": "skills/cambridge-writer/SKILL.md",
+      "evals": "skills/cambridge-writer/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-04",
+      "summary": "Argument-first prose at a demanding academic standard: contestable thesis, steel-manned counter-arguments, three-pass edit, register control.",
+      "safety_gates": [
+        "evidence discipline: no unattributed claims"
+      ],
+      "instructions": "skills/cambridge-writer/cambridge-writer.instructions.md",
+      "prompt": "skills/cambridge-writer/cambridge-writer.prompt.json"
+    },
+    {
+      "name": "investigative-psychology",
+      "domain": "psychology",
+      "path": "skills/investigative-psychology/SKILL.md",
+      "status": "active",
+      "summary": "Investigative research auditing psychology, neuroscience, and pharmaceutical claims. Complements empathic-listening-psychology (research vs. support).",
+      "related": "investigative-research"
+    },
+    {
+      "name": "content-research-writer",
+      "domain": "writing",
+      "path": "skills/content-research-writer/SKILL.md",
+      "status": "active",
+      "summary": "Citation generation and research documentation. Complements cambridge-writer (mechanics vs. craft)."
+    },
+    {
+      "name": "deep-brainstorm",
+      "domain": "research-knowledge",
+      "path": "skills/deep-brainstorm/SKILL.md",
+      "status": "active",
+      "summary": "Multi-method structured ideation with concreteness gate.",
+      "instructions": "skills/deep-brainstorm/deep-brainstorm.instructions.md",
+      "prompt": "skills/deep-brainstorm/deep-brainstorm.prompt.json",
+      "references": [
+        "skills/deep-brainstorm/references/methods-registry.md",
+        "skills/deep-brainstorm/references/evidence-based-variant.md"
+      ]
+    },
+    {
+      "name": "invoice-file-organizer",
+      "domain": "productivity",
+      "path": "skills/invoice-file-organizer/SKILL.md",
+      "status": "active",
+      "summary": "Financial document categorization."
+    },
+    {
+      "name": "skill-creator",
+      "domain": "meta",
+      "path": "skills/skill-creator/SKILL.md",
+      "status": "active",
+      "summary": "Creates and packages new agent skills; owns the evals.json schema."
+    },
+    {
+      "name": "psychology-agent",
+      "domain": "psychology",
+      "path": "skills/psychology-agent/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Protocol-based structured support (WHO PM+, mhGAP, behavioural activation); adjunct to licensed care; crisis protocol overrides all.",
+      "instructions": "skills/psychology-agent/psychology-agent.instructions.md",
+      "prompt": "skills/psychology-agent/psychology-agent.prompt.json",
+      "related": "empathic-listening-psychology"
+    },
+    {
+      "name": "writer-agent",
+      "domain": "writing",
+      "path": "skills/writer-agent/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Plain-language explainer agent (Orwell economy, Gopen and Swan structure, Flesch measurement).",
+      "instructions": "skills/writer-agent/writer-agent.instructions.md",
+      "prompt": "skills/writer-agent/writer-agent.prompt.json",
+      "related": "cambridge-writer"
+    },
+    {
+      "name": "system-design",
+      "domain": "productivity",
+      "path": "skills/system-design/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Complete documented operating systems: components, flows, roles, procedures, metrics, risk register, review cadence."
+    },
+    {
+      "name": "self-hosting-infra-advisor",
+      "domain": "research-knowledge",
+      "path": "skills/self-hosting-infra-advisor/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Decision framework for self-hosted media and automation infrastructure (Raspberry Pi, n8n, local LLM, storage)."
+    },
+    {
+      "name": "api-reference",
+      "domain": "meta",
+      "path": "skills/api-reference/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Categorized reference for project external APIs; contains no credential values by design."
+    },
+    {
+      "name": "universal-upgrade",
+      "domain": "meta",
+      "path": "skills/universal-upgrade/SKILL.md",
+      "status": "active",
+      "summary": "Source-anchored upgrade of any artifact.",
+      "instructions": "skills/universal-upgrade/universal-upgrade.instructions.md",
+      "prompt": "skills/universal-upgrade/universal-upgrade.prompt.json"
+    },
+    {
+      "name": "memory-elicitation-interview-skill",
+      "domain": "interviewing",
+      "path": "skills/memory-elicitation-interview-skill/SKILL.md",
+      "status": "superseded",
+      "summary": "Distortion-aware life-history elicitation.",
+      "note": "Superseded by life-history-elicitation (2026-07-06); companion files moved there."
+    },
+    {
+      "name": "objective-first",
+      "domain": "meta",
+      "path": "skills/objective-first/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Gate before any task: Objective Card — aim, beneficiary, success criteria, non-goals, kill condition, first step.",
+      "instructions": "skills/objective-first/objective-first.instructions.md",
+      "prompt": "skills/objective-first/objective-first.prompt.json",
+      "related": [
+        "self-debate",
+        "system-design"
+      ]
+    },
+    {
+      "name": "data-analysis",
+      "domain": "research-knowledge",
+      "path": "skills/data-analysis/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Question-first analysis: data audit before statistics, effect sizes over p-values, reproducible scripts, self-debate on interpretation.",
+      "instructions": "skills/data-analysis/data-analysis.instructions.md",
+      "prompt": "skills/data-analysis/data-analysis.prompt.json",
+      "related": [
+        "objective-first",
+        "self-debate"
+      ]
+    },
+    {
+      "name": "self-debate",
+      "domain": "meta",
+      "path": "skills/self-debate/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Structured adversarial self-refinement (Toulmin steelmen, rebuttal, cross-examination, judge, synthesis); standing post-job quality pass.",
+      "instructions": "skills/self-debate/self-debate.instructions.md",
+      "prompt": "skills/self-debate/self-debate.prompt.json",
+      "related": [
+        "objective-first",
+        "deep-brainstorm"
+      ]
+    },
+    {
+      "name": "life-history-elicitation",
+      "domain": "interviewing",
+      "path": "skills/life-history-elicitation/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Distortion-aware life interviewing (Life History Calendar, McAdams, Cognitive Interview, PEACE); supersedes memory-elicitation-interview-skill.",
+      "instructions": "skills/life-history-elicitation/life-history-elicitation.instructions.md",
+      "prompt": "skills/life-history-elicitation/life-history-elicitation.prompt.json"
+    },
+    {
+      "name": "investigative-research",
+      "domain": "research-knowledge",
+      "path": "skills/investigative-research/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Sourcing and conflict-of-interest audit methodology; v1 methodology plus v2 future protocol (provenance chains, AI-contamination screen, live verification).",
+      "instructions": "skills/investigative-research/investigative-research.instructions.md",
+      "prompt": "skills/investigative-research/investigative-research.prompt.json",
+      "references": [
+        "skills/investigative-research/references/methodology.md",
+        "skills/investigative-research/references/methodology-future.md"
+      ]
+    },
+    {
+      "name": "job-search-agent",
+      "domain": "productivity",
+      "path": "skills/job-search-agent/SKILL.md",
+      "status": "active",
+      "added": "2026-07-06",
+      "summary": "Multi-tool job-seeker workflow: CV and letter updates, opportunity research, Gmail cross-reference, CSV tracking, PDF export.",
+      "instructions": "skills/job-search-agent/job-search-agent.instructions.md",
+      "prompt": "skills/job-search-agent/job-search-agent.prompt.json"
+    }
+  ],
+  "agents": [
+    {
+      "name": "Daily_Living_Productivity_Agent",
+      "path": "agents/Daily_Living_Productivity_Agent.md",
+      "status": "stub",
+      "note": "One-line description only; full instructions now covered by skills/pragmatic-productivity."
+    },
+    {
+      "name": "Legal_Regulatory_Dossier_Agent",
+      "path": "agents/Legal_Regulatory_Dossier_Agent.md",
+      "status": "stub",
+      "note": "One-line description only; analytical core now covered by skills/legal-analysis-compliance."
+    },
+    {
+      "name": "Skilled_Biography_Interviewer_Agent",
+      "path": "agents/Skilled_Biography_Interviewer_Agent.md",
+      "status": "stub",
+      "note": "Biography-specific; general technique now covered by skills/structured-interviewer."
+    },
+    {
+      "name": "Biography_Memoir_Writer_Agent",
+      "path": "agents/Biography_Memoir_Writer_Agent.md",
+      "status": "stub",
+      "note": "Genre-specific; general prose craft now covered by skills/cambridge-writer."
+    }
+  ],
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "prompts_library": [
+    {
+      "name": "socratic-self-review",
+      "path": "prompts/socratic-self-review/",
+      "note": "Pre-delivery self-critique pass; chain after any publication output."
+    },
+    {
+      "name": "frontend-design",
+      "path": "prompts/frontend-design/",
+      "note": "Distinctive production-grade frontend interfaces; pairs with projects/website-redesign."
+    },
+    {
+      "name": "legal-agent",
+      "path": "prompts/legal-agent/",
+      "note": "Paralegal-grade drafting counterpart; pairs with skills/legal-analysis-compliance."
+    }
+  ],
+  "excluded_from_repo": [
+    {
+      "file": "api_credentials_LOCAL_ONLY.md",
+      "reason": "File header forbids committing; repository is public. Keep in a password manager."
+    },
+    {
+      "file": "project1files/ (personal regulatory dossier)",
+      "reason": "Contains personal data of named third parties; repository is public. Held back pending owner decision (private repo recommended)."
+    }
+  ],
+  "core_instructions": "AI_Agent_Core_Instructions.md"
+}

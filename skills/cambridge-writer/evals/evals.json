@@ -1,0 +1,39 @@
+{
+  "skill_name": "cambridge-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a 700-word op-ed arguing that cities should replace most on-street parking with protected bike lanes.",
+      "expected_output": "An op-ed with the thesis by paragraph two, one prosecuted argument with evidence discipline, the strongest opposing case (business owners, disabled access) steel-manned and answered, no throat-clearing opener, and a consequence-driven ending.",
+      "expectations": [
+        "The thesis appears by the second paragraph and is contestable",
+        "The strongest counter-argument is presented fairly and answered or conceded in scope",
+        "The opening contains no throat-clearing phrases like 'In today's society'",
+        "No unattributed 'studies show' claims appear",
+        "The conclusion states consequence or implication rather than summarizing"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Edit this paragraph: 'It is clear that the utilization of renewable energy sources is something that is very important for the future of our planet. There are many reasons why this is the case. The implementation of solar panels has been done by many countries and it is really making a very big difference.'",
+      "expected_output": "A diagnosis identifying expletive openers, nominalizations, intensifiers and vagueness; an edited version with actors in subjects and actions in verbs; and an explanation of the highest-leverage changes.",
+      "expectations": [
+        "The edit removes 'It is clear that', 'utilization', and all intensifiers",
+        "Nominalizations are converted to verbs, such as implementation to implement",
+        "The rewrite is significantly shorter than the original",
+        "The response explains the top changes so the writer learns the pattern"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Here's my draft personal statement for a history degree. It says I've been passionate about history since I was a child and lists four historical periods I find fascinating. Improve it.",
+      "expected_output": "A diagnosis that declared passion and breadth-listing are the core weaknesses, restructuring around one moment of genuine intellectual curiosity explored in depth with evidence of what the writer did about it, fixed in argument-structure-sentence order.",
+      "expectations": [
+        "The feedback identifies 'declared passion' as weaker than demonstrated intellectual action",
+        "The revision develops one idea deeply rather than four superficially",
+        "Structural diagnosis precedes sentence-level polish",
+        "The response returns a diagnosis, an edit, and the highest-leverage changes explained"
+      ]
+    }
+  ]
+}

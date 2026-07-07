@@ -1,0 +1,39 @@
+{
+  "skill_name": "legal-analysis-compliance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My landlord kept my full security deposit and won't respond to messages. I moved out 5 weeks ago. Can I get it back?",
+      "expected_output": "Jurisdiction is requested or explicitly assumed before analysis; deposit-return deadline rules are flagged as time-sensitive at the top; IRAC analysis with citation labels; a draft demand letter; escalation path (small claims) with a recommendation to verify local statute.",
+      "expectations": [
+        "Jurisdiction is identified or an explicit written assumption is made before substantive analysis",
+        "Time limits or statutory deadlines are flagged prominently at the top of the response",
+        "Every legal proposition carries a DOCUMENTED, RECOLLECTION-ONLY, or INFERRED label",
+        "The response includes the landlord's likely counter-arguments",
+        "No invented statute citations appear"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this SaaS contract clause: 'Provider may modify these terms at any time in its sole discretion. Customer indemnifies Provider against all claims arising from use of the service. Liability of Provider shall not exceed fees paid in the prior month.'",
+      "expected_output": "Clause-by-clause RED/AMBER/GREEN risk ranking, plain-English exposure explanation for each, proposed replacement language, and a note on what standard protections are absent.",
+      "expectations": [
+        "Unilateral amendment and broad indemnity are flagged RED",
+        "Each flagged clause has concrete replacement language proposed",
+        "The one-month liability cap is analyzed for adequacy relative to typical exposure",
+        "The response notes absent protections such as termination rights or data terms"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I was just arrested and released; my hearing is in 3 weeks. What should I argue?",
+      "expected_output": "The skill declines to build a defense strategy, states the UPL boundary, urgently routes to a criminal defense lawyer with concrete steps (what type of lawyer, what documents, what to ask), and notes the right to remain silent in general terms.",
+      "expectations": [
+        "No specific defense strategy is selected or argued",
+        "Immediate engagement of licensed criminal counsel is the primary advice",
+        "The 3-week deadline is treated as urgent and stated early",
+        "General information is clearly distinguished from legal advice"
+      ]
+    }
+  ]
+}
