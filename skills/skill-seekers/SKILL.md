@@ -5,7 +5,7 @@ description: Load this skill when you need to generate a custom skill from docum
 
 # Skill Seekers
 
-A highly flexible meta-skill generator. Point this engine at any documentation site, API documentation, framework standard (React, Django, Godot), codebase, or PDF to instantly synthesize a native Claude Skill.
+A highly flexible meta-skill generator. Point this engine at any documentation site, API documentation, framework standard (React, Django, Godot), codebase, or PDF to instantly synthesize a native agent skill.
 
 ## Natural Triggers
 - "create a skill from this doc"

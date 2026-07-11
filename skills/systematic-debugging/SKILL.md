@@ -4,7 +4,7 @@ description: "Load this skill when debugging issues. Prevents shallow fixes by e
 ---
 # Systematic Debugging
 
-Prevents Claude from offering shallow, unverified quick fixes. Mandates step-by-step root-cause analysis based on telemetry, log traces, and rigorous engineering principles.
+Prevents shallow, unverified quick fixes. Mandates step-by-step root-cause analysis based on telemetry, log traces, and rigorous engineering principles.
 
 ## Natural Triggers
 - debug this issue

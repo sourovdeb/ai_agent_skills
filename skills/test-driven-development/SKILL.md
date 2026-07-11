@@ -4,7 +4,7 @@ description: "Load this skill when you need to enforce strict test-driven develo
 ---
 # Test-Driven Development (TDD)
 
-Strictly enforces automated test-first architectural patterns. Restricts Claude from shifting to functional script generation until robust test specifications are written.
+Strictly enforces automated test-first architectural patterns. Prevents shifting to functional script generation until robust test specifications are written.
 
 ## Natural Triggers
 - "write tests first"

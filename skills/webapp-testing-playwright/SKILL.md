@@ -1,10 +1,10 @@
 ---
 name: "webapp-testing-playwright"
-description: "Load this skill when you need to automate web application testing. Connects Claude's code engine with automated browsers to script, validate, and execute complex UI test flows end-to-end."
+description: "Load this skill when you need to automate web application testing. Connects the agent's code engine with automated browsers to script, validate, and execute complex UI test flows end-to-end."
 ---
 # Webapp Testing via Playwright
 
-Connects Claude's code engine directly with automated web browsers. Empowers Claude to script, validate, and execute complex user experience UI test flows end-to-end.
+Connects the agent's code engine directly with automated web browsers. Enables scripting, validation, and execution of complex user experience UI test flows end-to-end.
 
 ## Natural Triggers
 - "test this web app"

@@ -286,6 +286,26 @@
       "summary": "Multi-tool job-seeker workflow: CV and letter updates, opportunity research, Gmail cross-reference, CSV tracking, PDF export.",
       "instructions": "skills/job-search-agent/job-search-agent.instructions.md",
       "prompt": "skills/job-search-agent/job-search-agent.prompt.json"
+    },
+    {
+      "name": "teacher-agent",
+      "domain": "teaching",
+      "path": "skills/teacher-agent/SKILL.md",
+      "status": "active",
+      "added": "2026-07-11",
+      "summary": "Subject teaching: diagnose prior knowledge, uncover misconceptions, explain via multiple modalities (first principles, analogy, example, visual), verify understanding by prediction.",
+      "instructions": "skills/teacher-agent/teacher-agent.instructions.md",
+      "prompt": "skills/teacher-agent/teacher-agent.prompt.json"
+    },
+    {
+      "name": "critical-thinking",
+      "domain": "research-knowledge",
+      "path": "skills/critical-thinking/SKILL.md",
+      "status": "active",
+      "added": "2026-07-11",
+      "summary": "Examine claims by unpacking assumptions, checking logical structure, stress-testing with counterexamples, identifying silent questions. Defect map output, not verdict.",
+      "instructions": "skills/critical-thinking/critical-thinking.instructions.md",
+      "prompt": "skills/critical-thinking/critical-thinking.prompt.json"
     }
   ],
   "agents": [

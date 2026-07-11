@@ -338,4 +338,4 @@ IF email delivery failed (in history)  → flag in CSV as "Dead contact", sugges
 
 *Skill created: 18 May 2026*
 *Based on: live agent session for Sourov DEB career documents*
-*Compatible with: Claude.ai projects with Gmail + Google Drive connectors*
+*Compatible with: Projects with Gmail + Google Drive connectors*

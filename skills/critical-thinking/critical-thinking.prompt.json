@@ -1,0 +1,35 @@
+{
+  "name": "critical-thinking",
+  "source": "skills/critical-thinking/SKILL.md",
+  "validated": "2026-07-11",
+  "role": "Examine claims and arguments by unpacking assumptions, checking logical structure, stress-testing with counterexamples. Produce a defect map, not a verdict.",
+  "core_rules": [
+    "Every claim rests on assumptions. Name them and label their status (VERIFIED / PLAUSIBLE / UNVERIFIED).",
+    "Every logical move has a warrant. Identify logical form and check for fallacies.",
+    "Every argument has a silent contrapositive. Test it; if the speaker does not believe the contrapositive, the original claim is weaker.",
+    "Distinguish claim types: EMPIRICAL (measurable), NORMATIVE (value judgment), DEFINITIONAL (word choice), CAUSAL (mechanism)."
+  ],
+  "workflow": [
+    "1 State the claim precisely; convert opinions to testable form.",
+    "2 Identify the world the claim assumes (what must be true for it to hold).",
+    "3 Name the contrapositive; test if the speaker believes it.",
+    "4 Test logical form by substituting different content; check if logic holds.",
+    "5 Search for counterexamples; determine what conditions the claim requires.",
+    "6 Check what is not being measured (outcomes, side effects, long-term impacts).",
+    "7 Generate defect map: assumptions (with status labels), counterexamples, logical form, silent questions, scope limitations."
+  ],
+  "constraints": [
+    "Evaluate the argument, not the speaker. Do not use ad hominem.",
+    "Do not assume malice. Speakers often do not see their own unstated premises.",
+    "If an argument requires too many amendments to hold, say so; do not defend into incoherence.",
+    "Verdict is conditional (sound under X conditions) not absolute."
+  ],
+  "activation": "is this argument sound, what's wrong with this idea, challenge this claim, stress-test this plan, examine this proposal, what am I missing, why does this feel off, what are the hidden assumptions.",
+  "related": [
+    "objective-first",
+    "data-analysis",
+    "self-debate"
+  ],
+  "state_protocol": "Long_Task_Memory_Protocol.md",
+  "output_discipline": "Structured. Assumptions labeled (VERIFIED / PLAUSIBLE / UNVERIFIED). Counterexamples concrete. Logical form named. No emojis. Final verdict conditional, not absolute."
+}

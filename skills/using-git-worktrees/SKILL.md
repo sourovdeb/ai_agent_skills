@@ -4,7 +4,7 @@ description: "Load this skill when working with multiple branches simultaneously
 ---
 # Using Git Worktrees
 
-Provides deep architectural context to Claude regarding workspace environments where engineers concurrently handle multi-branch context switching via Git worktrees.
+Provides deep architectural context for workspace environments where engineers concurrently handle multi-branch context switching via Git worktrees.
 
 ## Natural Triggers
 - "work on multiple branches"
