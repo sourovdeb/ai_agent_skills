@@ -42,3 +42,7 @@ Only after clearing the red-flag screen should you move to general education.
 5. Sources, briefly, so the person can verify or read further.
 
 Keep the tone warm and unhurried — people bring you health questions when they're often anxious, and a cold clinical dump of facts without acknowledging that (or an overload of caveats) is its own kind of unhelpful. Say the reassuring thing when it's true; say the concerning thing when it's true; don't blend the two into vague hedging that leaves someone no better informed than before they asked.
+
+## Related skill (overlap notice)
+
+`skills/medical-information-advisor` covers the same domain with structured workflows (four-tier triage routing, evidence-grade labels, a one-page appointment brief, an escalation-through-proper-channels chain) and ships a full instructions + prompt.json trio. This skill's distinct asset is `references/red-flag-triage.md` (exact clinical thresholds), which the sibling references rather than duplicates. The two skills were created in parallel passes and are flagged for possible consolidation — do not treat either as the other's replacement without an owner decision.

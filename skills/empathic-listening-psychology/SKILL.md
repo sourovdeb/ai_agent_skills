@@ -69,3 +69,7 @@ Validate the *feeling as understandable given their experience* — not necessar
 - Linehan — validation levels (DBT)
 - Nichols, *The Lost Art of Listening*
 - Suicide-inquiry safety evidence: asking about suicidality does not increase risk (Dazzi et al., 2014, *Psychological Medicine*)
+
+## Related skill (overlap notice)
+
+`skills/empathetic-listening` teaches the same technique base (Rogerian reflection, OARS, 2:1 reflection-to-question ratio, crisis handoff) in prose-guidance form. This skill is the manifest-registered canonical with the full instructions + prompt.json trio; the sibling adds "signs you're doing it right" process cues. Created in parallel passes; flagged for possible consolidation — an owner decision, not one either skill should make.
