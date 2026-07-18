@@ -1,6 +1,6 @@
 {
-  "manifest_version": "1.0",
-  "updated": "2026-07-06",
+  "manifest_version": "1.1",
+  "updated": "2026-07-18",
   "description": "Machine-readable registry of agent skills in this repository. Each entry points to the skill's SKILL.md definition and, where present, its evals/evals.json (schema documented in 'JSON Schemas.MD.md').",
   "domains": [
     "productivity",
@@ -13,6 +13,7 @@
     "research-knowledge",
     "security",
     "teaching",
+    "design",
     "meta"
   ],
   "skills": [
@@ -60,7 +61,8 @@
         "evidence grading labels"
       ],
       "instructions": "skills/medical-information-advisor/medical-information-advisor.instructions.md",
-      "prompt": "skills/medical-information-advisor/medical-information-advisor.prompt.json"
+      "prompt": "skills/medical-information-advisor/medical-information-advisor.prompt.json",
+      "related": "health-information-advisor"
     },
     {
       "name": "empathic-listening-psychology",
@@ -76,7 +78,8 @@
         "crisis protocol with direct safety inquiry and resources"
       ],
       "instructions": "skills/empathic-listening-psychology/empathic-listening-psychology.instructions.md",
-      "prompt": "skills/empathic-listening-psychology/empathic-listening-psychology.prompt.json"
+      "prompt": "skills/empathic-listening-psychology/empathic-listening-psychology.prompt.json",
+      "related": "empathetic-listening"
     },
     {
       "name": "structured-interviewer",
@@ -286,32 +289,349 @@
       "summary": "Multi-tool job-seeker workflow: CV and letter updates, opportunity research, Gmail cross-reference, CSV tracking, PDF export.",
       "instructions": "skills/job-search-agent/job-search-agent.instructions.md",
       "prompt": "skills/job-search-agent/job-search-agent.prompt.json"
+    },
+    {
+      "name": "health-information-advisor",
+      "domain": "medical",
+      "path": "skills/health-information-advisor/SKILL.md",
+      "evals": "skills/health-information-advisor/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "summary": "General health information and patient education with AHA/CDC/WHO/NIA/SAMHSA-grounded red-flag triage (cardiac, BE-FAST stroke, sepsis, anaphylaxis, pediatric, obstetric, mental-health crisis) run before any education.",
+      "safety_gates": [
+        "emergency red-flag screen before general education",
+        "no diagnosis, dosing, or clinician replacement"
+      ],
+      "references": [
+        "skills/health-information-advisor/references/red-flag-triage.md"
+      ],
+      "related": "medical-information-advisor"
+    },
+    {
+      "name": "empathetic-listening",
+      "domain": "psychology",
+      "path": "skills/empathetic-listening/SKILL.md",
+      "evals": "skills/empathetic-listening/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "summary": "Rogerian/motivational-interviewing reflective listening: reflect-before-fix, OARS reflection-to-question ratio, validation without forced agreement, explicit crisis escalation (988, abuse disclosures).",
+      "safety_gates": [
+        "crisis-escalation section overrides technique",
+        "peer-support scope boundary"
+      ],
+      "related": "empathic-listening-psychology"
+    },
+    {
+      "name": "alzheimers-adhd-daily-support",
+      "domain": "medical",
+      "path": "skills/alzheimers-adhd-daily-support/SKILL.md",
+      "evals": "skills/alzheimers-adhd-daily-support/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "summary": "Dementia caregiving (validation therapy over correction, environment/routine design, wandering safety, caregiver burnout) and ADHD executive-function support (externalized time and memory, body doubling, task initiation, Wall of Awful/PINCH).",
+      "safety_gates": [
+        "medication questions route to the person's own clinician"
+      ],
+      "related": [
+        "family-memory-deep-probe-reliability",
+        "health-information-advisor",
+        "pragmatic-productivity"
+      ]
+    },
+    {
+      "name": "biography-memoir-system",
+      "domain": "interviewing",
+      "path": "skills/biography-memoir-system/SKILL.md",
+      "evals": "skills/biography-memoir-system/evals/evals.json",
+      "status": "active",
+      "added": "2026-06-19",
+      "summary": "Orchestrator for the biography/memoir skill family: which interview variant to run and how material flows into writing.",
+      "note": "Stub created 2026-06-19; rebuilt as full skill 2026-07-05.",
+      "references": [
+        "skills/biography-memoir-system/references/interview-methodology.md"
+      ]
+    },
+    {
+      "name": "biography-interview-kit-private-master",
+      "domain": "interviewing",
+      "path": "skills/biography-interview-kit-private-master/SKILL.md",
+      "evals": "skills/biography-interview-kit-private-master/evals/evals.json",
+      "status": "active",
+      "added": "2026-06-19",
+      "summary": "Complete, unfiltered personal-history interview for a private family archive (default variant).",
+      "note": "Stub created 2026-06-19; rebuilt as full skill 2026-07-05.",
+      "related": "biography-memoir-system"
+    },
+    {
+      "name": "biography-interview-kit-public",
+      "domain": "interviewing",
+      "path": "skills/biography-interview-kit-public/SKILL.md",
+      "evals": "skills/biography-interview-kit-public/evals/evals.json",
+      "status": "active",
+      "added": "2026-06-19",
+      "summary": "Publication-intended interview with the private/public boundary set before the session.",
+      "note": "Stub created 2026-06-19; rebuilt as full skill 2026-07-05.",
+      "related": "biography-memoir-system"
+    },
+    {
+      "name": "dual-biography-interview-skill-v2",
+      "domain": "interviewing",
+      "path": "skills/dual-biography-interview-skill-v2/SKILL.md",
+      "evals": "skills/dual-biography-interview-skill-v2/evals/evals.json",
+      "status": "active",
+      "added": "2026-06-19",
+      "summary": "One interview session producing two tagged outputs (private archive + publishable draft).",
+      "note": "Stub created 2026-06-19; rebuilt as full skill 2026-07-05.",
+      "related": "biography-memoir-system"
+    },
+    {
+      "name": "family-memory-deep-probe-reliability",
+      "domain": "interviewing",
+      "path": "skills/family-memory-deep-probe-reliability/SKILL.md",
+      "evals": "skills/family-memory-deep-probe-reliability/evals/evals.json",
+      "status": "active",
+      "added": "2026-06-19",
+      "summary": "Elderly/memory-impaired narrators and cross-relative reliability reconciliation; dementia-aware interviewing technique lives here.",
+      "note": "Stub created 2026-06-19; rebuilt as full skill 2026-07-05.",
+      "related": [
+        "biography-memoir-system",
+        "alzheimers-adhd-daily-support"
+      ]
+    },
+    {
+      "name": "prompt-architect",
+      "domain": "meta",
+      "path": "skills/prompt-architect/SKILL.md",
+      "status": "active",
+      "added": "2026-07-08",
+      "summary": "Rebuilds raw questions into precise, testable prompts; grounded in Anthropic prompting docs and the peer-reviewed prompting literature."
+    },
+    {
+      "name": "decision-battery-antifragile",
+      "domain": "productivity",
+      "path": "skills/decision-battery-antifragile/SKILL.md",
+      "status": "active",
+      "added": "2026-07-14",
+      "summary": "42-step antifragile decision OS: debiasing battery, SCAMPER mutation, black-swan module, neurodivergent energy gates, meta-agent hooks.",
+      "note": "Ships with standalone AGENT.md (copy-paste-ready agent prompt) and README."
+    },
+    {
+      "name": "theme-factory",
+      "domain": "design",
+      "path": "skills/theme-factory/SKILL.md",
+      "status": "active",
+      "added": "2026-07-17",
+      "summary": "Styling toolkit with 10 professional color/font themes for slide decks, documents, reports, and HTML pages; supports on-the-fly custom themes.",
+      "references": [
+        "skills/theme-factory/references/theme-details.md"
+      ]
+    },
+    {
+      "name": "brainstorming-matrix",
+      "domain": "research-knowledge",
+      "path": "skills/brainstorming-matrix/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Analytical sparring partner turning rough ideas into structured system-architecture designs.",
+      "related": "deep-brainstorm"
+    },
+    {
+      "name": "superpowers",
+      "domain": "meta",
+      "path": "skills/superpowers/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Coordinator skill: brainstorming, debugging, TDD enforcement, and multi-step execution planning via custom slash commands."
+    },
+    {
+      "name": "superpowers-lab",
+      "domain": "meta",
+      "path": "skills/superpowers-lab/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Experimental features from the Superpowers ecosystem, pre-production."
+    },
+    {
+      "name": "skill-seekers",
+      "domain": "meta",
+      "path": "skills/skill-seekers/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Generates a custom skill from documentation, API docs, codebases, or PDFs.",
+      "related": "skill-creator"
+    },
+    {
+      "name": "tapestry-knowledge-graphs",
+      "domain": "research-knowledge",
+      "path": "skills/tapestry-knowledge-graphs/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Ingests large document dumps and structures them into navigable knowledge graphs or wiki format."
+    },
+    {
+      "name": "defense-in-depth-hardening",
+      "domain": "security",
+      "path": "skills/defense-in-depth-hardening/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Multi-layered security assessment: surface vulnerabilities, sanitize input paths, harden codebases."
+    },
+    {
+      "name": "ffuf-security-fuzzer",
+      "domain": "security",
+      "path": "skills/ffuf-security-fuzzer/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Web-application fuzzing integration for dynamic analysis and security-posture verification (authorized testing)."
+    },
+    {
+      "name": "epub-pdf-analyzer",
+      "domain": "research-knowledge",
+      "path": "skills/epub-pdf-analyzer/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Deep structural parsing, indexing, cross-referencing, and semantic querying of ebooks and whitepapers."
+    },
+    {
+      "name": "youtube-article-extractor",
+      "domain": "research-knowledge",
+      "path": "skills/youtube-article-extractor/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Extracts and summarizes YouTube video transcripts and web-article content."
+    },
+    {
+      "name": "finishing-dev-branch",
+      "domain": "developer-workflow",
+      "path": "skills/finishing-dev-branch/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Automates the branch-merge staging workflow: validation, formatting, reviews, cleanup."
+    },
+    {
+      "name": "systematic-debugging",
+      "domain": "developer-workflow",
+      "path": "skills/systematic-debugging/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Enforces step-by-step root-cause analysis from telemetry and logs; prevents shallow fixes."
+    },
+    {
+      "name": "test-driven-development",
+      "domain": "developer-workflow",
+      "path": "skills/test-driven-development/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Strict TDD enforcement: no code generation until robust test specifications exist."
+    },
+    {
+      "name": "using-git-worktrees",
+      "domain": "developer-workflow",
+      "path": "skills/using-git-worktrees/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Architectural context for multi-branch work with Git worktrees."
+    },
+    {
+      "name": "pypict-combinatorial-qa",
+      "domain": "developer-workflow",
+      "path": "skills/pypict-combinatorial-qa/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Generates pairwise and combinatorial test matrices for structural QA."
+    },
+    {
+      "name": "webapp-testing-playwright",
+      "domain": "developer-workflow",
+      "path": "skills/webapp-testing-playwright/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Automated browser-driven UI test flows end-to-end via Playwright."
+    },
+    {
+      "name": "web-asset-generator",
+      "domain": "design",
+      "path": "skills/web-asset-generator/SKILL.md",
+      "status": "active",
+      "added": "2026-07-01",
+      "summary": "Produces cross-platform app icons, Open Graph tags, and PWA manifest configurations."
     }
   ],
   "agents": [
     {
       "name": "Daily_Living_Productivity_Agent",
       "path": "agents/Daily_Living_Productivity_Agent.md",
-      "status": "stub",
-      "note": "One-line description only; full instructions now covered by skills/pragmatic-productivity."
+      "status": "active",
+      "note": "Rebuilt 2026-07-05: state-based routing (clear-headed/scattered/depleted/catch-up), GTD capture-clarify-organize, anchors and closing ritual; hands off to skills/alzheimers-adhd-daily-support for executive-function-shaped forgetfulness."
     },
     {
       "name": "Legal_Regulatory_Dossier_Agent",
       "path": "agents/Legal_Regulatory_Dossier_Agent.md",
-      "status": "stub",
-      "note": "One-line description only; analytical core now covered by skills/legal-analysis-compliance."
+      "status": "active",
+      "note": "Rebuilt 2026-07-05: CREAC analysis, jurisdiction matrices, Bluebook signal discipline, Likelihood×Impact compliance scoring, attorney-relationship disclaimer."
     },
     {
       "name": "Skilled_Biography_Interviewer_Agent",
       "path": "agents/Skilled_Biography_Interviewer_Agent.md",
-      "status": "stub",
-      "note": "Biography-specific; general technique now covered by skills/structured-interviewer."
+      "status": "active",
+      "note": "Rebuilt 2026-07-05: persona/rules card routing to the six-skill biography interview family."
     },
     {
       "name": "Biography_Memoir_Writer_Agent",
       "path": "agents/Biography_Memoir_Writer_Agent.md",
+      "status": "active",
+      "note": "Rebuilt 2026-07-05: Cambridge-level prose guidance (Orwell, Strunk & White, Cambridge style guide), AI-tell purge list; works only from publication-tagged interview material."
+    },
+    {
+      "name": "Cognitive_Support_Companion_Agent",
+      "path": "agents/Cognitive_Support_Companion_Agent.md",
+      "status": "active",
+      "added": "2026-07-18",
+      "note": "Routing persona for cognitive-support conversations: listens first (empathetic-listening), screens for red flags (health-information-advisor), then routes dementia-caregiver vs ADHD executive-function work to alzheimers-adhd-daily-support and siblings.",
+      "skills_routed": [
+        "empathetic-listening",
+        "health-information-advisor",
+        "medical-information-advisor",
+        "alzheimers-adhd-daily-support",
+        "family-memory-deep-probe-reliability",
+        "pragmatic-productivity"
+      ]
+    },
+    {
+      "name": "Job_Application_Career_Agent",
+      "path": "agents/Job_Application_Career_Agent.md",
       "status": "stub",
-      "note": "Genre-specific; general prose craft now covered by skills/cambridge-writer."
+      "note": "One-line description; functionality covered by skills/job-search-agent (flagged 2026-07-06 for absorption)."
+    },
+    {
+      "name": "Critical_Analysis_PostHoc_Agent",
+      "path": "agents/Critical_Analysis_PostHoc_Agent.md",
+      "status": "stub",
+      "note": "One-line description; functionality covered by Post-hoc Analyzer Agent.md and skills/self-debate."
+    },
+    {
+      "name": "Self_Challenge_Devils_Advocate_Agent",
+      "path": "agents/Self_Challenge_Devils_Advocate_Agent.md",
+      "status": "stub",
+      "note": "One-line description; functionality covered by skills/self-debate and prompts/socratic-self-review."
+    },
+    {
+      "name": "ELT_Teaching_Master_Agent",
+      "path": "agents/ELT_Teaching_Master_Agent.md",
+      "status": "stub",
+      "note": "One-line description; teaching content lives in SKILL_celta_lesson_teacher_v1.md and SKILL_elt_*.md at repo root."
+    },
+    {
+      "name": "ELT365_Micro_Course_Publisher_Agent",
+      "path": "agents/ELT365_Micro_Course_Publisher_Agent.md",
+      "status": "stub",
+      "note": "One-line description only."
+    },
+    {
+      "name": "Wiki_Knowledge_Management_Agent",
+      "path": "agents/Wiki_Knowledge_Management_Agent.md",
+      "status": "stub",
+      "note": "One-line description; functionality covered by skills/tapestry-knowledge-graphs."
     }
   ],
   "state_protocol": "Long_Task_Memory_Protocol.md",

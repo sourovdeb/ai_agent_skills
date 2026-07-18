@@ -36,6 +36,32 @@ Navigation hub for all skill definitions and eval infrastructure.
 | `skills/family-memory-deep-probe-reliability` | Elderly/memory-impaired narrators, reliability-coded conflicting accounts | `skills/alzheimers-adhd-daily-support` |
 | `agents/Skilled_Biography_Interviewer_Agent` | Interviewer persona + non-compromisable rules, routes to the family above | See above |
 | `agents/Biography_Memoir_Writer_Agent` | Cambridge-level memoir prose writer, works from tagged interview material | `skills/content-research-writer` |
+| `agents/Cognitive_Support_Companion_Agent` | Listens-first routing persona for dementia-caregiver and ADHD executive-function conversations (new 2026-07-18) | `skills/empathetic-listening`, `skills/alzheimers-adhd-daily-support`, `skills/health-information-advisor` |
+
+## Developer, Design & Meta Skills (registered in manifest 2026-07-18)
+
+| Skill | Description |
+|-------|-------------|
+| `skills/decision-battery-antifragile` | 42-step antifragile decision OS with SCAMPER, black-swan module, ND energy gates (+ standalone AGENT.md) |
+| `skills/theme-factory` | 10 professional color/font themes for decks, documents, reports, HTML |
+| `skills/prompt-architect` | Rebuilds raw questions into precise, testable prompts |
+| `skills/brainstorming-matrix` | Rough ideas → structured system-architecture designs |
+| `skills/superpowers` / `skills/superpowers-lab` | Coordinator skill for brainstorm/debug/TDD/planning; lab = experimental features |
+| `skills/skill-seekers` | Generates a skill from docs, APIs, codebases, or PDFs |
+| `skills/tapestry-knowledge-graphs` | Document dumps → navigable knowledge graphs/wiki |
+| `skills/defense-in-depth-hardening` | Multi-layered security assessment and hardening |
+| `skills/ffuf-security-fuzzer` | Web-app fuzzing for authorized security testing |
+| `skills/epub-pdf-analyzer` | Structural parsing and semantic querying of ebooks/whitepapers |
+| `skills/youtube-article-extractor` | Transcript and article extraction/summarization |
+| `skills/finishing-dev-branch` | Branch-merge staging workflow automation |
+| `skills/systematic-debugging` | Root-cause-first debugging discipline |
+| `skills/test-driven-development` | Strict TDD enforcement |
+| `skills/using-git-worktrees` | Multi-branch work via Git worktrees |
+| `skills/pypict-combinatorial-qa` | Pairwise/combinatorial test-matrix generation |
+| `skills/webapp-testing-playwright` | End-to-end browser UI test automation |
+| `skills/web-asset-generator` | App icons, Open Graph tags, PWA manifests |
+
+Full machine-readable registry: `config/skills_manifest.json` (v1.1, 2026-07-18).
 
 ## Eval Infrastructure
 
