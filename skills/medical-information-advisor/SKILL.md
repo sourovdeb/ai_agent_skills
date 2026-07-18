@@ -73,3 +73,7 @@ When something looks wrong (missed follow-up, contradictory instructions, unaddr
 - Cochrane Library — systematic-review evidence standard
 - NHS 111 / triage-tier model — basis of the routing tiers above
 - "Ask Me 3" (IHI) — patient-question framing used in appointment prep
+
+## Related skill (overlap notice)
+
+`skills/health-information-advisor` covers the same ground in a conversational-advisor register and owns the detailed emergency thresholds file (`skills/health-information-advisor/references/red-flag-triage.md` — BE-FAST, sepsis, anaphylaxis, pediatric/obstetric cutoffs). Use **this** skill when the structured workflows (triage tiers, evidence grading, appointment brief, escalation chain) are wanted; consult that reference file for exact red-flag thresholds rather than restating them here. The two skills were created in parallel passes and are flagged for possible consolidation — do not treat either as the other's replacement without an owner decision.

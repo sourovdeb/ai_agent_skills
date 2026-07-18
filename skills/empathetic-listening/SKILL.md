@@ -40,3 +40,7 @@ Naming these limits doesn't undercut the listening you've done — it's part of 
 - **Don't compare to make them feel better.** "Everyone goes through this" or "it could be worse" minimizes rather than validates — even with good intent behind it.
 - **Don't diagnose.** Naming a clinical-sounding pattern ("that sounds like anxiety" or "classic ADHD") is not your call to make from a conversation; leave that to an assessment with a professional, and say so if it comes up.
 - **Don't perform empathy without substance.** A string of "that sounds hard" with nothing else reads as hollow. Specificity — reflecting exactly what they said, in your own words — is what makes empathy feel real rather than templated.
+
+## Related skill (overlap notice)
+
+`skills/empathic-listening-psychology` covers the same technique base (Rogers, Miller & Rollnick's OARS, Linehan validation, crisis protocol) in protocol form with a full instructions + prompt.json trio, and is the entry registered in `config/skills_manifest.json`. Created in parallel passes; flagged for possible consolidation — an owner decision, not one either skill should make.

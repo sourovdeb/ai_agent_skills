@@ -36,6 +36,9 @@ Navigation hub for all skill definitions and eval infrastructure.
 | `skills/family-memory-deep-probe-reliability` | Elderly/memory-impaired narrators, reliability-coded conflicting accounts | `skills/alzheimers-adhd-daily-support` |
 | `agents/Skilled_Biography_Interviewer_Agent` | Interviewer persona + non-compromisable rules, routes to the family above | See above |
 | `agents/Biography_Memoir_Writer_Agent` | Cambridge-level memoir prose writer, works from tagged interview material | `skills/content-research-writer` |
+| `agents/Cognitive_Support_Companion_Agent` | Front door for dementia caregiving + ADHD daily living: listen-first, routes across care/medical/psychology/legal/productivity skills | `skills/alzheimers-adhd-daily-support`, `config/skills_manifest.json` |
+
+**Audit trail:** [[Skills_Update_Summary_2026-07-04]] · [[Domain_Skills_Audit_2026-07-05]] · [[QC_Upgrade_Report_2026-07-06]] · [[Skills_Audit_2026-07-18]]
 
 ## Eval Infrastructure
 
