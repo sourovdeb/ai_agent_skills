@@ -36,6 +36,22 @@ Navigation hub for all skill definitions and eval infrastructure.
 | `skills/family-memory-deep-probe-reliability` | Elderly/memory-impaired narrators, reliability-coded conflicting accounts | `skills/alzheimers-adhd-daily-support` |
 | `agents/Skilled_Biography_Interviewer_Agent` | Interviewer persona + non-compromisable rules, routes to the family above | See above |
 | `agents/Biography_Memoir_Writer_Agent` | Cambridge-level memoir prose writer, works from tagged interview material | `skills/content-research-writer` |
+| `skills/pragmatic-productivity` | Practical non-generic productivity workflows (capture-triage, weekly review, calendar defense) | `agents/Daily_Living_Productivity_Agent` |
+| `skills/legal-analysis-compliance` | IRAC-plus analysis, jurisdiction-first rule, UPL boundary | `agents/Legal_Regulatory_Dossier_Agent`, `prompts/legal-agent` |
+| `skills/medical-information-advisor` | Trio-format health advisor: red-flag triage, evidence grading, appointment prep | `skills/health-information-advisor` |
+| `skills/empathic-listening-psychology` | Enforced listening-first protocol (no advice in first response, OARS, crisis escalation) | `skills/empathetic-listening`, `skills/psychology-agent` |
+| `skills/structured-interviewer` | Structured-interview design, BARS scorecards, bias-controlled evaluation | `agents/Job_Application_Career_Agent` |
+| `skills/cambridge-writer` | Argument-first prose at a demanding academic standard | `skills/writer-agent` |
+| `agents/Care_Support_Companion_Agent` | Orchestrator routing mixed health/emotional/cognitive-support conversations, safety-first order | `skills/alzheimers-adhd-daily-support`, `skills/medical-information-advisor` |
+| `agents/Job_Application_Career_Agent` | Router card to the job-search-agent skill + interview/writing/productivity chain | `skills/job-search-agent` |
+
+## Meta & Decision Skills (added July 2026)
+
+| Skill | Description | Links |
+|-------|-------------|-------|
+| `skills/decision-battery-antifragile` | 42-step antifragile decision OS with SCAMPER core, black-swan module, energy gates | `skills/decision-battery-antifragile/AGENT.md` |
+| `skills/theme-factory` | Ten professional visual themes (palettes + typography) for artifacts and documents | `skills/theme-factory/references/theme-details.md` |
+| `config/skills_manifest.json` | Machine-readable registry of all skills and agents (v1.1, 2026-07-19) | — |
 
 ## Eval Infrastructure
 

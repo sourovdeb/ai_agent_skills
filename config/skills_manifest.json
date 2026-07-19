@@ -1,6 +1,6 @@
 {
-  "manifest_version": "1.0",
-  "updated": "2026-07-06",
+  "manifest_version": "1.1",
+  "updated": "2026-07-19",
   "description": "Machine-readable registry of agent skills in this repository. Each entry points to the skill's SKILL.md definition and, where present, its evals/evals.json (schema documented in 'JSON Schemas.MD.md').",
   "domains": [
     "productivity",
@@ -60,7 +60,9 @@
         "evidence grading labels"
       ],
       "instructions": "skills/medical-information-advisor/medical-information-advisor.instructions.md",
-      "prompt": "skills/medical-information-advisor/medical-information-advisor.prompt.json"
+      "prompt": "skills/medical-information-advisor/medical-information-advisor.prompt.json",
+      "related": "health-information-advisor",
+      "note": "Division of labor (2026-07-19): this skill is the trio-format protocol with evidence grading; health-information-advisor is the advisor-voice companion carrying the detailed red-flag-triage reference file. Deliberately kept as a pair."
     },
     {
       "name": "empathic-listening-psychology",
@@ -76,7 +78,12 @@
         "crisis protocol with direct safety inquiry and resources"
       ],
       "instructions": "skills/empathic-listening-psychology/empathic-listening-psychology.instructions.md",
-      "prompt": "skills/empathic-listening-psychology/empathic-listening-psychology.prompt.json"
+      "prompt": "skills/empathic-listening-psychology/empathic-listening-psychology.prompt.json",
+      "related": [
+        "empathetic-listening",
+        "psychology-agent"
+      ],
+      "note": "Division of labor (2026-07-19): this skill is the enforced protocol (banned first-response advice, trio format); empathetic-listening is the fuller technique essay explaining the method and its failure modes. Deliberately kept as a pair."
     },
     {
       "name": "structured-interviewer",
@@ -286,32 +293,199 @@
       "summary": "Multi-tool job-seeker workflow: CV and letter updates, opportunity research, Gmail cross-reference, CSV tracking, PDF export.",
       "instructions": "skills/job-search-agent/job-search-agent.instructions.md",
       "prompt": "skills/job-search-agent/job-search-agent.prompt.json"
+    },
+    {
+      "name": "health-information-advisor",
+      "domain": "medical",
+      "path": "skills/health-information-advisor/SKILL.md",
+      "evals": "skills/health-information-advisor/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Advisor-voice health information and patient education with a dedicated red-flag triage reference (cardiac, BE-FAST stroke, sepsis, anaphylaxis, pediatric, obstetric, mental-health crisis).",
+      "safety_gates": [
+        "red-flag screen before any other content",
+        "no diagnosis, dosing, or medication changes",
+        "sources named (CDC, WHO, NIH, specialty societies)"
+      ],
+      "references": [
+        "skills/health-information-advisor/references/red-flag-triage.md"
+      ],
+      "related": "medical-information-advisor"
+    },
+    {
+      "name": "empathetic-listening",
+      "domain": "psychology",
+      "path": "skills/empathetic-listening/SKILL.md",
+      "evals": "skills/empathetic-listening/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Reflective-listening technique essay grounded in Rogerian person-centered practice and motivational interviewing; reflect-before-fix, validation without forced agreement, crisis handoff.",
+      "safety_gates": [
+        "crisis-escalation section with concrete resources (988, abuse disclosures)"
+      ],
+      "related": "empathic-listening-psychology"
+    },
+    {
+      "name": "alzheimers-adhd-daily-support",
+      "domain": "medical",
+      "path": "skills/alzheimers-adhd-daily-support/SKILL.md",
+      "evals": "skills/alzheimers-adhd-daily-support/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Dementia caregiving (validation therapy, environment/routine design, wandering safety, caregiver burnout) and ADHD executive-function support (externalized time and memory, task initiation, body doubling).",
+      "safety_gates": [
+        "medication questions route to the person's own clinician"
+      ],
+      "related": [
+        "family-memory-deep-probe-reliability",
+        "pragmatic-productivity"
+      ]
+    },
+    {
+      "name": "biography-memoir-system",
+      "domain": "interviewing",
+      "path": "skills/biography-memoir-system/SKILL.md",
+      "evals": "skills/biography-memoir-system/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Orchestrator for the biography/interview skill family; owns the shared interview-methodology reference all variants read.",
+      "references": [
+        "skills/biography-memoir-system/references/interview-methodology.md"
+      ]
+    },
+    {
+      "name": "biography-interview-kit-private-master",
+      "domain": "interviewing",
+      "path": "skills/biography-interview-kit-private-master/SKILL.md",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Complete, unfiltered private-archive interviews — the family's default starting point."
+    },
+    {
+      "name": "biography-interview-kit-public",
+      "domain": "interviewing",
+      "path": "skills/biography-interview-kit-public/SKILL.md",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Publication-intended interviews with the private/public boundary set before the session."
+    },
+    {
+      "name": "dual-biography-interview-skill-v2",
+      "domain": "interviewing",
+      "path": "skills/dual-biography-interview-skill-v2/SKILL.md",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "One session, two tagged outputs (private archive + publishable draft), so no one is interviewed twice."
+    },
+    {
+      "name": "family-memory-deep-probe-reliability",
+      "domain": "interviewing",
+      "path": "skills/family-memory-deep-probe-reliability/SKILL.md",
+      "evals": "skills/family-memory-deep-probe-reliability/evals/evals.json",
+      "status": "active",
+      "added": "2026-07-05",
+      "registered": "2026-07-19",
+      "summary": "Elderly or memory-impaired narrators and cross-relative reliability reconciliation; home of the dementia-aware interviewing technique.",
+      "related": "alzheimers-adhd-daily-support"
+    },
+    {
+      "name": "decision-battery-antifragile",
+      "domain": "meta",
+      "path": "skills/decision-battery-antifragile/SKILL.md",
+      "status": "active",
+      "added": "2026-07-14",
+      "registered": "2026-07-19",
+      "summary": "42-step antifragile decision OS (SCAMPER core, black-swan module, neurodivergent energy gates, meta-agent hooks); ships with standalone AGENT.md prompt.",
+      "agent_prompt": "skills/decision-battery-antifragile/AGENT.md"
+    },
+    {
+      "name": "theme-factory",
+      "domain": "meta",
+      "path": "skills/theme-factory/SKILL.md",
+      "status": "active",
+      "added": "2026-07-17",
+      "registered": "2026-07-19",
+      "summary": "Ten professional visual themes (palettes + typography) for artifact and document styling.",
+      "references": [
+        "skills/theme-factory/references/theme-details.md"
+      ]
     }
   ],
   "agents": [
     {
       "name": "Daily_Living_Productivity_Agent",
       "path": "agents/Daily_Living_Productivity_Agent.md",
-      "status": "stub",
-      "note": "One-line description only; full instructions now covered by skills/pragmatic-productivity."
+      "status": "active",
+      "note": "Rewritten 2026-07-05 (state-based routing, GTD capture-clarify-organize, anchors); manifest status corrected 2026-07-19. Complements skills/pragmatic-productivity; hands off to alzheimers-adhd-daily-support for executive-function-shaped struggles."
     },
     {
       "name": "Legal_Regulatory_Dossier_Agent",
       "path": "agents/Legal_Regulatory_Dossier_Agent.md",
-      "status": "stub",
-      "note": "One-line description only; analytical core now covered by skills/legal-analysis-compliance."
+      "status": "active",
+      "note": "Rewritten 2026-07-05 (CREAC, jurisdiction matrices, Bluebook signals, risk scoring); manifest status corrected 2026-07-19. Complements skills/legal-analysis-compliance and prompts/legal-agent."
     },
     {
       "name": "Skilled_Biography_Interviewer_Agent",
       "path": "agents/Skilled_Biography_Interviewer_Agent.md",
-      "status": "stub",
-      "note": "Biography-specific; general technique now covered by skills/structured-interviewer."
+      "status": "active",
+      "note": "Rewritten 2026-07-05 as persona/rules card routing to the biography skill family; manifest status corrected 2026-07-19."
     },
     {
       "name": "Biography_Memoir_Writer_Agent",
       "path": "agents/Biography_Memoir_Writer_Agent.md",
+      "status": "active",
+      "note": "Rewritten 2026-07-05 (Cambridge-level prose guidance, AI-tell purge list); manifest status corrected 2026-07-19. Complements skills/cambridge-writer."
+    },
+    {
+      "name": "Care_Support_Companion_Agent",
+      "path": "agents/Care_Support_Companion_Agent.md",
+      "status": "active",
+      "added": "2026-07-19",
+      "note": "New orchestrator persona: routes mixed health/emotional/cognitive-support conversations across the medical, psychology, and alzheimers-adhd skills in a fixed safety-first order (red-flag screen, then listening, then information, then daily-living design, then caregiver check)."
+    },
+    {
+      "name": "Job_Application_Career_Agent",
+      "path": "agents/Job_Application_Career_Agent.md",
+      "status": "active",
+      "added": "2026-07-19",
+      "note": "Stub completed as a router card to skills/job-search-agent, closing the 2026-07-06 QC report follow-up."
+    },
+    {
+      "name": "Critical_Analysis_PostHoc_Agent",
+      "path": "agents/Critical_Analysis_PostHoc_Agent.md",
       "status": "stub",
-      "note": "Genre-specific; general prose craft now covered by skills/cambridge-writer."
+      "note": "One-line pointer; full content lives at root 'Post-hoc Analyzer Agent.md'."
+    },
+    {
+      "name": "ELT_Teaching_Master_Agent",
+      "path": "agents/ELT_Teaching_Master_Agent.md",
+      "status": "stub",
+      "note": "One-line pointer; full content lives in the root SKILL_celta/elt files. Out of scope for the domain passes."
+    },
+    {
+      "name": "ELT365_Micro_Course_Publisher_Agent",
+      "path": "agents/ELT365_Micro_Course_Publisher_Agent.md",
+      "status": "stub",
+      "note": "One-line description; teaching domain, out of scope for the domain passes."
+    },
+    {
+      "name": "Self_Challenge_Devils_Advocate_Agent",
+      "path": "agents/Self_Challenge_Devils_Advocate_Agent.md",
+      "status": "stub",
+      "note": "One-line description; function covered by skills/self-debate and prompts/socratic-self-review."
+    },
+    {
+      "name": "Wiki_Knowledge_Management_Agent",
+      "path": "agents/Wiki_Knowledge_Management_Agent.md",
+      "status": "stub",
+      "note": "One-line description; no covering skill yet — candidate for a future pass."
     }
   ],
   "state_protocol": "Long_Task_Memory_Protocol.md",
