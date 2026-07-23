@@ -1,0 +1,39 @@
+{
+  "skill_name": "system-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a system for handling my freelance client invoices. I use Gmail, Google Drive, and a spreadsheet. Invoices go out monthly and I keep forgetting to chase late payers.",
+      "expected_output": "A System Design Dossier: purpose, boundary, SIPOC-style flow with an owner and trigger per stage, named concrete components (specific files, folders, sheet columns), a risk register with the 5x5 matrix including the 'late payer never chased' failure, 2-5 metrics with unit and source, review cadence, kill criterion, and open assumptions listed at the end.",
+      "expectations": [
+        "Every stage of the flow has a named owner and an explicit trigger",
+        "Components are documentary-precise (named files, sheet columns, dates), not generic ('a tracking sheet')",
+        "The send/chase step terminates in a human approval gate rather than fully automated sending",
+        "A risk register with likelihood-impact scoring, control types, and owners is present",
+        "Open assumptions are listed at the end, not buried or omitted"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build me a risk register for running a 6-week community pilot of an online Bengali radio stream with volunteer contributors.",
+      "expected_output": "A risk-management deliverable: risks across content, technical, volunteer, legal/licensing, and audience dimensions, each scored on the 5x5 likelihood-impact matrix with a named owner, a control typed as prevent/detect/correct, and a review date; plus the review cadence for the register itself.",
+      "expectations": [
+        "Each risk has likelihood and impact scores with the scoring band stated",
+        "Each risk has an owner, a control classified as prevent/detect/correct, and a review date",
+        "Licensing/regulatory risk is included for a broadcasting pilot",
+        "No risk is listed without a corresponding control"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Automate my weekly report: pull numbers from our dashboard, write a summary, and email it to my boss every Friday.",
+      "expected_output": "An automation pipeline spec that names the runtime, credential store, failure path, and dry-run default, and that ends the pipeline at a human approval gate before the email is sent — automation prepares the draft, the owner sends it.",
+      "expectations": [
+        "The email send step is a human approval gate, not an unattended automatic send",
+        "The spec names a runtime, a credential store (no secrets in source), a failure path, and a dry-run default",
+        "The maintenance cost of the automation is stated alongside the proposal",
+        "Metrics or a checkpoint exist to detect silent failure of the pipeline"
+      ]
+    }
+  ]
+}

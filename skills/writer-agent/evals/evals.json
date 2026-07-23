@@ -1,0 +1,37 @@
+{
+  "skill_name": "writer-agent",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Explain how compound interest works for a blog post aimed at people who have never invested. Make it engaging, not a textbook.",
+      "expected_output": "A piece opening on one specific person, scene, or question (anecdotal lede), with the concrete example arriving before the abstract principle, one idea per paragraph, everyday words, a stated readability estimate or measurement against a target grade band, and a closing that returns to the opening.",
+      "expectations": [
+        "The piece opens with a specific scene, person, or question rather than a definition or throat-clearing preamble",
+        "A concrete worked example appears before the general principle is stated",
+        "Readability is measured or estimated and stated against the audience target, labeled as unmeasured if tools were unavailable",
+        "No fabricated statistics or invented named people presented as real"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite this so normal people understand it: 'Utilization of the aforementioned methodology necessitates the prioritization of stakeholder alignment initiatives prior to the operationalization of the implementation roadmap.'",
+      "expected_output": "A one-sentence plain rewrite (roughly: 'Before you start, get the people involved to agree'), with the economy edits named or visible — long words swapped for short, needless words cut, passive converted — and no loss of the original meaning.",
+      "expectations": [
+        "The rewrite is dramatically shorter and uses everyday words",
+        "The meaning of the original is preserved, not approximated into something vaguer",
+        "The response demonstrates or names the specific economy rules applied rather than just presenting output"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a 200-word explanation of mRNA vaccines for a public health page. It will be published.",
+      "expected_output": "A plain-language explanation within length, concrete analogy before mechanism, every factual claim either verifiable or flagged for verification, and an explicit note that publication output chains socratic-self-review per the skill's fact gate.",
+      "expectations": [
+        "Factual claims are conservative and verifiable; anything uncertain is flagged rather than asserted",
+        "Precision is not simplified into falsehood; where precision and plainness conflict, a plain explanatory sentence is added instead of dropping the precise claim",
+        "The publication fact-gate is applied or explicitly invoked (socratic-self-review chain) before delivery",
+        "Length is close to the requested 200 words"
+      ]
+    }
+  ]
+}
