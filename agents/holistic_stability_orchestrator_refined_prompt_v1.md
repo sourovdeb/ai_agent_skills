@@ -7,7 +7,7 @@
 - **CELTA/Regulatory (high-priority):** Appeals ongoing (Cambridge 2814333, Ofqual SJ3XP35D, DDD 26-023768, CNIL, Qualiopi). Evidence: Jane Ryder email 01/03/2026 (unimplemented accommodations), Doc 10 (Dr. Pauvert), RGPD violation. Strategy: Tailor per agency mandate (Loi 2005-102 etc.).
 - **Auto-Entrepreneur/Admin (urgent setup):** SIRET 10676406100011 BNC1 (aff. 04/06/2026), Urssaf (CA declarations, compte 974 5244629), DGFiP pro space needed, e-invoicing PDP reception by **01/09/2026** (confirmed: all enterprises must receive via PDP agréée from 01/09/2026 per service-public.fr/impots.gouv.fr; emission 2027 for micro). CGSS ameli account activation (courrier 01/07/2026).
 - **France Travail:** Contrat actif (19/11/2025), référent James MARTIN (068james.martin@francetravail.net), 15h/week mobilization, ORE Formateur anglais K2111 CDI ≥2000€/≤100km St-Pierre. Avoid sanctions (radiation 4 months).
-- **Other:** House Pierrefonds (copropriété), WP sourovdeb.com, tutoring (interactive, Wed AM+weekends), GitHub security fix needed.
+- **Other:** House Pierrefonds (copropriété), WP sourovdeb.com (REST key: stored in secure vault — rotate immediately if ever pasted in chat), tutoring (interactive, Wed AM+weekends), GitHub security fix needed.
 - **APIs/Sources:** France Travail/Emploi Store (renew creds <24/07/2026), ESCO, Legifrance PISTE, service-public.fr, impots.gouv.fr, ameli.fr, autoentrepreneur.urssaf.fr. Verify all admin deadlines here first.
 
 ## Task

@@ -9,7 +9,7 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 ## Quick Navigation
 
 | Folder | Files | Purpose |
-|--------|-------|----------|
+|--------|-------|---------|
 | [skills/](skills/) | 114 | Skill definitions (SKILL.md + evals + instructions + prompts) |
 | [agents/](agents/) | 17 | AI agent instruction sets and automation configs |
 | [guides/](guides/) | 7 | Tutorials, best practices, configuration guides |
@@ -24,18 +24,71 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 
 ---
 
-## Skills (114 files across 51 skill packages)
+## Skills (114 files across 41 skill packages)
 
 Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.instructions.md`, `.prompt.json`.
 
-See [skills/README.md](skills/README.md) for full skill listing.
+| Skill Package | Has Evals | Has Instructions |
+|---------------|-----------|------------------|
+| alzheimers-adhd-daily-support | ✅ | — |
+| api-reference | — | — |
+| biography-interview-kit-private-master | ✅ | — |
+| biography-interview-kit-public | ✅ | — |
+| biography-memoir-system | ✅ | — |
+| brainstorming-matrix | — | — |
+| cambridge-writer | ✅ | ✅ |
+| content-research-writer | — | — |
+| data-analysis | — | ✅ |
+| deep-brainstorm | — | ✅ |
+| defense-in-depth-hardening | — | — |
+| dual-biography-interview-skill-v2 | ✅ | — |
+| empathetic-listening | ✅ | — |
+| empathic-listening-psychology | ✅ | ✅ |
+| epub-pdf-analyzer | — | — |
+| family-memory-deep-probe-reliability | ✅ | — |
+| ffuf-security-fuzzer | — | — |
+| finishing-dev-branch | — | — |
+| health-information-advisor | ✅ | — |
+| investigative-psychology | — | — |
+| investigative-research | — | ✅ |
+| invoice-file-organizer | — | — |
+| job-search-agent | — | ✅ |
+| legal-analysis-compliance | ✅ | ✅ |
+| legacy/SKILL_celta_lesson_teacher_v1 | — | — |
+| legacy/SKILL_elt_elicitor_v1 | — | — |
+| legacy/SKILL_elt_essay_teacher_v1 | — | — |
+| life-history-elicitation | — | ✅ |
+| medical-information-advisor | ✅ | ✅ |
+| memory-elicitation-interview-skill | ✅ | — |
+| objective-first | — | ✅ |
+| pragmatic-productivity | ✅ | ✅ |
+| prompt-architect | — | — |
+| psychology-agent | — | ✅ |
+| pypict-combinatorial-qa | — | — |
+| self-debate | — | ✅ |
+| self-hosting-infra-advisor | — | — |
+| skill-creator | — | — |
+| skill-seekers | — | — |
+| structured-interviewer | ✅ | ✅ |
+| superpowers | — | — |
+| superpowers-lab | — | — |
+| system-design | — | — |
+| systematic-debugging | — | — |
+| tapestry-knowledge-graphs | — | — |
+| test-driven-development | — | — |
+| universal-upgrade | — | ✅ |
+| using-git-worktrees | — | — |
+| web-asset-generator | — | — |
+| webapp-testing-playwright | — | — |
+| writer-agent | — | ✅ |
+| youtube-article-extractor | — | — |
 
 ---
 
 ## Agents (17 files)
 
 | Agent | Purpose |
-|-------|---------|
+|-------|----------|
 | AI_Agent_Core_Instructions.md | Core Claude Code agent instructions |
 | Biography_Memoir_Writer_Agent.md | Biography and memoir writing automation |
 | Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
@@ -52,6 +105,7 @@ See [skills/README.md](skills/README.md) for full skill listing.
 | arch-usb-agent-instructions.md | Arch Linux USB setup automation |
 | email-agent.md | Email automation and drafting |
 | Compare two outputs...AGENT.md | Blind comparison evaluator |
+| holistic_stability_orchestrator_refined_prompt_v1.md | 10-agent health-first productivity orchestrator |
 
 ---
 

@@ -187,6 +187,7 @@ def extract_entities(filepath):
     with open(filepath, "r", errors="ignore") as f:
         content = f.read()
     
+    # Look for capitalised names (crude but effective for this project)
     import re
     
     # People: Two or more capitalised words
@@ -233,24 +234,31 @@ def answer_from_project(question, max_results=5):
     Given a question, search all project files and return relevant passages.
     Intended for agent use; agent then synthesises the answer.
     """
+    # Extract key terms from question
+    # (In production: use NLP; here, simple word extraction)
     stopwords = {"what","when","where","who","how","did","is","was","are","the","a","an","in","of","to","for","and","or"}
     keywords = [w for w in question.lower().split() if w not in stopwords and len(w) > 3]
     
     results = {}
     for keyword in keywords:
         found = search_project(keyword)
-        for item in found[:3]:
+        for item in found[:3]:  # top 3 per keyword
             key = item["file"]
             if key not in results:
                 results[key] = {"path": item["path"], "score": 0}
             results[key]["score"] += item["mentions"]
     
+    # Sort by relevance score
     ranked = sorted(results.items(), key=lambda x: -x[1]["score"])
     
+    # Extract relevant passages from top files
     passages = []
     for filename, info in ranked[:max_results]:
         with open(info["path"], "r", errors="ignore") as f:
             content = f.read()
+        # Find most relevant 300-char passage
+        best_idx = 0
+        best_score = 0
         for kw in keywords:
             idx = content.lower().find(kw)
             if idx > 0:
