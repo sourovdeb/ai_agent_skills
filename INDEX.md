@@ -2,7 +2,7 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-07-26 | **Total Files**: 189 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-07-26 | **Total Files**: 205 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
@@ -11,15 +11,15 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 | Folder | Files | Purpose |
 |--------|-------|---------|
 | [skills/](skills/) | 114 | Skill definitions (SKILL.md + evals + instructions + prompts) |
-| [agents/](agents/) | 17 | AI agent instruction sets and automation configs |
-| [guides/](guides/) | 7 | Tutorials, best practices, configuration guides |
+| [agents/](agents/) | 29 | AI agent instruction sets and automation configs |
+| [guides/](guides/) | 8 | Tutorials, best practices, configuration guides |
 | [tools/](tools/) | 17 | Python scripts, shell scripts, utilities |
 | [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
 | [templates/](templates/) | 3 | Frameworks for creating new skills and artifacts |
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
-| [projects/](projects/) | 2 | Website redesign and project assets |
-| [docs/](docs/) | 4 | Reports, archives, trackers, old index |
+| [projects/](projects/) | 4 | Website redesign and project assets |
+| [docs/](docs/) | 5 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
 ---
@@ -85,10 +85,29 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Agents (17 files)
+## Agents (29 files)
+
+### Fleet: Holistic Stability & Productivity
 
 | Agent | Purpose |
-|-------|----------|
+|-------|---------|
+| 01-holistic-life-orchestrator.md | Chief-of-staff orchestrator: all domains |
+| 02-health-stability-guardian.md | Health & stability veto agent |
+| 03-appointment-deadline-sentinel.md | Deadlines and reminders with lead-time alerts |
+| 04-document-intake-analyst.md | PDF/letter ingestion and routing |
+| 05-inbox-triage-agent.md | Gmail triage and daily digest |
+| 06-admin-correspondence-drafter.md | FR/EN formal letters — never auto-sends |
+| 07-income-opportunity-scout.md | Job and tutoring opportunity search |
+| 08-content-publishing-agent.md | WordPress draft and publish |
+| 09-weekly-planner-prioritizer.md | Health-first weekly plan |
+| 10-knowledge-cache-curator.md | Central knowledge registry — load first |
+| BRAINSTORM-v2-five-agents-and-workflows.md | 5-agent core design + workflow chains |
+| TWO_CORE_AGENTS.md | Consolidated two-core system v1.0 |
+
+### Specialist Agents
+
+| Agent | Purpose |
+|-------|---------|
 | AI_Agent_Core_Instructions.md | Core Claude Code agent instructions |
 | Biography_Memoir_Writer_Agent.md | Biography and memoir writing automation |
 | Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
@@ -122,6 +141,8 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 ## Tracker
 
 Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
+
+Agents fleet catalog: [`docs/trackers/agents-catalog.csv`](docs/trackers/agents-catalog.csv)
 
 Also saved to: Google Drive & Box (`free_education - AI Skills Trends` folder)
 
