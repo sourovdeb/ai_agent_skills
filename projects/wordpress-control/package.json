@@ -1,0 +1,38 @@
+{
+  "name": "wp-ai-studio",
+  "displayName": "WP AI Studio",
+  "description": "Control your WordPress site with AI — Claude, DeepSeek, Ollama",
+  "version": "1.0.0",
+  "publisher": "sourovdeb",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "wpai.openPanel",    "title": "WP AI: Open Studio"       },
+      { "command": "wpai.generatePost", "title": "WP AI: Generate Post"     },
+      { "command": "wpai.siteStatus",   "title": "WP AI: Check Site Status" }
+    ],
+    "viewsContainers": {
+      "activitybar": [{ "id": "wp-ai-studio", "title": "WP AI Studio", "icon": "media/icon.svg" }]
+    },
+    "configuration": {
+      "title": "WP AI Studio",
+      "properties": {
+        "wpai.wordpressUrl":  { "type": "string",  "default": "" },
+        "wpai.wpUser":        { "type": "string",  "default": "" },
+        "wpai.wpAppPassword": { "type": "string",  "default": "" },
+        "wpai.pluginKey":     { "type": "string",  "default": "" },
+        "wpai.aiProvider":    { "type": "string",  "default": "claude" },
+        "wpai.claudeKey":     { "type": "string",  "default": "" },
+        "wpai.deepseekKey":   { "type": "string",  "default": "" },
+        "wpai.ollamaUrl":     { "type": "string",  "default": "http://localhost:11434" },
+        "wpai.ollamaModel":   { "type": "string",  "default": "llama3" },
+        "wpai.approvalMode":  { "type": "boolean", "default": true },
+        "wpai.defaultStatus": { "type": "string",  "default": "draft" }
+      }
+    }
+  },
+  "dependencies": { "node-fetch": "^3.3.2" }
+}
