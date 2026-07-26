@@ -2,133 +2,86 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Organized Date**: 2026-07-11  
-**Repository Structure Version**: 1.0
+**Last Organised**: 2026-07-26 | **Total Files**: 189 | **Branch**: `claude/jolly-fermi-gkbw49`
+
+---
 
 ## Quick Navigation
 
-- **[ORGANIZATION.md](ORGANIZATION.md)** - Complete folder structure and organization guide
-- **[Contributing Guide](#contributing)** - How to add new content
+| Folder | Files | Purpose |
+|--------|-------|----------|
+| [skills/](skills/) | 114 | Skill definitions (SKILL.md + evals + instructions + prompts) |
+| [agents/](agents/) | 17 | AI agent instruction sets and automation configs |
+| [guides/](guides/) | 7 | Tutorials, best practices, configuration guides |
+| [tools/](tools/) | 17 | Python scripts, shell scripts, utilities |
+| [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
+| [templates/](templates/) | 3 | Frameworks for creating new skills and artifacts |
+| [config/](config/) | 5 | JSON schemas, manifests, reference docs |
+| [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
+| [projects/](projects/) | 2 | Website redesign and project assets |
+| [docs/](docs/) | 4 | Reports, archives, trackers, old index |
+| [tests/](tests/) | 1 | Unit tests for repo utilities |
 
-## Folder Overview
+---
 
-### 📚 [Skills](skills/)
-Agent capabilities and task-specific skills
-- CELTA lesson teaching
-- ELT elicitation techniques
-- Essay teaching methodology
+## Skills (114 files across 51 skill packages)
 
-→ [View Skills](skills/README.md)
+Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.instructions.md`, `.prompt.json`.
 
-### 🤖 [Agents](agents/)
-Pre-configured AI agent instruction sets
-- Post-hoc analyzer for output evaluation
-- Email automation agent
-- Blind comparison evaluator
-- System automation agents
+See [skills/README.md](skills/README.md) for full skill listing.
 
-→ [View Agents](agents/README.md)
+---
 
-### 📖 [Guides](guides/)
-Detailed tutorials and best practices
-- System configuration (NXTPaper, Arch Linux, KDE)
-- Collaborative workflows
-- Automation strategies
-- Research best practices
+## Agents (17 files)
 
-→ [View Guides](guides/README.md)
-
-### 🛠️ [Tools](tools/)
-Reusable scripts and utilities
-- Python tools for report generation, validation, GIF creation
-- Shell scripts for artifact bundling
-- Shared utilities and validators
-
-→ [View Tools](tools/README.md)
-
-### ✅ [Evaluation](evaluation/)
-Testing and validation frameworks
-- Interactive evaluation interface
-- Transcript evaluation tools
-- Output validation workflows
-
-→ [View Evaluation](evaluation/README.md)
-
-### 📋 [Templates](templates/)
-Frameworks for creating new content
-- Skill creation framework
-- Web artifact builder
-
-→ [View Templates](templates/README.md)
-
-### ⚙️ [Config](config/)
-Reference documentation and configuration
-- JSON schemas
-- GIF documentation reference
-- Updates and changelog
-
-→ [View Config](config/README.md)
+| Agent | Purpose |
+|-------|---------|
+| AI_Agent_Core_Instructions.md | Core Claude Code agent instructions |
+| Biography_Memoir_Writer_Agent.md | Biography and memoir writing automation |
+| Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
+| Daily_Living_Productivity_Agent.md | Daily productivity support |
+| ELT365_Micro_Course_Publisher_Agent.md | ELT micro-course publication |
+| ELT_Teaching_Master_Agent.md | Master ELT teaching agent |
+| Job_Application_Career_Agent.md | Job application automation |
+| Legal_Regulatory_Dossier_Agent.md | Legal and regulatory research |
+| Long_Task_Memory_Protocol.md | Memory management for long tasks |
+| Post-hoc Analyzer Agent.md | Output evaluation and analysis |
+| Self_Challenge_Devils_Advocate_Agent.md | Devil's advocate reasoning |
+| Skilled_Biography_Interviewer_Agent.md | Biography interview specialist |
+| Wiki_Knowledge_Management_Agent.md | Knowledge base management |
+| arch-usb-agent-instructions.md | Arch Linux USB setup automation |
+| email-agent.md | Email automation and drafting |
+| Compare two outputs...AGENT.md | Blind comparison evaluator |
 
 ---
 
 ## Getting Started
 
-### For Beginners
-1. Start with the **[Guides](guides/)** folder
-2. Read system configuration and best practices
-3. Explore the **[Skills](skills/)** folder to understand capabilities
+**Beginners**: → [guides/](guides/) → [skills/](skills/)
 
-### For Developers
-1. Review **[Templates](templates/)** to understand skill creation
-2. Check **[Tools](tools/)** for reusable components
-3. Use **[Evaluation](evaluation/)** framework to validate your work
+**Developers**: → [templates/](templates/) → [tools/](tools/) → [evaluation/](evaluation/)
 
-### For Integration
-1. Review **[Agents](agents/)** for available automations
-2. Configure using **[Config](config/)** schemas
-3. Test using **[Evaluation](evaluation/)** tools
+**Integration**: → [agents/](agents/) → [config/](config/) → [prompts/](prompts/)
+
+---
+
+## Tracker
+
+Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
+
+Also saved to: Google Drive & Box (`free_education - AI Skills Trends` folder)
 
 ---
 
 ## Contributing
 
-When adding new content:
-
-1. **Identify the category** - Which folder does your content belong to?
-2. **Follow conventions** - Use naming patterns from existing files
-3. **Add documentation** - Include README sections explaining your contribution
-4. **Update this INDEX** - Add references to new major content
-5. **Commit with clear message** - Describe what was added and why
-
-Example folder locations:
-- New educational guide → `guides/`
-- New skill definition → `skills/`
-- New automation agent → `agents/`
-- New Python utility → `tools/`
-- New validation tool → `evaluation/`
-- New template → `templates/`
+1. Place new content in the correct folder
+2. For skills: create `skills/<your-skill-name>/SKILL.md`
+3. For agents: add to `agents/`
+4. For guides: add to `guides/`
+5. Update this INDEX on significant additions
+6. Commit to branch `claude/jolly-fermi-gkbw49`
 
 ---
 
-## Repository Statistics
-
-- **Total Skills**: 3
-- **Total Agents**: 4
-- **Total Guides**: 6
-- **Total Tools**: 19
-- **Total Evaluation Tools**: 2
-- **Total Templates**: 2
-- **Total Reference Files**: 3
-
-**Last Updated**: 2026-07-11  
-**Repository Branch**: claude/jolly-fermi-gkbw49
-
----
-
-## License
-
-See LICENSE file in repository root.
-
----
-
-For questions or contributions, refer to individual folder READMEs.
+See [ORGANIZATION.md](ORGANIZATION.md) for full folder structure reference.
