@@ -41,7 +41,7 @@
 ## 3. Prioritized Actions (Strongest Effective First)
 **Critical/High Severity (Security + Workflow Integrity)**:
 1. **Rotate Credentials Immediately** (do this before any further publishing or tool use):
-   - Hostinger API token (revoke RZL18sGBKEXtN3ru4nBKJUUHfrx6RhTPD9eA4vtA91f690fd in hPanel, generate new).
+   - Hostinger API token (revoke in hPanel, generate new).
    - WordPress X-Sourov-Key / deploy.php secret (update via wp-admin or secure method; never paste new value in chat).
    - Update any connected apps/scripts (GAS PropertiesService, local .env, skill files) with new values only.
 2. **Re-verify Custom Endpoints Post-Rotation**:

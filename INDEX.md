@@ -29,7 +29,7 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.instructions.md`, `.prompt.json`.
 
 | Skill Package | Has Evals | Has Instructions |
-|---------------|-----------|-----------------|
+|---------------|-----------|------------------|
 | alzheimers-adhd-daily-support | ✅ | — |
 | api-reference | — | — |
 | biography-interview-kit-private-master | ✅ | — |
@@ -88,7 +88,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 ## Agents (17 files)
 
 | Agent | Purpose |
-|-------|---------|
+|-------|----------|
 | AI_Agent_Core_Instructions.md | Core Claude Code agent instructions |
 | Biography_Memoir_Writer_Agent.md | Biography and memoir writing automation |
 | Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
@@ -105,6 +105,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | arch-usb-agent-instructions.md | Arch Linux USB setup automation |
 | email-agent.md | Email automation and drafting |
 | Compare two outputs...AGENT.md | Blind comparison evaluator |
+| holistic_stability_orchestrator_refined_prompt_v1.md | 10-agent health-first productivity orchestrator |
 
 ---
 

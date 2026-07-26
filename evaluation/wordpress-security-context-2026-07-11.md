@@ -45,7 +45,7 @@
 - Note: This config is for external MCP clients (e.g. Claude Desktop). Not directly launchable or usable from this environment's tool registry. No matching Hostinger MCP connector available in current tools.
 
 ## 5. Security Warning & Governance Conflict (Direct from Source Message)
-**Critical Flag**: "Before anything else: this message contains live secrets in plaintext — a Hostinger API token, a phpMyAdmin database name/user, and a WordPress 'Secret API Key' (`0767044896thevenet_`). This is now in chat transcript, which conflicts directly with your own governance rule (INC2671905 — no credentials outside PropertiesService/env vars, established as permanent after the France Travail exposure)."
+**Critical Flag**: Plaintext secrets appeared in chat transcript — a Hostinger API token, a phpMyAdmin database name/user, and a WordPress 'Secret API Key'. This conflicts directly with governance rule INC2671905 (no credentials outside PropertiesService/env vars, established as permanent after the France Travail exposure).
 
 **Action Required (Source Message)**:
 1. Rotate the Hostinger API token now (hPanel → API tokens → revoke the specific token, issue new one).

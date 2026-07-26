@@ -334,4 +334,3 @@ pip install pypdf pdfplumber --break-system-packages
 # pdftotext: sudo apt-get install poppler-utils
 # python-docx: pip install python-docx --break-system-packages
 ```
-
