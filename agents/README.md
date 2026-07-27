@@ -2,7 +2,7 @@
 
 AI agent instruction sets and configurations for automated workflows.
 
-**Total agents**: 29 | **Last Updated**: 2026-07-26
+**Total agents**: 34 | **Last Updated**: 2026-07-27
 
 ---
 
@@ -28,17 +28,30 @@ Integrated system for health-first life management. Load Agent 10 (Knowledge Cac
 ## Design & Architecture
 
 | File | Purpose |
-|------|---------|
+|------|----------|
 | [BRAINSTORM-v2-five-agents-and-workflows.md](BRAINSTORM-v2-five-agents-and-workflows.md) | 5-agent core design + workflow chains |
 | [TWO_CORE_AGENTS.md](TWO_CORE_AGENTS.md) | Consolidated two-core system v1.0 |
 | [holistic_stability_orchestrator_refined_prompt_v1.md](holistic_stability_orchestrator_refined_prompt_v1.md) | Original 10-agent orchestrator prompt |
 
 ---
 
+## v2 Architecture (Redesigned System)
+
+Upgraded from v1.0 based on design review. Wellbeing gatekeeper broadened; France Travail merged into Legal Sentinel; Deep Brainstorm (#6) and Tutoring & Learning Designer (#9) added; dates removed from agent specs (live in tracker CSV only).
+
+| File | Purpose |
+|------|----------|
+| [v2/README.md](v2/README.md) | v2 system overview and v1→v2 change table |
+| [v2/00_orchestrator_spec.yaml](v2/00_orchestrator_spec.yaml) | Agent 0 full YAML spec — intake→extract→verify→health-gate→route→act→report |
+| [v2/01-09_specialized_agents.md](v2/01-09_specialized_agents.md) | Agents 1–9 summary specs (YAML blocks) |
+| [v2/master_tracker_v2.csv](v2/master_tracker_v2.csv) | Single source of truth for deadlines and obligations |
+
+---
+
 ## Specialist Agents (16)
 
 | Agent | Purpose |
-|-------|---------|
+|-------|----------|
 | [AI_Agent_Core_Instructions.md](AI_Agent_Core_Instructions.md) | Core Claude Code agent instructions |
 | [Biography_Memoir_Writer_Agent.md](Biography_Memoir_Writer_Agent.md) | Biography and memoir writing |
 | [Critical_Analysis_PostHoc_Agent.md](Critical_Analysis_PostHoc_Agent.md) | Post-hoc critical analysis |

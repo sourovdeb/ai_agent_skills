@@ -2,24 +2,24 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-07-26 | **Total Files**: 205 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-07-27 | **Total Files**: 217 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
 ## Quick Navigation
 
 | Folder | Files | Purpose |
-|--------|-------|---------|
+|--------|-------|----------|
 | [skills/](skills/) | 114 | Skill definitions (SKILL.md + evals + instructions + prompts) |
-| [agents/](agents/) | 29 | AI agent instruction sets and automation configs |
+| [agents/](agents/) | 34 | AI agent instruction sets and automation configs |
 | [guides/](guides/) | 8 | Tutorials, best practices, configuration guides |
-| [tools/](tools/) | 17 | Python scripts, shell scripts, utilities |
+| [tools/](tools/) | 18 | Python scripts, shell scripts, utilities |
 | [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
 | [templates/](templates/) | 3 | Frameworks for creating new skills and artifacts |
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
-| [projects/](projects/) | 4 | Website redesign and project assets |
-| [docs/](docs/) | 5 | Reports, archives, trackers, old index |
+| [projects/](projects/) | 10 | Project assets (website redesign, WP extension, Bengali Radio) |
+| [docs/](docs/) | 6 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
 ---
@@ -85,12 +85,12 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Agents (29 files)
+## Agents (34 files)
 
 ### Fleet: Holistic Stability & Productivity
 
 | Agent | Purpose |
-|-------|---------|
+|-------|----------|
 | 01-holistic-life-orchestrator.md | Chief-of-staff orchestrator: all domains |
 | 02-health-stability-guardian.md | Health & stability veto agent |
 | 03-appointment-deadline-sentinel.md | Deadlines and reminders with lead-time alerts |
@@ -104,27 +104,68 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | BRAINSTORM-v2-five-agents-and-workflows.md | 5-agent core design + workflow chains |
 | TWO_CORE_AGENTS.md | Consolidated two-core system v1.0 |
 
+### v2 Architecture (Redesigned System)
+
+Upgraded from v1.0. Wellbeing gatekeeper broadened; France Travail merged into Legal Sentinel; Deep Brainstorm (#6) and Tutoring Designer (#9) added; deadlines moved to tracker CSV.
+
+| File | Purpose |
+|------|----------|
+| v2/README.md | v2 system overview and v1→v2 change table |
+| v2/00_orchestrator_spec.yaml | Agent 0 full YAML spec — intake→extract→verify→health-gate→route→act→report |
+| v2/01-09_specialized_agents.md | Agents 1–9 summary specs (YAML blocks) |
+| v2/master_tracker_v2.csv | Single source of truth for deadlines and obligations |
+
 ### Specialist Agents
 
 | Agent | Purpose |
-|-------|---------|
-| AI_Agent_Core_Instructions.md | Core Claude Code agent instructions |
+|-------|----------|
+| AI_Agent_Core_Instructions.md | Core Claude Code agent instructions and protocols |
 | Biography_Memoir_Writer_Agent.md | Biography and memoir writing automation |
 | Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
-| Daily_Living_Productivity_Agent.md | Daily productivity support |
+| Daily_Living_Productivity_Agent.md | Daily productivity and living support |
 | ELT365_Micro_Course_Publisher_Agent.md | ELT micro-course publication |
-| ELT_Teaching_Master_Agent.md | Master ELT teaching agent |
-| Job_Application_Career_Agent.md | Job application automation |
-| Legal_Regulatory_Dossier_Agent.md | Legal and regulatory research |
-| Long_Task_Memory_Protocol.md | Memory management for long tasks |
-| Post-hoc Analyzer Agent.md | Output evaluation and analysis |
+| ELT_Teaching_Master_Agent.md | Master ELT teaching agent for lesson planning and delivery |
+| Job_Application_Career_Agent.md | Job application and career advancement automation |
+| Legal_Regulatory_Dossier_Agent.md | Legal and regulatory research and dossier building |
+| Long_Task_Memory_Protocol.md | Memory management protocol for long multi-session tasks |
+| Post-hoc Analyzer Agent.md | Output evaluation and analysis against expectations |
 | Self_Challenge_Devils_Advocate_Agent.md | Devil's advocate reasoning |
-| Skilled_Biography_Interviewer_Agent.md | Biography interview specialist |
-| Wiki_Knowledge_Management_Agent.md | Knowledge base management |
+| Skilled_Biography_Interviewer_Agent.md | Biography interview specialist with elicitation techniques |
+| Wiki_Knowledge_Management_Agent.md | Knowledge base and wiki management automation |
 | arch-usb-agent-instructions.md | Arch Linux USB setup automation |
 | email-agent.md | Email automation and drafting |
 | Compare two outputs...AGENT.md | Blind comparison evaluator |
 | holistic_stability_orchestrator_refined_prompt_v1.md | 10-agent health-first productivity orchestrator |
+
+---
+
+## Projects (10 files)
+
+### website-redesign & wordpress-control
+
+| File | Purpose |
+|------|----------|
+| projects/website-redesign/ | Website redesign assets and documentation |
+| projects/wordpress-control/README.md | WP AI Studio VS Code extension documentation |
+| projects/wordpress-control/package.json | WP AI Studio VS Code extension manifest (no credentials) |
+
+### bengali-radio (2026-07-27)
+
+Community radio platform research and planning for West Bengal Bengali-language content.
+
+| File | Purpose |
+|------|----------|
+| projects/bengali-radio/execution-plan.md | 4-phase plan: validation → pilot → scale → sustainability |
+| projects/bengali-radio/ideas.md | 5 brainstormed ideas ranked by impact/feasibility |
+| projects/bengali-radio/research-methodology.md | Investigative research framework for MIB licensing |
+| projects/bengali-radio/upgrades.md | Gap analysis: AI transcription + solar power + emergency alerts |
+
+### wordpress-control/audits (2026-07-27)
+
+| File | Purpose |
+|------|----------|
+| projects/wordpress-control/audits/INDEXED_MESSAGE_AND_SECURITY_CONTEXT.md | Redacted security context index (INC2671905) |
+| projects/wordpress-control/audits/PUBLIC_AUDIT_REPORT_sourovdeb_com_2026-07-11.md | Public audit — plugins/pages/posts (Hostinger token redacted) |
 
 ---
 
@@ -140,7 +181,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ## Tracker
 
-Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
+Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv)
 
 Agents fleet catalog: [`docs/trackers/agents-catalog.csv`](docs/trackers/agents-catalog.csv)
 
