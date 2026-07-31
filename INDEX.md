@@ -2,7 +2,7 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-07-31 | **Total Files**: 255 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-07-31 | **Total Files**: 270 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
@@ -12,13 +12,13 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 |--------|-------|----------|
 | [skills/](skills/) | 119 | Skill definitions (SKILL.md + evals + instructions + prompts) |
 | [agents/](agents/) | 34 | AI agent instruction sets and automation configs |
-| [guides/](guides/) | 19 | Tutorials, best practices, configuration guides |
+| [guides/](guides/) | 20 | Tutorials, best practices, configuration guides |
 | [tools/](tools/) | 34 | Python scripts, shell scripts, JS utilities |
 | [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
 | [templates/](templates/) | 4 | Frameworks for creating new skills and artifacts |
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
-| [projects/](projects/) | 20 | Project assets (website redesign, WP extension, Bengali Radio, free-education) |
+| [projects/](projects/) | 34 | Project assets (website redesign, WP extension, Bengali Radio, free-education, ai-term-lessons, site-monetization) |
 | [docs/](docs/) | 7 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
@@ -142,7 +142,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Guides (19 files)
+## Guides (20 files)
 
 | Guide | Purpose |
 |-------|----------|
@@ -156,6 +156,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | 08_HEALTH_PRODUCTIVITY_TOOLS.md | eMoods, Daylio, Focusmate, no-zero-days system, neurodivergent writing |
 | 09_AUTOMATION_TOOLS.md | Free and open source automation tools: job scraping, email, content, SEO, social, cron, analytics |
 | 10_WORDPRESS_SEO_GUIDE.md | WordPress SEO guide with pre/post-publish checklists, keyword strategy, backlinks, timeline |
+| 11_AI_LANGUAGE_TEACHING_MODES.md | Three operational modes (Teacher/Linguist/Learner) for consistent AI-assisted ELT |
 | GITHUB_SETUP_GUIDE_STEP_BY_STEP.md | Step-by-step git setup for beginners |
 | GOOGLE_DRIVE_SETUP_GUIDE_STEP_BY_STEP.md | Google Drive folder structure and sharing setup |
 | Always use supporting extensions... | Extensions, local software, cache clearing, efficiency |
@@ -235,7 +236,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Projects (20 files)
+## Projects (34 files)
 
 ### website-redesign & wordpress-control
 
@@ -275,6 +276,30 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | projects/weekly-briefings/2026-07-19-human-skills-vs-ai/build_deck.py | python-pptx 9-slide doodle deck builder (PAPER/INK/ACCENT palette) |
 | projects/weekly-briefings/2026-07-19-human-skills-vs-ai/mindmap.mm | FreeMind mind map: DURABLE HUMAN SKILLS, AI shifts, NICHE LEARNING, meta-skill, formula |
 | projects/weekly-briefings/2026-06-29-human-nature-evolution-psychology.md | Weekly briefing: human nature, evolution, psychology, major life transitions (June 2026) |
+
+### ai-term-lessons (2026-07-24)
+
+| File | Purpose |
+|------|----------|
+| projects/ai-term-lessons/README.md | AI Explained Simply series overview: plain-language AI term lessons, 9-episode roadmap |
+| projects/ai-term-lessons/mindmaps/AI_Explained_Simply.mm | FreeMind mindmap with speaker notes for Episodes 1–2 and full 9-episode roadmap |
+| projects/ai-term-lessons/01_AI_Agent/01_AI_Agent_Lesson_Script.md | Episode 1 script: What's an AI Agent? — slide map, doodle list, Mistral Studio anchor |
+| projects/ai-term-lessons/01_AI_Agent/build_deck.js | Episode 1 pptxgenjs Node.js deck builder: Ocean Gradient palette, 5 slides |
+| projects/ai-term-lessons/02_Model/02_Model_Lesson_Script.md | Episode 2 script: What's an AI Model? — data+muscle+language formula, next-word predictor |
+| projects/ai-term-lessons/02_Model/build_deck.py | Episode 2 python-pptx 5-slide deck builder: Ocean Gradient palette |
+
+### site-monetization (2026-07-24)
+
+| File | Purpose |
+|------|----------|
+| projects/site-monetization/00-README.md | sourovdeb.com monetization package index — 4 AdSense blockers, 8-file package overview |
+| projects/site-monetization/advertiser-attraction-plan.md | Phase-by-phase plan: compliance → AdSense → traffic → direct sponsors; income table |
+| projects/site-monetization/category-descriptions.md | SEO descriptions for 11 WP categories + fill-in formula |
+| projects/site-monetization/global-improvement-manual.md | Long-term SEO and monetization roadmap, quarterly review guide, Core Web Vitals |
+| projects/site-monetization/homepage-meta-tags.md | Homepage title/description options, OG social preview tags, per-post meta formula |
+| projects/site-monetization/implementation-manual.md | Step-by-step WP implementation: AdSense blockers through application and ad placement (10 sections) |
+| projects/site-monetization/privacy-policy.md | GDPR + AdSense compliant Privacy Policy template — placeholder fields, no live credentials |
+| projects/site-monetization/weekly-audit-agent.md | Weekly site audit agent spec: 14-check checklist, Monday 06:00 UTC schedule |
 
 ---
 
