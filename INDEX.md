@@ -2,7 +2,7 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-07-27 | **Total Files**: 217 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-07-31 | **Total Files**: 241 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
@@ -10,21 +10,21 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 
 | Folder | Files | Purpose |
 |--------|-------|----------|
-| [skills/](skills/) | 114 | Skill definitions (SKILL.md + evals + instructions + prompts) |
+| [skills/](skills/) | 119 | Skill definitions (SKILL.md + evals + instructions + prompts) |
 | [agents/](agents/) | 34 | AI agent instruction sets and automation configs |
-| [guides/](guides/) | 8 | Tutorials, best practices, configuration guides |
-| [tools/](tools/) | 18 | Python scripts, shell scripts, utilities |
+| [guides/](guides/) | 17 | Tutorials, best practices, configuration guides |
+| [tools/](tools/) | 27 | Python scripts, shell scripts, JS utilities |
 | [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
 | [templates/](templates/) | 3 | Frameworks for creating new skills and artifacts |
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
-| [projects/](projects/) | 10 | Project assets (website redesign, WP extension, Bengali Radio) |
-| [docs/](docs/) | 6 | Reports, archives, trackers, old index |
+| [projects/](projects/) | 16 | Project assets (website redesign, WP extension, Bengali Radio, free-education) |
+| [docs/](docs/) | 7 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
 ---
 
-## Skills (114 files across 41 skill packages)
+## Skills (119 files across 46 skill packages)
 
 Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.instructions.md`, `.prompt.json`.
 
@@ -36,6 +36,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | biography-interview-kit-public | ✅ | — |
 | biography-memoir-system | ✅ | — |
 | brainstorming-matrix | — | — |
+| branded-cv-letter-design | — | — |
 | cambridge-writer | ✅ | ✅ |
 | content-research-writer | — | — |
 | data-analysis | — | ✅ |
@@ -48,6 +49,8 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | family-memory-deep-probe-reliability | ✅ | — |
 | ffuf-security-fuzzer | — | — |
 | finishing-dev-branch | — | — |
+| gmail-bulk-draft-automation | — | — |
+| google-apps-script-job-automation | — | — |
 | health-information-advisor | ✅ | — |
 | investigative-psychology | — | — |
 | investigative-research | — | ✅ |
@@ -60,11 +63,13 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | life-history-elicitation | — | ✅ |
 | medical-information-advisor | ✅ | ✅ |
 | memory-elicitation-interview-skill | ✅ | — |
+| neurodiversity-disclosure-documentation | — | — |
 | objective-first | — | ✅ |
 | pragmatic-productivity | ✅ | ✅ |
 | prompt-architect | — | — |
 | psychology-agent | — | ✅ |
 | pypict-combinatorial-qa | — | — |
+| regulatory-case-analysis-education | — | — |
 | self-debate | — | ✅ |
 | self-hosting-infra-advisor | — | — |
 | skill-creator | — | — |
@@ -106,8 +111,6 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ### v2 Architecture (Redesigned System)
 
-Upgraded from v1.0. Wellbeing gatekeeper broadened; France Travail merged into Legal Sentinel; Deep Brainstorm (#6) and Tutoring Designer (#9) added; deadlines moved to tracker CSV.
-
 | File | Purpose |
 |------|----------|
 | v2/README.md | v2 system overview and v1→v2 change table |
@@ -124,48 +127,121 @@ Upgraded from v1.0. Wellbeing gatekeeper broadened; France Travail merged into L
 | Critical_Analysis_PostHoc_Agent.md | Post-hoc critical analysis |
 | Daily_Living_Productivity_Agent.md | Daily productivity and living support |
 | ELT365_Micro_Course_Publisher_Agent.md | ELT micro-course publication |
-| ELT_Teaching_Master_Agent.md | Master ELT teaching agent for lesson planning and delivery |
-| Job_Application_Career_Agent.md | Job application and career advancement automation |
-| Legal_Regulatory_Dossier_Agent.md | Legal and regulatory research and dossier building |
-| Long_Task_Memory_Protocol.md | Memory management protocol for long multi-session tasks |
-| Post-hoc Analyzer Agent.md | Output evaluation and analysis against expectations |
+| ELT_Teaching_Master_Agent.md | Master ELT teaching agent |
+| Job_Application_Career_Agent.md | Job application and career advancement |
+| Legal_Regulatory_Dossier_Agent.md | Legal and regulatory research |
+| Long_Task_Memory_Protocol.md | Memory management for long multi-session tasks |
+| Post-hoc Analyzer Agent.md | Output evaluation against expectations |
 | Self_Challenge_Devils_Advocate_Agent.md | Devil's advocate reasoning |
-| Skilled_Biography_Interviewer_Agent.md | Biography interview specialist with elicitation techniques |
-| Wiki_Knowledge_Management_Agent.md | Knowledge base and wiki management automation |
+| Skilled_Biography_Interviewer_Agent.md | Biography interview specialist |
+| Wiki_Knowledge_Management_Agent.md | Knowledge base and wiki management |
 | arch-usb-agent-instructions.md | Arch Linux USB setup automation |
 | email-agent.md | Email automation and drafting |
 | Compare two outputs...AGENT.md | Blind comparison evaluator |
-| holistic_stability_orchestrator_refined_prompt_v1.md | 10-agent health-first productivity orchestrator |
+| holistic_stability_orchestrator_refined_prompt_v1.md | 10-agent health-first orchestrator |
 
 ---
 
-## Projects (10 files)
+## Guides (17 files)
+
+| Guide | Purpose |
+|-------|----------|
+| 01_MASTER_AUTOMATION_GUIDE.md | WordPress automation system: folder watcher, GitHub Actions, job hunting |
+| 02_DEEPSEEK_API_GUIDE.md | DeepSeek API vs OpenAI cost comparison + Python/GAS integration |
+| 03_CSV_GOOGLE_SHEETS_TUTORIAL.md | CSV + Google Apps Script tutorial with publishFromSheet() script |
+| 04_FREE_AI_TOOLS_GUIDE.md | Comprehensive guide to free AI tools |
+| 05_OPEN_SOURCE_TOOLS_COLLECTION.md | WP-CLI, n8n, Huginn, writing tools, job search automation |
+| 06_AUDIO_VIDEO_BANNER_TOOLS.md | Canva, GIMP/Pillow banners, ElevenLabs, Whisper, OBS, DaVinci |
+| 07_WORDPRESS_CATEGORY_TAG_FIX.md | Python WP REST API category/tag fixes via Application Passwords |
+| 08_HEALTH_PRODUCTIVITY_TOOLS.md | eMoods, Daylio, Focusmate, no-zero-days system, neurodivergent writing |
+| GITHUB_SETUP_GUIDE_STEP_BY_STEP.md | Step-by-step git setup for beginners |
+| GOOGLE_DRIVE_SETUP_GUIDE_STEP_BY_STEP.md | Google Drive folder structure and sharing setup |
+| Always use supporting extensions... | Extensions, local software, cache clearing, efficiency |
+| always study and create scripts... | Automation scripts for large tasks |
+| always take advantage of copilot... | VS Code Copilot, local LMs, official docs |
+| doc-coauthoring.MD.md | Document co-authoring methodology |
+| nxtpaper-mode-arch-kde-deep-guide.md | NXTPaper mode on Arch Linux with KDE |
+| open automatically browser... | Live browser research guidance |
+| wordpress-content-sync.md | WordPress hourly content sync (credential redacted — INC2671905) |
+
+---
+
+## Tools (27 files)
+
+### WordPress Publishing
+
+| Tool | Purpose |
+|------|----------|
+| auto_publisher.py | Cron-based markdown→WP draft auto-publisher (env vars) |
+| folder_watcher.js | Node.js chokidar watcher: drop .md → WP draft (env vars) |
+| sheet_publisher.gs | Google Apps Script batch publisher from Sheets (PropertiesService) |
+| wp_publisher_gui.py | Tkinter desktop GUI for WP publishing (env vars) |
+| WP_PUBLISH_HELPER.py | Validates metadata, generates excerpts, publishing checklist |
+
+### Job Search
+
+| Tool | Purpose |
+|------|----------|
+| job_search.py | ELT/TEFL job search via Indeed RSS + daily email digest |
+| indeed_scraper.py | Indeed scraper via BeautifulSoup → job_leads/indeed_leads.json |
+| contact_finder.py | GitHub API search for writers/collaborators + outreach templates |
+| INDEED_SEARCH_AUTOMATION.sh | Bash job search report generator with Indeed URLs |
+| run_daily.sh | Daily runner: scrapers, essay count, git status |
+
+### AI Skill Utilities (from skill packages)
+
+| Tool | Purpose |
+|------|----------|
+| aggregate_benchmark.py | Benchmark aggregation |
+| bundle-artifact.sh | Artifact bundling |
+| frame_cmposer.py | Frame composition |
+| generate_report.py | Report generation |
+| generate_review.py | Review generation |
+| gif-builder.py | GIF building and animation |
+| gif_easing.py | GIF easing effects |
+| improve_description.py | Description optimization |
+| init-artifact.sh | Artifact initialization |
+| package_skill.py | Skill packaging |
+| quick_validate.py | Quick validation |
+| requirements.txt | Python dependencies |
+| run_eval.py | Evaluation runner |
+| run_loop.py | Agent loop runner |
+| utils.py | Shared utilities |
+| validators.py | Input/output validation |
+
+---
+
+## Projects (16 files)
 
 ### website-redesign & wordpress-control
 
 | File | Purpose |
 |------|----------|
-| projects/website-redesign/ | Website redesign assets and documentation |
+| projects/website-redesign/ | Website redesign assets |
 | projects/wordpress-control/README.md | WP AI Studio VS Code extension documentation |
-| projects/wordpress-control/package.json | WP AI Studio VS Code extension manifest (no credentials) |
+| projects/wordpress-control/package.json | Extension manifest (no credentials) |
+| projects/wordpress-control/CONTENT_SYNC_README.md | Content sync README (WP REST key redacted — INC2671905) |
+| projects/wordpress-control/extension.js | Extension backend: WP REST + AI providers (credentials via VS Code config) |
+| projects/wordpress-control/webview.js | Webview panel: 5 tabs Chat/Generate/Posts/Logs/Settings |
+| projects/wordpress-control/audits/INDEXED_MESSAGE_AND_SECURITY_CONTEXT.md | Redacted security context index |
+| projects/wordpress-control/audits/PUBLIC_AUDIT_REPORT_sourovdeb_com_2026-07-11.md | Public audit (Hostinger token redacted) |
 
 ### bengali-radio (2026-07-27)
-
-Community radio platform research and planning for West Bengal Bengali-language content.
 
 | File | Purpose |
 |------|----------|
 | projects/bengali-radio/execution-plan.md | 4-phase plan: validation → pilot → scale → sustainability |
-| projects/bengali-radio/ideas.md | 5 brainstormed ideas ranked by impact/feasibility |
-| projects/bengali-radio/research-methodology.md | Investigative research framework for MIB licensing |
-| projects/bengali-radio/upgrades.md | Gap analysis: AI transcription + solar power + emergency alerts |
+| projects/bengali-radio/ideas.md | 5 ideas ranked by impact/feasibility |
+| projects/bengali-radio/research-methodology.md | MIB licensing research framework |
+| projects/bengali-radio/upgrades.md | AI transcription + solar + emergency alerts gap analysis |
 
-### wordpress-control/audits (2026-07-27)
+### free-education (2026-07-27)
 
 | File | Purpose |
 |------|----------|
-| projects/wordpress-control/audits/INDEXED_MESSAGE_AND_SECURITY_CONTEXT.md | Redacted security context index (INC2671905) |
-| projects/wordpress-control/audits/PUBLIC_AUDIT_REPORT_sourovdeb_com_2026-07-11.md | Public audit — plugins/pages/posts (Hostinger token redacted) |
+| projects/free-education/2026-07-18-durable-skills-vs-ai/README.md | AI durable skills article: PwC 62% wage premium, AI×Judgment Stack |
+| projects/free-education/2026-07-18-durable-skills-vs-ai/mindmap.mm | FreeMind/Freeplane mind map of AI & durable skills |
+| projects/free-education/2026-07-18-durable-skills-vs-ai/build_deck.py | python-pptx 6-slide deck builder |
 
 ---
 
@@ -181,7 +257,9 @@ Community radio platform research and planning for West Bengal Bengali-language 
 
 ## Tracker
 
-Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv)
+Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-07-31.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-07-31.csv)
+
+Prior trackers: [`2026-07-27`](docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv) | [`2026-07-26`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
 
 Agents fleet catalog: [`docs/trackers/agents-catalog.csv`](docs/trackers/agents-catalog.csv)
 
