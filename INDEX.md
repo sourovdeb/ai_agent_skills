@@ -2,7 +2,7 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-07-31 | **Total Files**: 241 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-07-31 | **Total Files**: 255 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
@@ -12,13 +12,13 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 |--------|-------|----------|
 | [skills/](skills/) | 119 | Skill definitions (SKILL.md + evals + instructions + prompts) |
 | [agents/](agents/) | 34 | AI agent instruction sets and automation configs |
-| [guides/](guides/) | 17 | Tutorials, best practices, configuration guides |
-| [tools/](tools/) | 27 | Python scripts, shell scripts, JS utilities |
+| [guides/](guides/) | 19 | Tutorials, best practices, configuration guides |
+| [tools/](tools/) | 34 | Python scripts, shell scripts, JS utilities |
 | [evaluation/](evaluation/) | 5 | Testing, audit reports, validation frameworks |
-| [templates/](templates/) | 3 | Frameworks for creating new skills and artifacts |
+| [templates/](templates/) | 4 | Frameworks for creating new skills and artifacts |
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
-| [projects/](projects/) | 16 | Project assets (website redesign, WP extension, Bengali Radio, free-education) |
+| [projects/](projects/) | 20 | Project assets (website redesign, WP extension, Bengali Radio, free-education) |
 | [docs/](docs/) | 7 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
@@ -142,7 +142,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Guides (17 files)
+## Guides (19 files)
 
 | Guide | Purpose |
 |-------|----------|
@@ -154,6 +154,8 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | 06_AUDIO_VIDEO_BANNER_TOOLS.md | Canva, GIMP/Pillow banners, ElevenLabs, Whisper, OBS, DaVinci |
 | 07_WORDPRESS_CATEGORY_TAG_FIX.md | Python WP REST API category/tag fixes via Application Passwords |
 | 08_HEALTH_PRODUCTIVITY_TOOLS.md | eMoods, Daylio, Focusmate, no-zero-days system, neurodivergent writing |
+| 09_AUTOMATION_TOOLS.md | Free and open source automation tools: job scraping, email, content, SEO, social, cron, analytics |
+| 10_WORDPRESS_SEO_GUIDE.md | WordPress SEO guide with pre/post-publish checklists, keyword strategy, backlinks, timeline |
 | GITHUB_SETUP_GUIDE_STEP_BY_STEP.md | Step-by-step git setup for beginners |
 | GOOGLE_DRIVE_SETUP_GUIDE_STEP_BY_STEP.md | Google Drive folder structure and sharing setup |
 | Always use supporting extensions... | Extensions, local software, cache clearing, efficiency |
@@ -166,7 +168,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Tools (27 files)
+## Tools (34 files)
 
 ### WordPress Publishing
 
@@ -177,6 +179,17 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | sheet_publisher.gs | Google Apps Script batch publisher from Sheets (PropertiesService) |
 | wp_publisher_gui.py | Tkinter desktop GUI for WP publishing (env vars) |
 | WP_PUBLISH_HELPER.py | Validates metadata, generates excerpts, publishing checklist |
+| wp_publisher.py | WordPress publisher with SEO via deploy.php gateway (WP_DEPLOY_KEY env var — INC2671905) |
+| multiplatform_publisher.py | Multi-platform publisher: WordPress, Dev.to, Box, IndexNow — all credentials via env vars (INC2671905) |
+| sync_prep.py | Content manifest scanner: categorizes markdown for multi-platform sync, no credentials |
+| sync_verification.py | Content sync verification and deduplication hourly runner (WP_PLUGIN_KEY env var — INC2671905) |
+
+### Dev.to & Email
+
+| Tool | Purpose |
+|------|----------|
+| devto_publisher.py | Dev.to publisher: scans repos for AI content, posts as drafts (DEVTO_API_KEY env var) |
+| SMART_EMAIL_COMPOSER_v1.gs | Google Apps Script personalised outreach: 5 sector templates, placeholder file IDs |
 
 ### Job Search
 
@@ -187,6 +200,7 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | contact_finder.py | GitHub API search for writers/collaborators + outreach templates |
 | INDEED_SEARCH_AUTOMATION.sh | Bash job search report generator with Indeed URLs |
 | run_daily.sh | Daily runner: scrapers, essay count, git status |
+| unzip_and_push_my_professional_documents.sh | Bash archive extractor + git push: ZIP/TAR/GZ/7Z/RAR |
 
 ### AI Skill Utilities (from skill packages)
 
@@ -211,7 +225,17 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ---
 
-## Projects (16 files)
+## Templates (4 files)
+
+| Template | Purpose |
+|----------|----------|
+| Skill Creator.md | Comprehensive framework for creating new skills (33KB) |
+| Web Artifacts Builder.MD.md | Template for building web artifacts and HTML pages |
+| research-template.md | Investigative research template: claim identification, source hierarchy, COI checklist, balance check |
+
+---
+
+## Projects (20 files)
 
 ### website-redesign & wordpress-control
 
@@ -242,6 +266,15 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 | projects/free-education/2026-07-18-durable-skills-vs-ai/README.md | AI durable skills article: PwC 62% wage premium, AI×Judgment Stack |
 | projects/free-education/2026-07-18-durable-skills-vs-ai/mindmap.mm | FreeMind/Freeplane mind map of AI & durable skills |
 | projects/free-education/2026-07-18-durable-skills-vs-ai/build_deck.py | python-pptx 6-slide deck builder |
+
+### weekly-briefings (2026-07-31)
+
+| File | Purpose |
+|------|----------|
+| projects/weekly-briefings/2026-07-19-human-skills-vs-ai/README.md | The Human-Skills Premium 2026 mid-year trend brief: PwC 62% wage premium, skilliday boom |
+| projects/weekly-briefings/2026-07-19-human-skills-vs-ai/build_deck.py | python-pptx 9-slide doodle deck builder (PAPER/INK/ACCENT palette) |
+| projects/weekly-briefings/2026-07-19-human-skills-vs-ai/mindmap.mm | FreeMind mind map: DURABLE HUMAN SKILLS, AI shifts, NICHE LEARNING, meta-skill, formula |
+| projects/weekly-briefings/2026-06-29-human-nature-evolution-psychology.md | Weekly briefing: human nature, evolution, psychology, major life transitions (June 2026) |
 
 ---
 
