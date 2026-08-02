@@ -2,7 +2,7 @@
 
 A comprehensive collection of AI skills, agents, guides, and tools created by Claude Code routines.
 
-**Last Organised**: 2026-08-01 | **Total Files**: 271 | **Branch**: `claude/jolly-fermi-gkbw49`
+**Last Organised**: 2026-08-02 | **Total Files**: 271 | **Branch**: `claude/jolly-fermi-gkbw49`
 
 ---
 
@@ -19,7 +19,7 @@ A comprehensive collection of AI skills, agents, guides, and tools created by Cl
 | [config/](config/) | 5 | JSON schemas, manifests, reference docs |
 | [prompts/](prompts/) | 7 | Structured prompts (instructions + prompt.json pairs) |
 | [projects/](projects/) | 34 | Project assets (website redesign, WP extension, Bengali Radio, free-education, ai-term-lessons, site-monetization) |
-| [docs/](docs/) | 8 | Reports, archives, trackers, old index |
+| [docs/](docs/) | 9 | Reports, archives, trackers, old index |
 | [tests/](tests/) | 1 | Unit tests for repo utilities |
 
 ---
@@ -315,9 +315,9 @@ Structured as `skills/<name>/SKILL.md` with optional `evals/`, `references/`, `.
 
 ## Tracker
 
-Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-08-01.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-08-01.csv)
+Full file inventory CSV: [`docs/trackers/AI_Agent_Skills_Organization_2026-08-02.csv`](docs/trackers/AI_Agent_Skills_Organization_2026-08-02.csv)
 
-Prior trackers: [`2026-07-31`](docs/trackers/AI_Agent_Skills_Organization_2026-07-31.csv) | [`2026-07-27`](docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv) | [`2026-07-26`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
+Prior trackers: [`2026-08-01`](docs/trackers/AI_Agent_Skills_Organization_2026-08-01.csv) | [`2026-07-31`](docs/trackers/AI_Agent_Skills_Organization_2026-07-31.csv) | [`2026-07-27`](docs/trackers/AI_Agent_Skills_Organization_2026-07-27.csv) | [`2026-07-26`](docs/trackers/AI_Agent_Skills_Organization_2026-07-26.csv)
 
 Agents fleet catalog: [`docs/trackers/agents-catalog.csv`](docs/trackers/agents-catalog.csv)
 
