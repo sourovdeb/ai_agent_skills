@@ -20,5 +20,5 @@ env/
 
 # never commit credentials or local-only files
 *LOCAL_ONLY*
-*credentials*
-!credentials/
+credentials/
+*.xml
