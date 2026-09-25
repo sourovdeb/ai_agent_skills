@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "model": "mistral-small-2603",
+  "temperature": 0.6,
+  "max_calls": 4,
+  "max_output_tokens": 3000,
+  "max_request_bytes": 48000,
+  "automatic_provider_fallback": false,
+  "note": "Model pin verified in official docs 2026-09-25. Check your /models access. Limits are design defaults, not a price guarantee."
+}

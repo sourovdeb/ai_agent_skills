@@ -1,0 +1,5 @@
+/audiobook
+Fictional source: "You came back!"
+Context: a reunion; interpretive choice is relief becoming joy.
+Use the provisional UK pronunciation key for this tiny example: yoo=you, kaym=came, bak=back.
+Produce separate reading and pronunciation scripts with matching P01-S01 identifiers. Use a compact ASCII map. Do not add spoken words or generate audio.
