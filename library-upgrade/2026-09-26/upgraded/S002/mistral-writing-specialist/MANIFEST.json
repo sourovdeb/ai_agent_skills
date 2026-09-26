@@ -1,0 +1,146 @@
+{
+  "skill_id": "S002",
+  "name": "mistral-writing-specialist",
+  "source_version": "1.0.0",
+  "candidate_version": "1.1.0",
+  "source_commit": "0ad02d92d2ac130516f773035b63bb833ff0e593",
+  "publication_format": "source_package",
+  "generated_from": "verified response bundle",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 70
+    },
+    {
+      "path": "AUDIT.md",
+      "bytes": 4811
+    },
+    {
+      "path": "CHANGES.md",
+      "bytes": 591
+    },
+    {
+      "path": "CYCLE_CHECKPOINT.md",
+      "bytes": 891
+    },
+    {
+      "path": "EVALUATION.md",
+      "bytes": 2117
+    },
+    {
+      "path": "README.md",
+      "bytes": 1431
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 6975
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 1110
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 1328
+    },
+    {
+      "path": "STUDIO_SETUP.md",
+      "bytes": 2768
+    },
+    {
+      "path": "TEST_REPORT.md",
+      "bytes": 1716
+    },
+    {
+      "path": "UPGRADE_PROMPT.md",
+      "bytes": 1429
+    },
+    {
+      "path": "config.json",
+      "bytes": 383
+    },
+    {
+      "path": "examples/audiobook.txt",
+      "bytes": 358
+    },
+    {
+      "path": "examples/brief.txt",
+      "bytes": 530
+    },
+    {
+      "path": "examples/illumination-faithful.md",
+      "bytes": 637
+    },
+    {
+      "path": "examples/illumination-key-state.svg",
+      "bytes": 1055
+    },
+    {
+      "path": "knowledge/story-bible.template.json",
+      "bytes": 2090
+    },
+    {
+      "path": "prompts/chat-personalization.txt",
+      "bytes": 1167
+    },
+    {
+      "path": "prompts/compact.md",
+      "bytes": 1284
+    },
+    {
+      "path": "prompts/director.md",
+      "bytes": 4324
+    },
+    {
+      "path": "prompts/studio-agent.txt",
+      "bytes": 15990
+    },
+    {
+      "path": "tests/test_candidate_contract.py",
+      "bytes": 2968
+    },
+    {
+      "path": "tests/test_writer.py",
+      "bytes": 10350
+    },
+    {
+      "path": "tools.json",
+      "bytes": 2570
+    },
+    {
+      "path": "writer.py",
+      "bytes": 17067
+    },
+    {
+      "path": "writing-skills/audiobook/SKILL.md",
+      "bytes": 2732
+    },
+    {
+      "path": "writing-skills/continuity/SKILL.md",
+      "bytes": 1852
+    },
+    {
+      "path": "writing-skills/editor/SKILL.md",
+      "bytes": 1879
+    },
+    {
+      "path": "writing-skills/research/SKILL.md",
+      "bytes": 2015
+    },
+    {
+      "path": "writing-skills/scene-draft/SKILL.md",
+      "bytes": 1853
+    },
+    {
+      "path": "writing-skills/story-bible/SKILL.md",
+      "bytes": 2432
+    }
+  ],
+  "excluded_build_artifacts": [
+    "__pycache__/writer.cpython-313.pyc",
+    "tests/__pycache__/test_candidate_contract.cpython-313.pyc",
+    "tests/__pycache__/test_writer.cpython-313.pyc",
+    "examples/illumination-key-state.png"
+  ],
+  "exclusion_note": "Python caches are generated artifacts. The PNG is a derived preview; editable SVG remains included."
+}

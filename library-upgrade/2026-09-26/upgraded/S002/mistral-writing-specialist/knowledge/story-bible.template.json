@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "title": "Untitled",
+    "kind": "fiction",
+    "privacy": "private",
+    "author_preferences": []
+  },
+  "sections": {
+    "braindump": {
+      "raw_notes": [],
+      "alternatives": [],
+      "open_questions": []
+    },
+    "genre": {
+      "primary": null,
+      "audience": null,
+      "reader_promise": null,
+      "boundaries": []
+    },
+    "style": {
+      "language": "English",
+      "viewpoint": null,
+      "tense": null,
+      "register": null,
+      "rhythm": null,
+      "preferences": [],
+      "examples": []
+    },
+    "synopsis": {
+      "premise": null,
+      "protagonist": null,
+      "pressure": null,
+      "stakes": null,
+      "trajectory": null
+    },
+    "characters": {
+      "entries": [],
+      "entry_fields": [
+        "id",
+        "name",
+        "desire",
+        "fear",
+        "contradiction",
+        "agency",
+        "relationships",
+        "voice",
+        "knowledge",
+        "source_locator"
+      ]
+    },
+    "worldbuilding": {
+      "rules": [],
+      "places": [],
+      "institutions": [],
+      "costs": [],
+      "exceptions": []
+    },
+    "outline": {
+      "scenes": [],
+      "scene_fields": [
+        "id",
+        "viewpoint",
+        "time_place",
+        "entering_state",
+        "intention",
+        "resistance",
+        "turn",
+        "exit_state",
+        "canon_ids",
+        "open_threads"
+      ]
+    },
+    "timeline": {
+      "events": [],
+      "time_system": null
+    },
+    "canon": {
+      "facts": [],
+      "fact_fields": [
+        "id",
+        "fact",
+        "source_locator",
+        "scope",
+        "author_approval_note"
+      ]
+    },
+    "sources": {
+      "entries": [],
+      "entry_fields": [
+        "claim_id",
+        "claim",
+        "url_or_file",
+        "title",
+        "date",
+        "accessed",
+        "locator",
+        "status",
+        "limitations"
+      ]
+    },
+    "session": {
+      "source_version": null,
+      "completed_range": null,
+      "next_range": null,
+      "open_questions": [],
+      "voice_accent": null
+    }
+  }
+}

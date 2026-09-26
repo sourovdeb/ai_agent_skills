@@ -1,0 +1,10 @@
+{
+  "version": "1.1.0",
+  "model": "mistral-small-2603",
+  "temperature": 0.6,
+  "max_calls": 4,
+  "max_output_tokens": 3000,
+  "max_request_bytes": 48000,
+  "automatic_provider_fallback": false,
+  "note": "Model identifier rechecked in official Mistral documentation 2026-09-26. Check actual account access before cloud use. Cloud calls require authorization and may incur cost."
+}
