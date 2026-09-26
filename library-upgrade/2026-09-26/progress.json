@@ -1,8 +1,10 @@
 {
   "schema_version": "1.0.0",
   "campaign_id": "skill-library-2026-09-26",
-  "revision": 6,
+  "revision": 7,
   "campaign_status": "active",
+  "policy_version": "2.1.0",
+  "policy_path": "library-upgrade/2026-09-26/CONTINUATION_POLICY_v2.1.md",
   "inventory_status": "partial",
   "verified_total": null,
   "prepared": 1,
@@ -10,11 +12,15 @@
   "alternative_delivered": 0,
   "blocked": 0,
   "active_skill": "S002",
-  "lease": {
-    "skill_id": "S002",
-    "purpose": "campaign_policy_update_only",
-    "token": "58277324e64d47edbcfb639885587e29",
-    "expires_utc": "2026-09-26T16:55:00Z"
+  "lease": null,
+  "delivery_policy": {
+    "minimum_verified_destinations": 1,
+    "all_three_required": false,
+    "main_branch_merge_required": false,
+    "optional_mirrors_block_advancement": false,
+    "automatic_pause_after_failed_runs": false,
+    "gmail_mode": "draft_only",
+    "completion_requires": "Complete candidate and resumable checkpoint verified in at least one authorized destination."
   },
   "skills": [
     {
@@ -25,18 +31,33 @@
       "github_status": "branch_only_sync_unavailable",
       "github_branch": "skill-upgrade-s001-sync",
       "drive_status": "verified",
-      "gmail_status": "draft_verified"
+      "gmail_status": "draft_verified",
+      "status_basis": "Retained from revision 5; candidate not revalidated during the policy update."
     },
     {
       "id": "S002",
       "name": "mistral-writing-specialist",
+      "candidate_version": "1.1.0-rc1",
       "work_status": "in_progress",
-      "test_status": "not_run",
-      "github_status": "lease_acquired",
-      "drive_status": "pending",
-      "gmail_status": "pending"
+      "test_status": "static_only_no_candidate_runtime_tests",
+      "github_status": "candidate_save_unverified",
+      "drive_status": "checkpoint_verified_package_incomplete",
+      "gmail_status": "pending",
+      "audit_gap": "Reassess individual A1-A4, Q01-Q60 and X01-X10 against the supplied Master Skill Standard; the earlier grouped mapping differs from that standard."
     }
   ],
-  "next_action": "Record the authorized one-or-more-destination policy, then resume S002 candidate preparation.",
-  "note": "Recovered the previous expired lease. This reservation changes campaign policy only; no candidate work or test is claimed."
+  "latest_configuration": {
+    "date": "2026-09-26",
+    "policy_saved": {
+      "github": "verified",
+      "drive": "verified",
+      "gmail": "draft_verified"
+    },
+    "private_state_revision": 7,
+    "skills_completed": 0,
+    "candidate_tests_run": 0,
+    "messages_sent": 0
+  },
+  "next_action": "Resume S002 from sources and its checkpoint; finish its integrated package and feasible tests. After one complete verified save, advance next run without waiting for optional mirrors.",
+  "note": "Policy and state recovery only. Previous expired lease recovered; configuration lease released. Original candidates remain unchanged. Private source references and delivery receipts remain outside this public file."
 }
