@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "campaign_id": "skill-library-2026-09-26",
-  "revision": 3,
+  "revision": 4,
   "campaign_status": "active",
   "inventory_status": "partial",
   "verified_total": null,
@@ -16,18 +16,12 @@
       "name": "audiobook-performance-coach",
       "work_status": "prepared",
       "test_status": "partially_run",
-      "github_status": "branch_only",
+      "github_status": "branch_only_sync_unavailable",
       "github_branch": "skill-upgrade-s001-sync",
       "drive_status": "verified",
       "gmail_status": "draft_verified"
     }
   ],
-  "next_action": "Attempt one safe S001 synchronization route.",
-  "note": "Lease acquired for S001 synchronization only.",
-  "lease": {
-    "token": "lease-s001-20260926-sync-01",
-    "skill_id": "S001",
-    "purpose": "main synchronization",
-    "expires_utc": "2026-09-26T14:30:00Z"
-  }
+  "next_action": "Preserve S001 branch candidate. Continue bounded library work next cycle.",
+  "note": "S001 synchronization could not be completed this cycle. Lease released."
 }
