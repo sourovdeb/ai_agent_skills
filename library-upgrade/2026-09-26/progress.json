@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "campaign_id": "skill-library-2026-09-26",
-  "revision": 4,
+  "revision": 5,
   "campaign_status": "active",
   "inventory_status": "partial",
   "verified_total": null,
@@ -9,7 +9,12 @@
   "audited_unchanged": 0,
   "alternative_delivered": 0,
   "blocked": 0,
-  "active_skill": "S001",
+  "active_skill": "S002",
+  "lease": {
+    "skill_id": "S002",
+    "token": "s002-r5-mistral-writing",
+    "expires_utc": "2026-09-26T16:30:00Z"
+  },
   "skills": [
     {
       "id": "S001",
@@ -20,8 +25,17 @@
       "github_branch": "skill-upgrade-s001-sync",
       "drive_status": "verified",
       "gmail_status": "draft_verified"
+    },
+    {
+      "id": "S002",
+      "name": "mistral-writing-specialist",
+      "work_status": "in_progress",
+      "test_status": "not_run",
+      "github_status": "lease_acquired",
+      "drive_status": "pending",
+      "gmail_status": "pending"
     }
   ],
-  "next_action": "Preserve S001 branch candidate. Continue bounded library work next cycle.",
-  "note": "S001 synchronization could not be completed this cycle. Lease released."
+  "next_action": "Audit and upgrade S002 without modifying its operational live accounts.",
+  "note": "S002 selected from an existing pre-cutoff package. Lease acquired before candidate writes."
 }
