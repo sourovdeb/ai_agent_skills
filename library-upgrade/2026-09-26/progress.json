@@ -1,16 +1,21 @@
 {
   "schema_version": "1.0.0",
   "campaign_id": "skill-library-2026-09-26",
-  "revision": 0,
-  "campaign_status": "scheduled_initial_inventory_pending",
+  "revision": 1,
+  "campaign_status": "active",
   "inventory_status": "partial",
   "verified_total": null,
   "prepared": 0,
   "audited_unchanged": 0,
   "alternative_delivered": 0,
   "blocked": 0,
-  "active_skill": null,
+  "active_skill": "S001",
+  "lease": {
+    "skill_id": "S001",
+    "token": "lease-S001-20260926T1101Z-4b7f",
+    "expires_utc": "2026-09-26T11:21:34Z"
+  },
   "skills": [],
-  "next_action": "Reconcile the existing library, then upgrade one verified skill at a time.",
-  "note": "Setup and protocol are saved. No individual skill is claimed upgraded yet. Private source references and delivery receipts are not published here."
+  "next_action": "Synchronize prepared S001 candidate, then release lease.",
+  "note": "S001 candidate was prepared in Drive during prior cycles. This lease protects synchronization only."
 }
