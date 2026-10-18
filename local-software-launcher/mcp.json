@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "localSoftware": {
+      "type": "stdio",
+      "command": "E:\\tools\\uv-tools\\mistral-vibe\\Scripts\\python.exe",
+      "args": ["${PLUGIN_ROOT}/server/launcher.py"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "local-software-launcher",
+  "version": "1.0.0",
+  "description": "Click-and-execute tools for Windows software: launch (programmatic double-click), resolve, search, list apps, list drives, status, and stop.",
+  "keywords": ["windows", "launcher", "local-software", "productivity"],
+  "license": "MIT",
+  "extensions": {
+    "ai.mistral.vibe": {
+      "schemaVersion": 1,
+      "toolNamespace": "localSoftware"
+    }
+  }
+}
