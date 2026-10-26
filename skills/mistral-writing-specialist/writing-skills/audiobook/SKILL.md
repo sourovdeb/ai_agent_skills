@@ -2,7 +2,7 @@
 name: audiobook
 description: Use when preparing supplied prose for human narration with separated reading and pronunciation scripts, expressive cues and ASCII emotion maps.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Audiobook performance adapter

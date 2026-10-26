@@ -2,7 +2,7 @@
 name: scene-draft
 description: Use when drafting fiction, dialogue, scenes, chapters, or a voice-preserving rewrite from an approved plan.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Scene drafting

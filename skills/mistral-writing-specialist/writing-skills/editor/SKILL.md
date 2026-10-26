@@ -2,7 +2,7 @@
 name: editor
 description: Use when diagnosing or revising prose, dialogue, structure, clarity or style without erasing the author voice.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Editorial specialist

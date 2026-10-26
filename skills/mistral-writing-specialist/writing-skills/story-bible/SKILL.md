@@ -2,7 +2,7 @@
 name: story-bible
 description: Use when organizing story ideas, defining an authorial style, creating a Story Bible, or planning an outline.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Story Bible and story architecture

@@ -131,6 +131,71 @@ class ProjectTests(unittest.TestCase):
     def test_sequential_tools(self):
         api = FakeAPI([answer()]); w.run(api, self.db, 'draft', 'Draft.')
         self.assertFalse(api.requests[0][2]['parallel_tool_calls'])
+    def test_tool_batch_limit_enforced(self):
+        calls = [call(id=f't{i}') for i in range(9)]
+        api = FakeAPI([answer(None, calls=calls), answer()])
+        with self.assertRaises(ValueError): w.run(api, self.db, 'draft', 'Draft.')
+    def test_eight_call_batch_processed(self):
+        calls = [call(id=f't{i}') for i in range(8)]
+        api = FakeAPI([answer(None, calls=calls), answer('done')])
+        result = w.run(api, self.db, 'draft', 'Draft.')
+        tool_msgs = [m for m in api.requests[1][2]['messages'] if m['role'] == 'tool']
+        self.assertEqual(result['status'], 'completed')
+        self.assertEqual(len(tool_msgs), 8)
+    def test_malformed_tool_arguments_not_executed(self):
+        bad = {'id': 't9', 'type': 'function',
+               'function': {'name': 'get_project_context', 'arguments': '{bad json'}}
+        api = FakeAPI([answer(None, calls=[bad]), answer('recovered')])
+        w.run(api, self.db, 'draft', 'Draft.')
+        tool_msg = [m for m in api.requests[1][2]['messages'] if m['role'] == 'tool'][0]
+        self.assertEqual(json.loads(tool_msg['content'])['status'], 'not_executed')
+    def test_unknown_tool_name_not_executed(self):
+        api = FakeAPI([answer(None, calls=[call('rm_rf', {'command': 'x'})]), answer('ok')])
+        w.run(api, self.db, 'draft', 'Draft.')
+        tool_msg = [m for m in api.requests[1][2]['messages'] if m['role'] == 'tool'][0]
+        self.assertEqual(json.loads(tool_msg['content'])['status'], 'not_executed')
+    def test_duplicate_call_id_same_args_idempotent(self):
+        first = w.execute_tool(self.db, 'dup', 'get_project_context', {'section': 'canon'})
+        second = w.execute_tool(self.db, 'dup', 'get_project_context', {'section': 'canon'})
+        self.assertEqual(first, second)
+    def test_oversized_tool_argument_rejected(self):
+        with self.assertRaises(ValueError):
+            w.execute_tool(self.db, 'big', 'save_draft', {'title': 't', 'content': 'x' * 60001})
+    def test_whitespace_only_argument_rejected(self):
+        with self.assertRaises(ValueError):
+            w.execute_tool(self.db, 'ws', 'save_draft', {'title': '   ', 'content': 'x'})
+    def test_negative_revision_rejected(self):
+        with self.assertRaises(ValueError):
+            w.execute_tool(self.db, 'neg', 'stage_canon_update',
+                           {'section': 'canon', 'content_json': '{}', 'reason': 'r', 'expected_revision': -1})
+    def test_path_traversal_draft_title_stored_as_data(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            result = w.execute_tool(self.db, 'pt', 'save_draft', {'title': '../../escape', 'content': 'x'})
+            self.assertEqual(result['status'], 'saved_locally')
+            self.assertFalse((Path(tmp) / 'escape').exists())
+    def test_full_canon_lifecycle(self):
+        staged = w.execute_tool(self.db, 'lc', 'stage_canon_update', {
+            'section': 'canon',
+            'content_json': '{"facts": [{"id": "C1", "fact": "Mara has the key"}]}',
+            'reason': 'Author review', 'expected_revision': 0})
+        self.assertEqual(staged['status'], 'pending')
+        self.assertFalse(staged['canon_changed'])
+        approved = w.approve(self.db, staged['proposal_id'])
+        self.assertEqual(approved['revision'], 1)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM history').fetchone()[0], 1)
+        self.assertEqual(w.approve(self.db, staged['proposal_id'])['status'], 'already_approved')
+        exported = w.export_project(self.db)
+        self.assertEqual(exported['sections']['canon']['facts'][0]['id'], 'C1')
+        self.assertEqual(exported['section_revisions']['canon'], 1)
+        with self.assertRaises(ValueError):
+            w.execute_tool(self.db, 'lc2', 'stage_canon_update',
+                           {'section': 'canon', 'content_json': '{}', 'reason': 'r', 'expected_revision': 0})
+    def test_draft_stored_but_never_promoted(self):
+        w.execute_tool(self.db, 'dp', 'save_draft', {'title': 'Scene 1', 'content': 'Mara opened the door.'})
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM drafts').fetchone()[0], 1)
+        self.assertEqual(w.export_project(self.db)['sections']['canon']['facts'], [])
+    def test_approve_not_exposed_as_tool(self):
+        self.assertNotIn('approve', {t['function']['name'] for t in w.tool_definitions()})
 
 
 class PackageTests(unittest.TestCase):
@@ -184,6 +249,69 @@ class PackageTests(unittest.TestCase):
     def test_api_key_not_in_composed_packet(self):
         with patch.dict('os.environ', {'MISTRAL_API_KEY': 'PRIVATE_TEST_MARKER'}):
             self.assertNotIn('PRIVATE_TEST_MARKER', w.instructions('draft'))
+    def test_api_key_absent_from_all_instruction_variants(self):
+        with patch.dict('os.environ', {'MISTRAL_API_KEY': 'PRIVATE_TEST_MARKER_2'}):
+            for mode in w.MODES:
+                self.assertNotIn('PRIVATE_TEST_MARKER_2', w.instructions(mode))
+                self.assertNotIn('PRIVATE_TEST_MARKER_2', w.instructions(mode, compact=True))
+    def test_endpoint_allowlist_blocks_non_allowlisted_pairs(self):
+        api = w.MistralAPI('test-only-not-a-real-key')
+        for method, endpoint in (('GET', '/chat/completions'), ('DELETE', '/models'),
+                                 ('PUT', '/models'), ('POST', '/v1/models'), ('GET', '/agents')):
+            with self.subTest(method=method, endpoint=endpoint), self.assertRaises(ValueError):
+                api.request(method, endpoint)
+    def test_redirect_handler_refuses_redirects(self):
+        import urllib.request
+        handler = w.NoRedirect()
+        request = urllib.request.Request('https://api.mistral.ai/v1/models')
+        self.assertIsNone(handler.redirect_request(request, None, 302, 'Found', {}, 'https://evil.example'))
+    def test_non_finite_json_rejected(self):
+        for text in ('{"x": NaN}', '{"x": Infinity}', '{"x": -Infinity}'):
+            with self.subTest(text=text), self.assertRaises(ValueError): w.loads(text)
+    def test_dump_refuses_nan(self):
+        with self.assertRaises(ValueError): w.dump({'x': float('nan')})
+    def test_versions_agree_across_package(self):
+        import re
+        config = w.read_json(w.ROOT / 'config.json')
+        self.assertEqual(config['version'], '1.1.0')
+        root_meta = (w.ROOT / 'SKILL.md').read_text().split('---')[1]
+        self.assertIn('version: "1.1.0"', root_meta)
+        self.assertIn('review-status: "review-verified"', root_meta)
+        for skill_md in sorted((w.ROOT / 'writing-skills').rglob('SKILL.md')):
+            self.assertIn('version: "1.1.0"', skill_md.read_text().split('---')[1])
+    def test_changelog_exists_and_records_upgrade(self):
+        changelog = (w.ROOT / 'CHANGELOG.md').read_text()
+        self.assertIn('## 1.1.0', changelog)
+        self.assertIn('review-verified', changelog)
+    def test_cli_init_compose_export_lifecycle(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as tmp:
+            def cli(*args):
+                return subprocess.run([sys.executable, str(w.ROOT / 'writer.py'), *args],
+                                      capture_output=True, text=True, cwd=tmp)
+            self.assertEqual(cli('init', '--db', 'a.db').returncode, 0)
+            self.assertEqual(cli('init', '--db', 'a.db').returncode, 1)
+            result = cli('compose', '--mode', 'outline', '--input', str(w.ROOT / 'examples/brief.txt'),
+                         '--output', 'p.txt')
+            self.assertEqual(result.returncode, 0)
+            self.assertGreater((Path(tmp) / 'p.txt').stat().st_size, 1000)
+            self.assertEqual(cli('compose', '--mode', 'outline', '--input', str(w.ROOT / 'examples/brief.txt'),
+                                 '--output', 'p.txt').returncode, 1)
+            empty = Path(tmp) / 'empty.txt'; empty.write_text('')
+            self.assertEqual(cli('compose', '--mode', 'draft', '--input', str(empty)).returncode, 1)
+            self.assertEqual(cli('run', '--mode', 'draft', '--input', str(w.ROOT / 'examples/brief.txt'),
+                                 '--db', 'a.db').returncode, 2)
+            self.assertEqual(cli('models').returncode, 2)
+            self.assertEqual(cli('deploy').returncode, 2)
+            dry = cli('deploy', '--dry-run')
+            self.assertEqual(dry.returncode, 0)
+            self.assertEqual(json.loads(dry.stdout)['tools'], [])
+            self.assertEqual(json.loads(cli('proposals', '--db', 'a.db').stdout), [])
+            self.assertEqual(cli('approve', '--db', 'a.db').returncode, 2)
+            self.assertEqual(cli('approve', '--db', 'a.db', '--proposal', 'nope').returncode, 1)
+            self.assertEqual(cli('export', '--db', 'a.db', '--output', 'e.json').returncode, 0)
+            self.assertEqual(len(json.loads((Path(tmp) / 'e.json').read_text())['sections']), 11)
+            self.assertEqual(cli('export', '--db', 'a.db', '--output', 'e.json').returncode, 1)
 
 
 if __name__ == '__main__':

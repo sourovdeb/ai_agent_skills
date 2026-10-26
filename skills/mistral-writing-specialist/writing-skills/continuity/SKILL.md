@@ -2,7 +2,7 @@
 name: continuity
 description: Use when checking story facts, timelines, character knowledge, world rules, possessions, promises and payoffs across supplied scenes.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Continuity and knowledge-state audit

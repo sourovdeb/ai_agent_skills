@@ -2,8 +2,10 @@
 name: mistral-writing-specialist
 description: Use when building, adapting, diagnosing or upgrading a Mistral Studio writing agent, its prompts, Story Bible, writing skills, tool contracts and evaluation plan.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   verified-docs-date: "2026-09-25"
+  review-status: "review-verified"
+  review-date: "2026-10-26"
 ---
 
 # Mistral Writing Skills Specialist
