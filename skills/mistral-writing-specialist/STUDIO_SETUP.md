@@ -14,7 +14,7 @@ In the Create Agent dialog shown in your screenshot:
 |---|---|
 | Agent Name | Story Studio - Writing Director |
 | Description | Story Bible, scene drafting, editing, continuity, sourced research and human narration coaching. |
-| Optional metadata | package=mistral-writing-specialist; version=1.0.0; mode=author-assistant |
+| Optional metadata | package=mistral-writing-specialist; version=1.1.0; mode=author-assistant |
 
 Metadata labels are descriptive, not instructions or security controls. Start with no custom functions. Enable built-in Web Search for research and Document Library only after configuring the relevant knowledge collection. Code Interpreter, image generation, MCP and background workers are not required for the initial writing workflow. [S3, S4]
 

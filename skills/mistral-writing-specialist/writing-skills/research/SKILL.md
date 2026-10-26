@@ -2,7 +2,7 @@
 name: research
 description: Use when planning sourced nonfiction, checking real-world claims or researching factual anchors for fiction.
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Evidence-led writing

@@ -1,6 +1,6 @@
 # Mistral Writing Skills Specialist / Story Studio
 
-A reusable specialist for building and upgrading a Mistral writing system, plus an author-facing writing agent. Version 1.0.0. Documentation checked 25 September 2026.
+A reusable specialist for building and upgrading a Mistral writing system, plus an author-facing writing agent. Version 1.1.0 (review-verified 26 October 2026). Documentation checked 25 September 2026. See **CHANGELOG.md** for the v1.0.0 to v1.1.0 review-verification delta.
 
 Start with **STUDIO_SETUP.md**. For the prompt field, use **prompts/studio-agent.txt**. The root **SKILL.md** is the agent-building specialist, not the author-facing system prompt.
 
@@ -47,10 +47,10 @@ The second command creates a hosted Mistral agent using the compiled instruction
 
 ## Status and boundaries
 
-See **TEST_REPORT.md** for the executed offline checks. Live Mistral calls, native Skill activation and model-quality trials were not performed in this build. **EVALUATION.md** contains the acceptance cases to run on the chosen models. This is not model weight fine-tuning, an independently measured performance guarantee, or a clone of the unidentified mobile writing application.
+See **TEST_REPORT.md** for the executed offline checks (57 tests in v1.1.0, review-verified). Live Mistral calls, native Skill activation and model-quality trials were not performed in this build. **EVALUATION.md** contains the acceptance cases to run on the chosen models. This is not model weight fine-tuning, an independently measured performance guarantee, or a clone of the unidentified mobile writing application.
 
 The reusable pack contains only instructions, blank templates and fictional examples. Keep manuscripts, project databases, receipts and credentials in `private/`, outside public Git. `.gitignore` is a convenience, not a security boundary. The local SQLite database is not encrypted; use operating-system protections and backups. Cloud execution sends the input plus any model-requested project sections to Mistral.
 
 ## File map
 
-`SKILL.md` — build/upgrade specialist. `prompts/` — full Studio, selective-load, compact and app personalization prompts. `writing-skills/` — six focused methods. `knowledge/` — blank project template. `writer.py` + `tools.json` — executable reference runner and its function contracts. `config.json` — adjustable resource defaults. `tests/`, `EVALUATION.md`, `TEST_REPORT.md` — validation and trial boundaries. `SOURCES.md` — documentation and adaptation provenance.
+`SKILL.md` — build/upgrade specialist. `prompts/` — full Studio, selective-load, compact and app personalization prompts. `writing-skills/` — six focused methods. `knowledge/` — blank project template. `writer.py` + `tools.json` — executable reference runner and its function contracts. `config.json` — adjustable resource defaults. `tests/`, `EVALUATION.md`, `TEST_REPORT.md` — validation and trial boundaries. `SOURCES.md` — documentation and adaptation provenance. `CHANGELOG.md` — version history and review-verification record.
