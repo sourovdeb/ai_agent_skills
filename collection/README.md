@@ -1,90 +1,142 @@
-# Latest Skills and Prompts — One-Place Collection
+# AI Agent Skills — Consolidated Collection
 
-**Consolidated:** 2026-10-28
-**Scope:** prompts, skills and skill packages from the last 3 months (2026-07-28 to 2026-10-28), collected from Gmail, Google Drive and GitHub into this repository. Education-focused view: [free_education/SKILLS_AND_PROMPTS_INDEX.md](https://github.com/sourovdeb/free_education/blob/main/SKILLS_AND_PROMPTS_INDEX.md).
+This repository consolidates prompts and skills from Gmail, Google Drive, and GitHub, built or collected from July 2026 through October 2026. Each item lists what it does and where its full procedure lives.
 
-## 1. Consolidated into this folder
+Related repositories:
+- [sourovdeb/free_education](https://github.com/sourovdeb/free_education) — teacher-facing educational content: ELT365 micro-lessons, Open Teacher Training modules, classroom games.
+- [sourovdeb/myde-by-vibe](https://github.com/sourovdeb/myde-by-vibe) — scripts and automation tools for the content pipeline.
 
-| File | Origin | Source date |
+## 1. Mishu Goal-Driven Skills v3 — 48 skills (2026-10-07)
+
+Full ZIP in Gmail (Mishu Goal-Driven Skills v3, 48 skills, 2026-10-07). Each skill below follows the goal-driven format: goal, inputs, steps, quality gates, honesty limits. Copy-paste prompts live in this repo under `collection/prompts/`.
+
+| Skill | Purpose | Full procedure |
 |---|---|---|
-| [prompts/agnes-prompt-compiler.md](prompts/agnes-prompt-compiler.md) | Gmail — "Skill for Agnes" | 2026-08-29 |
-| [prompts/book-production-prompt.md](prompts/book-production-prompt.md) | Google Drive — BOOK_PRODUCTION_PROMPT.md ("For website" folder) | 2026-10-19 |
-| [prompts/ott-materials-studio-copy-and-paste.md](prompts/ott-materials-studio-copy-and-paste.md) | Google Drive — Mistral_Teaching_Studio_Copy_and_Paste.md ("For website" folder) | 2026-10-19 |
+| mishu-weekly-reading-sentence-lab | Score sentences for meaning, stress, prominence, performance; weekly reading lab for pronunciation and recording feedback | [collection/prompts/mishu-weekly-reading-sentence-lab.md](prompts/mishu-weekly-reading-sentence-lab.md) · local Vibe skill |
+| mishu-agents | Default router; six task agents (OBEY, RESEARCH, GUIDE, CREATE, BUILD, ADMIN) for daily work | [collection/prompts/mishu-agents.md](prompts/mishu-agents.md) · local Vibe skill |
+| mishu-lecture-to-lessons | Convert existing lectures into teachable lessons with practice and assessment | [collection/prompts/mishu-lecture-to-lessons.md](prompts/mishu-lecture-to-lessons.md) |
+| mishu-teaching-materials-methods | Build a complete unit pack: master unit, learner sheet, teacher guide, answer key, assessment, revision (OTT Materials Studio) | [collection/prompts/ott-materials-studio-copy-and-paste.md](prompts/ott-materials-studio-copy-and-paste.md) |
+| mishu-novel-progression-checklist | Track novel progression through drafting and revision | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-story-drafting-agent | Draft and revise novel scenes against the story bible | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-jefl-academic-review | Review JEFL academic submissions against the review protocol | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-feedback-editor | Fiction editing pass with craft-aware feedback | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-autocrit-chapter | Automated chapter critique | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-canon-update | Update story bible/canon after each drafting session | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-goal-driven-mindset | Operating mindset for goal-driven work sessions | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-life-playbook | Maintain life-structure rules and routines | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-memoir-sprint | Daily memoir interview and manuscript sessions | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-research-library | Maintain and retrieve research sources for fiction | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-style-discovery | Discover and codify writing style from samples | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-skill-growth | Grow and extend skills across the 48-skill set | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-teach-off | Head-to-head teaching demonstration framework | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-writing-office | Writing-office management: folders, canon, session flow | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-lesson-plan | Standard lesson-plan structure for ELT teaching | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-decision-audit | Audit a decision before committing | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-topic-research | Research a topic into source-backed briefs | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-fact-check | Verify claims against sources | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-expert-interview | Structured expert-interview protocol | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-language-exchange | Language-exchange session structure | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-classroom-games | Classroom game design for ELT lessons | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-reading-list | Curated reading-list building | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-52-lessons | Year-long lesson series planning | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-course-design | Full course design from outcomes to assessment | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-content-calendar | Content calendar management for sourovdeb.com | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-elt-daily | Daily ELT practice generation | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-sentence-lab | Sentence-level language lab work | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-translation-check | Verify translations against meaning and register | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-stakeholder-translator | Reframe content for a different audience | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-prompt-architect | Turn vague requests into executable prompts | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-brainstorming-matrix | Structure brainstorming into options and trade-offs | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-challenge-my-thinking | Adversarial pressure-testing of plans and claims | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-rigorous-review | Evidence-led review of claims and investigations | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-deep-online-investigation | Hard-target online research protocol | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-doc-coauthoring | Co-author docs through structured phases | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-document-review | Compliance and quality review of documents | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-structured-extraction | Extract structured data from unstructured sources | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-research-synthesis | Synthesize multiple sources into a brief | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-skill-creator | Create and maintain skills (Vibe local registry format) | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-knowledge-onboarding | Knowledge-base onboarding interview | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-knowledge-mutations | Durable knowledge create/update/delete | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-vibe-work-onboarding | Vibe Work setup and discovery flow | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-fiction-tool-scout | Compare and rank AI fiction writing tools | ZIP (Mishu Goal-Driven Skills v3) |
+| mishu-narrative-skills-engine | Baseline-versus-skilled fiction skill-stack evaluation | ZIP (Mishu Goal-Driven Skills v3) |
 
-Binary ZIP collections (Goal-Driven Skills, Open Teacher Training kits, Writer skills) stay in Gmail/Drive and are linked below.
+48 skills total in the v3 ZIP. The table above indexes the full set.
 
-## 2. GitHub (last 3 months)
+## 2. Local Vibe Registry Skills (built October 2026)
 
-| Item | Location | Date |
+Skills created directly in the local Vibe skills registry at `/home/user/skills/`, replicated here for reference.
+
+| Skill | Purpose | Built |
 |---|---|---|
-| mistral-writing-specialist v1.0 (Story Studio: 6 writing skills, canon-safe runner, 37 tests) | [skills/mistral-writing-specialist](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/mistral-writing-specialist) | 2026-09-25 |
-| mistral-writing-specialist v1.1.0 (review-verified, 57 tests, changelog) | same | 2026-10-26 |
-| Debug & audit skill pack (debug-cycle, code-review, security-audit, code-audit, qa-verify, dev-cycle) | [skills/](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills) | 2026-10-26 |
-| audiobook-performance-coach v1.1.0 (separate scripts, ASCII emotion maps) | [skills/audiobook-performance-coach](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/audiobook-performance-coach) | 2026-09-23 |
-| Skill library upgrade protocol (S001/S002 leases, hourly upgrades) | [repo root](https://github.com/sourovdeb/ai_agent_skills) | 2026-09-26 |
-| local-software-launcher Vibe plugin | [skills/local-software-launcher](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/local-software-launcher) | 2026-10-18 |
-| five-minute-english-lab skill | [myde-by-vibe/skills/five-minute-english-lab](https://github.com/sourovdeb/myde-by-vibe/tree/main/skills/five-minute-english-lab) | 2026-10 |
-| elt-hourly-lab-pipeline skill | [myde-by-vibe/skills/elt-hourly-lab-pipeline](https://github.com/sourovdeb/myde-by-vibe/tree/main/skills/elt-hourly-lab-pipeline) | 2026-10 |
-| fiction-tool-scout, mishu-writer-os and 16 more skills | [myde-by-vibe/skills](https://github.com/sourovdeb/myde-by-vibe/tree/main/skills) | 2026-10 |
-| Skills audit evidence: 763-skill inventory, 62 clusters, TypeSafe verdicts, consolidation manifest | [myde-by-vibe/sessions/skills-audit-evidence](https://github.com/sourovdeb/myde-by-vibe/tree/main/sessions/skills-audit-evidence) | 2026-10-28 |
-| ELT365 modules, storyboard series, transcript-visual-director v1.0/v1.1, routines | [free_education](https://github.com/sourovdeb/free_education) | 2026-08 to 2026-10 |
-| sourov-workflows, PodFlow, StykFlow (new repos) | [github.com/sourovdeb](https://github.com/sourovdeb?tab=repositories) | 2026-10-22 |
+| ott-module-games | Interactive game.js / HTML classroom games for OTT module pages on sourovdeb.com | 2026-10 |
+| elt-365-micro-lesson-writer | Daily 5-minute teacher-training micro-lessons for sourovdeb.com | 2026-10 |
+| open-teacher-training-website-section | Build and maintain the /open-teacher-training/ section of sourovdeb.com | 2026-10 |
+| mishu-writer-os | Fiction Writer OS: story-to-novel profile, canon, drafting and revision loops | 2026-10 |
+| mishu-teaching-materials-methods | Teaching materials methods and unit-pack building (OTT Materials Studio) | 2026-10 |
+| fiction-tool-scout | Rank AI long-form fiction writing tools for a novelist | 2026-10 |
+| mishu-agents | Six task agents and the default router for daily work | 2026-10 |
+| brainstorming-matrix | Ideas into structured options, decision matrices, system concepts | 2026-10 |
+| humanize-writing | Remove AI-tone patterns from text | 2026-10 |
+| critical-thinking-and-decision-audit | Evaluate claims, plans, risks, and advice | 2026-10 |
+| hermes-memoir-daily-interview | Daily memoir interview and manuscript build | 2026-10 |
+| elt-365-micro-lesson-writer | Daily teacher-training micro-lessons (same as above, canonical entry) | 2026-10 |
+| clear-prompt-architect | Vague requests into clear executable prompts | 2026-10 |
+| rigorous-review | Evidence-led analysis of consequential claims and systems | 2026-10 |
+| deep-online-investigation | Difficult, obscure, or investigative online research | 2026-10 |
+| workflow-architect | Goal into verified, dependency-ordered plan | 2026-10 |
+| narrative-skills-engine | Fiction skill-stack portfolio evaluation | 2026-10 |
+| mistral-writing-specialist | Writing-agent building and auditing from the Story Studio package | 2026-10 |
+| mishu-weekly-reading-sentence-lab | Weekly reading sentence scoring and pronunciation feedback | 2026-10 |
+| lecture-notes-builder | Lecture notes for adult novices on any topic, one visual per concept, grounded in established methods (Mayer, Sweller, Paivio, Knowles, retrieval practice) | 2026-10-28 |
 
-## 3. Gmail (last 3 months)
+## 3. Copy-Paste Prompt Collection
 
-| Item | Email subject | Date | Status |
-|---|---|---|---|
-| Mishu Goal-Driven Skills v3 — 48 skills (goals, procedures, templates, prompts, completion checks) | "Mishu Skills v3: 48 upgrades" | 2026-10-07 | ZIP in Gmail (Mishu_Goal_Driven_Skills_v3_2026-10-07.zip); v2 ZIP in Drive |
-| agnes-prompt-compiler | "Skill for Agnes" | 2026-08-29 | consolidated → prompts/agnes-prompt-compiler.md |
-| Mistral Writing Specialist v1.0 package | "Completed: Mistral Writing Specialist v1.0 — GitHub package and setup guide" | 2026-09-25 | in skills/mistral-writing-specialist |
-| Audiobook Performance Coach v1.1.0 | "Audiobook Performance Coach v1.1.0 — separated scripts and ASCII emotion maps" | 2026-09-23 | in skills/audiobook-performance-coach |
-| Open Teacher Training website drafts (32 pages) | "Open Teacher Training website drafts - 5 October 2026" | 2026-10-05 | WordPress drafts on sourovdeb.com; ZIP in Drive |
-| Critical thinking skill | "Critical thinking skill" | 2026-09-12 | text in Gmail |
-| Skill writing / Skill upgrade / Self authoring method / Deep search method | several threads | 2026-09-10 to 2026-09-16 | text in Gmail |
-| FML lesson packs (e.g. FML-0014) | "5-Minute English Lab | FML-0014 | ..." | 2026-09-27 | label: Free Education/5-Minute English Lab |
+Full text prompts consolidated from Gmail and Drive, stored in `collection/prompts/`.
 
-## 4. Google Drive (last 3 months)
+| Prompt | Source | Purpose |
+|---|---|---|
+| mishu-weekly-reading-sentence-lab.md | Gmail | Sentence scoring for meaning, stress, prominence |
+| mishu-agents.md | Gmail | Six task agents, default router |
+| mishu-lecture-to-lessons.md | Gmail | Lecture-to-lesson conversion |
+| ott-materials-studio-copy-and-paste.md | Drive | Complete unit pack builder |
+| plus 44 more from the v3 ZIP | Gmail | Full 48-skill set indexed in section 1 |
 
-"For website" folder (created 2026-10-19):
+## 4. Fiction Writing Skills (Mistral Story Studio package)
 
-| File | Link |
+Skills derived from the Mistral Story Studio package, focused on fiction writing craft.
+
+| Skill | Purpose |
 |---|---|
-| Mishu_Goal_Driven_Skills_v2_2026-10-06.zip (48 goal-driven skills, v2) | [Drive](https://drive.google.com/file/d/1308HxL_qmQ9dSdHSCVJSaF2ZNyd7O7CC/view?usp=drivesdk) |
-| Open_Teacher_Training_Website_and_Skill.zip | [Drive](https://drive.google.com/file/d/1cXln_xbr1L8Bc3-g8uLLpEUNnUDJ07Vp/view?usp=drivesdk) |
-| Open_Teacher_Training_v3_2026-09-30.zip | [Drive](https://drive.google.com/file/d/18naqk43pDBqwzDrUnnb9ELWOT7OidHag/view?usp=drivesdk) |
-| Open_Teacher_Training_Master_v2_2026-09-19.zip | [Drive](https://drive.google.com/file/d/1tmS8n_-zxsCVRAlZFVfmVdNHiaRDOBKi/view?usp=drivesdk) |
-| Mistral_Teaching_Studio_Setup_Kit.zip | [Drive](https://drive.google.com/file/d/1w9AhpQSFVYAAg0a6rOXqVka1470Z9UHp/view?usp=drivesdk) |
-| Mistral_Teaching_Studio_Copy_and_Paste.md | [Drive](https://drive.google.com/file/d/1c3KFkYhagO05dl2680N9blkhHVQIjIzO/view?usp=drivesdk) — consolidated → prompts/ |
-| BOOK_PRODUCTION_PROMPT.md | [Drive](https://drive.google.com/file/d/1JfzSLhgkyE0YZLjkNnkcDhOHCO1ImF4v/view?usp=drivesdk) — consolidated → prompts/ |
-| FML-0001-ask-for-repetition-v1.1.0.zip | [Drive](https://drive.google.com/file/d/1GusunulCm2IxExBzoqeU1r1LC1aDPN32/view?usp=drivesdk) |
-| Open_Teacher_Training_WordPress_Drafts_2026-10-05.zip | [Drive](https://drive.google.com/file/d/1worGlAMQw7i0WkwN_TKTnWt_wqE9VB33/view?usp=drivesdk) |
-| Open_Teacher_Training_Website_Section.md | [Drive](https://drive.google.com/file/d/14Y6S8R24lA_BCrkvB-LoFgRLE3C4WWvH/view?usp=drivesdk) |
-| Mistral_Open_Teacher_Training_Click_Guide.pdf | [Drive](https://drive.google.com/file/d/1tkrq-ffaqaAZsh51gwzkMcHASGQKTas1/view?usp=drivesdk) |
-| Sourov_Deb_Memory_Export_2026-10-19.md.txt | [Drive](https://drive.google.com/file/d/1KqdnVspjWi5yjqczyCzCR623h7umTEFb/view?usp=drivesdk) |
-| stored_context_export.pdf | [Drive](https://drive.google.com/file/d/1SrAPVUOWftMI54aYcnfo058rrmBPWtx4/view?usp=drivesdk) |
+| audiobook | Produce audiobook-ready narration from fiction text |
+| continuity | Series continuity checking across manuscripts |
+| editor | Fiction editing with craft-aware feedback |
+| research | Fiction research with source discipline |
+| scene-draft | Scene drafting against story-bible contracts |
+| story-bible | Build and maintain the story bible / canon |
 
-"Writer skills" folder (created 2026-10-27):
-
-| File | Link |
-|---|---|
-| mishu-writer-os.zip | [Drive](https://drive.google.com/file/d/1s8KQ5cMqXSDRoo2HZ-okeYm5dsyAzEDY/view?usp=drivesdk) |
-| fiction-tool-scout.skill | [Drive](https://drive.google.com/file/d/1ynZYo4aZYzg8broZD_vP3BJi-Osj6Hz2/view?usp=drivesdk) |
-| fiction-scout-prototype.zip | [Drive](https://drive.google.com/file/d/1CkEt4WzmcG_LQDlZpo-ZsxdXG6Ie_hs4/view?usp=drivesdk) |
-
-## 5. Lecture- and lesson-building skills (last 3 months)
+## 5. Lecture- and Lesson-Building Skills
 
 | Skill | What it builds | Where |
 |---|---|---|
-| mishu-teaching-materials-methods (OTT Materials Studio) | Complete teaching units / lecture packs: master unit, learner sheet, teacher guide, answer key, assessment, revision | Goal-Driven Skills v3 (2026-10); full copy-paste procedure at [prompts/ott-materials-studio-copy-and-paste.md](prompts/ott-materials-studio-copy-and-paste.md); packaged in Open_Teacher_Training_Website_and_Skill.zip and Mistral_Teaching_Studio_Setup_Kit.zip (Drive) |
-| mishu-lecture-to-lessons | Turns a long lecture, book section or old resource into coherent small lessons with source traceability | Goal-Driven Skills v3 (2026-10); local skill trees (vibe/apps/H:) |
-| mishu-elt365-micro-lesson | One ELT365 micro-lesson per day (5-minute teacher-training unit) | Goal-Driven Skills v3 (2026-10); local skill trees |
-| elt-hourly-lab-pipeline + five-minute-english-lab | 5-minute learner-facing English lessons: HTML player, WordPress, Medium, LinkedIn, Gmail delivery | [myde-by-vibe/skills](https://github.com/sourovdeb/myde-by-vibe/tree/main/skills) (2026-10) |
-| SKILL_celta_lesson_teacher_v1 | CELTA/ELT lessons across contexts | [repo root](https://github.com/sourovdeb/ai_agent_skills/blob/main/SKILL_celta_lesson_teacher_v1.md) |
+| lecture-notes-builder | Lecture notes for adult novices on any topic: one visual example per concept, worked examples before practice, segmented structure, pre-taught key terms, glossary, retrieval checks with answers; grounded in Mayer's multimedia principles, cognitive load theory, worked-example effect, dual coding, andragogy, retrieval practice | [skills/lecture-notes-builder](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/lecture-notes-builder) (built 2026-10-28) |
+| mishu-teaching-materials-methods | Complete unit pack: master unit, learner sheet, teacher guide, answer key, assessment, revision (OTT Materials Studio) | [collection/prompts/ott-materials-studio-copy-and-paste.md](prompts/ott-materials-studio-copy-and-paste.md) · Open_Teacher_Training_Website_and_Skill.zip (Drive) |
+| mishu-lecture-to-lessons | Existing lectures converted into teachable lessons with practice and assessment | [collection/prompts/mishu-lecture-to-lessons.md](prompts/mishu-lecture-to-lessons.md) |
 
-The primary lecture/unit builder is mishu-teaching-materials-methods — its full procedure is now consolidated in this folder (prompts/ott-materials-studio-copy-and-paste.md).
+The primary lecture/unit builder is mishu-teaching-materials-methods (OTT Materials Studio) for full teaching unit packs. For new lecture notes aimed at adults with no prior education in a topic, use lecture-notes-builder (built 2026-10-28).
 
-## 6. Related indexes
+## 6. Content Pipeline and Site Publishing
 
-- [_INDEX.md](../_INDEX.md) — this repo's skill and agent navigation
-- [Skills Audit & Consolidation 2026-10-28](https://github.com/sourovdeb/myde-by-vibe/blob/main/sessions/2026-10-28-skills-audit-consolidation.md) — full local-PC skills audit (763 skills, 62 clusters, consolidation manifest)
-- [free_education/SKILLS_AND_PROMPTS_INDEX.md](https://github.com/sourovdeb/free_education/blob/main/SKILLS_AND_PROMPTS_INDEX.md) — education-focused view
+| Item | Purpose | Where |
+|---|---|---|
+| sourov/v1 ai-post API | WordPress draft-then-publish pipeline for sourovdeb.com | Secrets store (never inline) |
+| ELT365 series | 365-day teacher-training micro-course | [free_education repo](https://github.com/sourovdeb/free_education) · sourovdeb.com |
+| Open Teacher Training | Public course section /open-teacher-training/ | sourovdeb.com |
+| ott-module-games | Interactive module-page classroom games | [free_education repo](https://github.com/sourovdeb/free_education) · local Vibe skill |
+
+## 7. Deduplication and Naming Rules
+
+- One canonical copy per prompt; duplicates listed here by pointer, not by full text.
+- mishu- prefixed items follow the goal-driven skill format (goal, inputs, steps, quality gates, honesty limits).
+- Vibe local registry skills keep their folder name as the skill name.
+- When a prompt exists both in Gmail/Drive and the local Vibe registry, the local registry is the live copy and the repo copy is the reference snapshot.
