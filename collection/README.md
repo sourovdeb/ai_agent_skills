@@ -89,6 +89,7 @@ Skills created directly in the local Vibe skills registry at `/home/user/skills/
 | mistral-writing-specialist | Writing-agent building and auditing from the Story Studio package | 2026-10 |
 | mishu-weekly-reading-sentence-lab | Weekly reading sentence scoring and pronunciation feedback | 2026-10 |
 | lecture-notes-builder | Lecture notes for adult novices on any topic, one visual per concept, grounded in established methods (Mayer, Sweller, Paivio, Knowles, retrieval practice) | 2026-10-28 |
+| lecture-presenter-builder | Presenter-ready lectures for adult beginners: spoken instructor script plus separate sparse audience visuals, two-layer output, worked examples, source discipline | 2026-10-28 |
 
 ## 3. Copy-Paste Prompt Collection
 
@@ -119,11 +120,12 @@ Skills derived from the Mistral Story Studio package, focused on fiction writing
 
 | Skill | What it builds | Where |
 |---|---|---|
-| lecture-notes-builder | Lecture notes for adult novices on any topic: one visual example per concept, worked examples before practice, segmented structure, pre-taught key terms, glossary, retrieval checks with answers; grounded in Mayer's multimedia principles, cognitive load theory, worked-example effect, dual coding, andragogy, retrieval practice | [skills/lecture-notes-builder](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/lecture-notes-builder) (built 2026-10-28) |
+| lecture-notes-builder | Lecture notes for adult novices on any topic: one visual example per concept, worked examples before practice, segmented structure, pre-taught key terms, glossary, retrieval checks with answers; grounded in Mayer's multimedia principles, cognitive load theory, worked-example effect, dual coding, andragogy, retrieval practice; ships with 5 eval cases and TESTING.md | [skills/lecture-notes-builder](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/lecture-notes-builder) (2026-10-28, packaged edition) |
+| lecture-presenter-builder | Presenter-ready lectures for adult beginners: spoken script for the instructor (PRESENTER ONLY layer) plus separate sparse visuals for the audience (SHOW THE AUDIENCE layer), worked examples with staged reveals, research and source workflow, 5 eval cases and TESTING.md | [skills/lecture-presenter-builder](https://github.com/sourovdeb/ai_agent_skills/tree/main/skills/lecture-presenter-builder) (2026-10-28) |
 | mishu-teaching-materials-methods | Complete unit pack: master unit, learner sheet, teacher guide, answer key, assessment, revision (OTT Materials Studio) | [collection/prompts/ott-materials-studio-copy-and-paste.md](prompts/ott-materials-studio-copy-and-paste.md) · Open_Teacher_Training_Website_and_Skill.zip (Drive) |
 | mishu-lecture-to-lessons | Existing lectures converted into teachable lessons with practice and assessment | [collection/prompts/mishu-lecture-to-lessons.md](prompts/mishu-lecture-to-lessons.md) |
 
-The primary lecture/unit builder is mishu-teaching-materials-methods (OTT Materials Studio) for full teaching unit packs. For new lecture notes aimed at adults with no prior education in a topic, use lecture-notes-builder (built 2026-10-28).
+The primary lecture/unit builder is mishu-teaching-materials-methods (OTT Materials Studio) for full teaching unit packs. For learner-facing notes aimed at adults with no prior education in a topic, use lecture-notes-builder. For a lecture the instructor reads aloud with separate audience visuals (live teaching, narrated video), use lecture-presenter-builder. Both lecture skills were imported from the Drive skill packages on 2026-10-28.
 
 ## 6. Content Pipeline and Site Publishing
 
