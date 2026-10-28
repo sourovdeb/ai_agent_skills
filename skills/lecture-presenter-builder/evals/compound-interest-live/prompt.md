@@ -1,0 +1,1 @@
+Create a 10-minute lecture for adult beginners explaining compound interest. I will read it aloud and show visuals on screen. Use a hypothetical savings example with correct arithmetic. Keep the audience-facing screen content sparse. I have no source material; research suitable sources if needed.

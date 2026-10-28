@@ -1,105 +1,99 @@
 ---
 name: lecture-notes-builder
-description: Produce complete lecture notes on a given topic for adult learners who have no prior education in that topic, with at least one concrete visual example per concept. Grounded in established methods (Mayer's multimedia principles, cognitive load theory, worked examples, dual coding, Knowles' andragogy, retrieval practice). Use when asked to create lecture notes, class notes, teaching handouts, or beginner explanations for non-specialist adults on any topic.
+description: Create clear, visual-first lecture notes for adults who are new to a topic. Use for class notes, lecture notes, video-lecture notes, teaching handouts, and beginner explanations across subjects. Adapt to the requested language, audience, format, and length.
 ---
 
 # Lecture Notes Builder
 
-Produces lecture notes for adults who are new to a topic, heavy on visual examples, and built on well-established instructional methods. The full method grounding is in `references/methods.md`; the fill-in output structure is in `references/output-template.md`.
+Create notes that help a beginner understand, remember, and use an idea. Treat the reader as an intelligent adult. Do not confuse completeness with length.
 
-## When to use
+## Workflow
 
-The user asks for lecture notes, class notes, a teaching handout, or a beginner's explanation of a topic, and the audience is adults with no prior education in that topic. Do not use this for expert audiences, exam cram sheets, or scripts for live delivery; adapt the intake questions instead of refusing.
+1. Identify the topic and the useful action the learner should take afterwards.
+2. Ask one concise question only when a missing detail would change the result. Otherwise proceed and state any important assumption briefly.
+3. Build a concept sequence: familiar situation → core idea → how it works → practical use → limits or exceptions.
+4. Choose the requested format. For speaking or video work, use speaker notes or a script when requested; keep the same learning design.
+5. Draft the notes using `references/output-template.md`. Replace every placeholder and remove guidance text. Drop sections that do not apply.
+6. Check the output against the quality gates below before delivering it.
 
-## Intake (ask only what materially changes the notes)
+### Defaults when details are missing
 
-Record answers; mark anything assumed as ASSUMED.
+- Audience: adults with no prior knowledge of the subject.
+- Language: the user's language; otherwise plain, professional English.
+- Format: Markdown.
+- Length: enough to teach the topic without padding; usually five to seven concepts for a 20–30 minute lesson.
+- Examples: work, money, home, health, or civic life, chosen to fit the topic.
+- Segment length: about 120–200 words. Go longer only when needed; never pad to hit a target.
+- Status: `draft` unless review has actually occurred.
 
-| Input | Why it matters |
-|---|---|
-| Topic and the one thing the learner should be able to do afterwards | Fixes the observable outcome before writing |
-| Audience context (workplace, daily life, general interest) | Adults need to know why it matters to them (Knowles: need to know, problem-centered orientation) |
-| Delivery format (markdown, print, web page, slides text) | Constrains the visual types available |
-| Length or session duration | Fixes the number of segments |
-| Language and reading level | Plain-language rule for francophone or second-language readers |
-| What the learner already knows | The novice rule assumes zero topic knowledge, but adults bring life and work experience to connect to |
+## Teaching rules
 
-Default when inputs are missing: adult professionals in Réunion (French L1), plain English at A2-B1 reading level, markdown delivery, workplace-relevant examples, five to eight segments.
+- Start with the outcome and why it matters in real life.
+- Teach one main concept per segment. Order concepts from concrete to abstract and simple to complex.
+- Define unfamiliar technical terms at first use. Keep useful technical vocabulary; explain it rather than replacing it with vague words.
+- Use this vocabulary ladder: concrete situation → plain explanation → exact term → useful example → limit or counterexample.
+- Start with a situation or example. Then explain the idea and name it.
+- Put each visual beside the explanation it supports.
+- Every major concept needs a **visible visual**, not just a description of one. Prefer an ASCII diagram, a small table, a step strip, a flow, a cycle, a comparison, or a quantity bar. Add a short caption explaining what the visual reveals.
+- Use an analogy only when it clarifies the concept. Label it **Analogy** and explain where it stops being accurate.
+- Give every concept a concrete adult example. Mark invented figures or scenarios as **Hypothetical**.
+- Show a full worked example before asking beginners to solve a similar procedure, calculation, or decision task.
+- Add one short retrieval question per segment. Put its answer in a collapsible block for web/Markdown, or in an answer key for print.
+- End with a short review and answers. Ask for recall, explanation, and transfer—not only definition recall.
+- Include common mistakes only when they are likely. Explain both the cause and the correction.
 
-## Non-negotiable rules
+## Human voice and vocabulary
 
-1. Novice rule. Assume zero prior knowledge of the topic. Define every term at first use in the words of the glossary. No term appears before its definition.
-2. One concept, one visual. Every major concept gets at least one visual example from the visual menu below. Visuals are concrete first, abstract second (dual coding).
-3. Visual next to words. Each visual sits immediately beside the sentence it explains, not in a separate figure dump (spatial contiguity; avoid split attention).
-4. One idea per segment. Short segments, simple-to-complex order, each segment ends before the next begins (segmenting; manage intrinsic load).
-5. Worked example before practice. Every procedure or calculation is shown fully worked, step by step, before any "you try" task (worked-example effect for novices).
-6. Say why up front. The notes open with what the learner will be able to do and why an adult should care (andragogy: need to know, readiness, intrinsic motivation).
-7. Connect to adult experience. Examples draw on workplace, money, household, health, or civic life the reader already knows (andragogy: experience).
-8. Cut decoration. No stock-photo language, side stories, or decorative visuals that do not carry meaning (coherence principle).
-9. Retrieval checks. Each segment ends with one small question with its answer hidden below it; a final quick review of five questions with answers closes the notes (retrieval practice).
-10. Source discipline. No invented facts, statistics, or citations. Factual claims list a source or are labelled UNSOURCED. Analogies are labelled as analogies and must be dropped when they mislead.
+Write like a teacher explaining an idea to a capable adult. Be direct, grounded, and respectful.
 
-## Method map
+Humanise the topic through a recognisable decision, constraint, consequence, or trade-off. Do not add fake personal stories, forced empathy, jokes, or motivational slogans.
 
-Established method grounding and its canonical sources live in `references/methods.md`. Summary of what each method forces into the notes:
+- Use precise nouns and verbs. Prefer `estimate`, `compare`, `allocate`, or `influence` when those are the right words; explain unfamiliar words in context.
+- Use everyday language around key technical terms. Keep distinctions that matter.
+- Mix short sentences with fuller explanations. Avoid choppy, repetitive sentence patterns.
+- Use concrete details that serve the lesson. Do not invent personal stories or claim to know how the reader feels.
+- Explain why an idea matters without marketing language.
+- Avoid filler openings, repeated summaries, fake quotations, decorative anecdotes, and phrases such as “in today's world,” “let's dive in,” or “it is important to note.”
+- Do not add synonyms just to sound sophisticated. Good vocabulary means exact meaning, not ornament.
+- Do not oversimplify, talk down to adults, or remove necessary complexity. Explain complexity in stages.
+- State uncertainty and competing explanations when the evidence requires them.
 
-| Method | Rule it forces |
-|---|---|
-| Cognitive load theory (Sweller) | Segment, sequence simple to complex, worked examples, no split attention |
-| Worked-example effect (Sweller, Renkl) | Full worked example with self-explanation prompts; faded steps only later |
-| Mayer's multimedia principles | Words plus visuals, visuals adjacent, signal structure with headings and arrows, cut extras, pre-teach key terms |
-| Dual coding theory (Paivio) | Concrete visual example for every concept; pictures beat prose for novel material |
-| Andragogy (Knowles) | Why-it-matters opening, problem-centered segments, links to learner experience |
-| Retrieval practice (Roediger and Karpicke) | Question with answer after each segment and at the end |
+## Research and source discipline
 
-## Visual menu
+- Browse when facts may have changed, the user requests sources, or the topic is legal, medical, financial, scientific, or otherwise consequential.
+- Prefer primary research, official guidance, recognised academic publishers, and authoritative institutions. Use sources that directly support the claims made.
+- Attach citations to the claim or paragraph they support. Avoid unsupported statistics and invented references.
+- If a substantive claim cannot be checked, label it `UNSOURCED` or remove it. Do not label hypothetical teaching examples as facts.
+- Date time-sensitive guidance. Separate facts, interpretations, and recommendations.
+- Do not present an analogy as proof. State its limits.
+- The notes are a learning aid. Never claim that a learner has mastered the topic, or that the notes were tested or reviewed, unless that actually happened.
 
-Pick the cheapest type that carries the meaning. Every visual must be reproducible by the reader with pencil and paper, or present in the notes as text.
+## Methods to apply
 
-| Type | Use it for |
-|---|---|
-| Analogy picture | First contact with an abstract idea (e.g. electrical current as water flow) |
-| Before / after pair | Showing what a change or decision does |
-| Step strip | Any procedure: numbered boxes left to right |
-| Comparison table | Two things confused easily (this vs that) |
-| Flow diagram | Causes, sequences, decision paths |
-| Cycle diagram | Recurring processes |
-| Quantity bar or proportion visual | Numbers, sizes, shares |
-| Map or layout | Anything spatial |
-| Worked example block | Applied rules, calculations, filled-in forms |
+Use methods when they serve the topic; do not name-drop them in learner-facing notes. The full grounding, sources, and boundary conditions for each method are in `references/methods.md`.
 
-Each visual entry in the notes carries three parts: what it shows, how to build or draw it, and the one sentence it must make obvious.
+- **Cognitive load:** one main idea per segment; remove material that does not help.
+- **Multimedia and dual coding:** pair words with relevant diagrams; keep them together.
+- **Pre-training:** define a few essential terms before the main explanation.
+- **Worked examples:** model each unfamiliar procedure before independent practice.
+- **Retrieval practice:** ask learners to recall before showing answers.
+- **Spacing and transfer:** where useful, add a brief practice plan for later review and a new-context question.
+- **Adult learning:** explain the purpose and connect ideas to situations adults recognise.
+- **Feedback and contrast:** show why a correct example works; use a non-example when it exposes a common misconception.
 
-## Output structure
+## Quality gates
 
-Full fill-in template in `references/output-template.md`. Skeleton:
+Before delivery, confirm:
 
-1. Title and one-sentence promise (why an adult cares)
-2. Before-you-start box: observable outcome, three key terms pre-taught, what the learner needs
-3. Segments (one concept each): plain explanation, visual, concrete adult example, mini-check with answer
-4. Worked example section
-5. Common mistakes box
-6. Glossary
-7. Quick review: five questions with answers
-8. Sources and status labels
+1. The opening names a useful outcome and its relevance.
+2. Technical terms are defined at first use.
+3. Each major concept has one visible, relevant visual beside the explanation.
+4. Every segment has a concrete example and a retrieval check with an answer.
+5. Procedures include a complete worked example before practice.
+6. The sequence moves from basic ideas to harder ones.
+7. The prose sounds natural and contains no padding or repeated explanations.
+8. Important factual claims are sourced or marked `UNSOURCED`.
+9. The glossary contains only terms actually used.
+10. The status is honest: `draft` or `ready_for_review`.
 
-## Quality gates (check before delivering)
-
-- [ ] Every term defined at first use and in the glossary
-- [ ] Every major concept has a visual, adjacent to its explanation
-- [ ] Segments hold one idea each, simple to complex
-- [ ] At least one fully worked example precedes any practice task
-- [ ] Every check question has an answer
-- [ ] Opening states why it matters to this audience
-- [ ] Factual claims sourced or labelled UNSOURCED; analogies labelled
-- [ ] No decorative filler
-- [ ] Reading level matches the audience (default plain English)
-
-## Honesty limits
-
-These notes follow established methods; that does not guarantee learning for every reader. Do not claim tested effectiveness, classroom validation, or expert review that did not happen. Notes are a learning aid, not evidence of competence.
-
-## Support files
-
-- `references/methods.md` — the established methods, their claims, boundaries, and canonical sources
-- `references/output-template.md` — the fill-in template for the finished notes
+If a requested format cannot display a visual well, use a text diagram or an integrated table. Never replace the visual with decorative imagery or a separate figure dump.

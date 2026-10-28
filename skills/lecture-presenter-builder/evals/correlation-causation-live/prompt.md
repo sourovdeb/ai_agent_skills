@@ -1,0 +1,1 @@
+Build a 12-minute live lecture for adults with no statistics background. Teach the difference between correlation and causation. Make it human through a workplace decision, but do not invent a real case or statistics. Include a visual that learners can read while I speak.

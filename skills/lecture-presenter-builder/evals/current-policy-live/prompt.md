@@ -1,0 +1,1 @@
+Create an 8-minute lecture for adult beginners about current sick-leave benefit rules in France. I will read it aloud and show the key steps. Use current sources and state dates and jurisdiction. Keep detailed caveats and source notes in my presenter layer, not on the learner-facing screen. If details depend on employment status, say so.
