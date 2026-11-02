@@ -57,6 +57,25 @@ python -m open_writer_os run ~/my-novel draft --book "The Salt Road" \
 The API key is read from the environment only. `provider.json` stores just
 the backend, base URL and model name — no secrets.
 
+## Web version (2.0)
+
+`web/` is the browser version: plain HTML/JS plus a standard-library
+`serve.py` that serves the app and proxies `/api/*` and `/v1/*` to Ollama
+or any OpenAI-compatible API. **It runs on your own computer** — a hosted
+page cannot reach Ollama or hold your API key.
+
+```bash
+ollama pull llama3.2
+python3 web/serve.py        # open http://localhost:8099
+# or via API: UPSTREAM=https://api.example.com API_KEY=... python3 web/serve.py
+```
+
+The web UI exposes all twelve writing modes plus the short-fiction and
+biography skill packs, streaming output, a voice-sample box, a notes
+(story bible) box, browser autosave, and .txt/.md/project export. The API
+key stays server-side when going through `serve.py`. See
+`web/README.md` and `V1-VS-V2.md` (comparison with the v1.0 browser zip).
+
 ## The twelve writing modes
 
 Adapted from the MISHU Writer OS. The writer owns the story; the modes
