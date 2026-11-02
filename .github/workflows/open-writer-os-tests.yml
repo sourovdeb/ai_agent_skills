@@ -1,0 +1,32 @@
+name: open-writer-os tests
+
+on:
+  push:
+    paths:
+      - "projects/open-writer-os/**"
+      - ".github/workflows/open-writer-os-tests.yml"
+  pull_request:
+    paths:
+      - "projects/open-writer-os/**"
+      - ".github/workflows/open-writer-os-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/open-writer-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build web skills bundle
+        run: python3 web/build.py
+      - name: Python tests (CLI core + web server, offline)
+        run: python3 -m unittest discover -s tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Web core JS tests (offline)
+        run: node web/tests/tests.js

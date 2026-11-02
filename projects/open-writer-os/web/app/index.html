@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Writer OS 2.0 (web)</title>
+<style>
+:root{--bg:#fffdf8;--fg:#222;--mut:#6a6a6a;--line:#ddd6c8;--card:#f4efe4;--acc:#b5451b;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#17150f;--fg:#ece8dc;--mut:#a39f92;--line:#3a3629;--card:#221f16;--acc:#e8875f;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Georgia,"Noto Serif",serif}
+main{max-width:760px;margin:0 auto;padding:12px}h1{font-size:20px;margin:.3em 0}h2{font-size:16px}
+input,select,textarea,button{font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px;box-sizing:border-box}
+textarea{width:100%;resize:vertical}button{cursor:pointer}button:disabled{opacity:.5}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.row>input{flex:1;min-width:120px}
+details{margin:8px 0}summary{cursor:pointer;color:var(--mut)}.m{color:var(--mut);font-size:13px}
+#acts button{margin:2px}#out{white-space:pre-wrap;background:var(--card);border-radius:8px;padding:10px;min-height:56px}
+</style></head><body><main>
+<h1>Open Writer OS 2.0 (web)</h1>
+<p class="m">Free and open source. Runs on your own computer &mdash; your writing stays on this device unless you connect a remote API. All 12 writing modes; skill packs for short fiction and biography.</p>
+<details id="set"><summary>Settings: model connection</summary>
+<div class="row"><select id="prov"><option value="ollama">Ollama (local)</option><option value="openai">OpenAI-compatible API</option></select>
+<input id="base" placeholder="Base URL"><input id="model" list="ml" placeholder="Model name"><datalist id="ml"></datalist></div>
+<div class="row"><input id="key" type="password" placeholder="API key (optional; with serve.py it stays server-side)"><input id="ctx" type="number" value="4096" title="Context tokens" style="width:90px"><button id="test">Test and list models</button></div>
+<p id="st" class="m"></p></details>
+<div class="row"><select id="skill"><option value="none">General (all 12 modes)</option><option value="short-fiction">Short fiction</option><option value="biography">Biography</option></select>
+<input id="title" placeholder="Title"><input id="lang" placeholder="Output language (blank = same as my text)"></div>
+<div class="row"><label class="m"><input type="checkbox" id="memoir"> memoir evidence rules</label></div>
+<div class="row" id="acts"></div>
+<textarea id="text" rows="14" placeholder="Write or paste here. Select text before using the rewrite tools."></textarea>
+<textarea id="instr" rows="2" placeholder="Your instruction (optional) - used by Discover, Revise, Canon update, Profile update"></textarea>
+<details><summary>Notes: characters, facts, sources (story bible)</summary><textarea id="notes" rows="6"></textarea></details>
+<details><summary>My voice sample (paste 200+ words of your own writing)</summary><textarea id="voice" rows="5"></textarea></details>
+<h2>AI output</h2><div id="out"></div>
+<div class="row"><button id="stop" disabled>Stop</button><button id="app">Append</button><button id="rep">Replace selection</button><button id="cpy">Copy</button></div>
+<div class="row"><button id="ext">Export .txt</button><button id="exm">Export .md</button><button id="exj">Save project</button><button id="imp">Open project</button><input id="file" type="file" accept=".json" hidden></div>
+</main>
+<script src="skills.js"></script><script src="core.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const FIELDS=['skill','title','lang','text','instr','notes','voice','memoir'],CFG=['prov','base','model','key','ctx'];
+const own=location.protocol==='http:'&&Number(location.port)||location.port==='8099';
+const DEF={prov:'ollama',base:location.protocol.startsWith('http')?location.origin:'http://127.0.0.1:11434',model:'',key:'',ctx:'4096'};
+const ls={get(k){try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+let rng=[0,0],ctl=null;
+function load(){const p=ls.get('owos2:p')||{},c={...DEF,...(ls.get('owos2:c')||{})};FIELDS.forEach(f=>{const el=$(f);if(p[f]!=null){if(el.type==='checkbox')el.checked=!!p[f];else el.value=p[f];}});CFG.forEach(f=>{$(f).value=c[f];});if(!$('base').value)$('base').value=DEF.base;}
+function save(){const p={},c={};FIELDS.forEach(f=>{const el=$(f);p[f]=el.type==='checkbox'?el.checked:el.value;});CFG.forEach(f=>{c[f]=$(f).value;});ls.set('owos2:p',p);ls.set('owos2:c',c);}
+const cfg=()=>({provider:$('prov').value,base:$('base').value.trim(),model:$('model').value.trim(),key:$('key').value,numCtx:Number($('ctx').value)||4096});
+function acts(){
+  $('acts').textContent='';const sk=$('skill').value;
+  if(sk!=='none'){const A=ACTIONS[sk];for(const k in A){const b=document.createElement('button');b.textContent=A[k].label;b.onclick=()=>run(k);$('acts').append(b);}}
+  else{for(const m in MODES){const b=document.createElement('button');b.textContent=MODES[m].label;b.onclick=()=>run(m);$('acts').append(b);}}
+}
+function busy(v){$('stop').disabled=!v;$('acts').querySelectorAll('button').forEach(b=>{b.disabled=v;});}
+async function run(a){
+  const ta=$('text'),out=$('out');rng=[ta.selectionStart,ta.selectionEnd];out.textContent='';
+  try{
+    const built=buildMessages(SKILLS,{skill:$('skill').value,action:a,text:ta.value,sel:ta.value.slice(rng[0],rng[1]),notes:$('notes').value,voice:$('voice').value,lang:$('lang').value,memoir:$('memoir').checked,instr:$('instr').value});
+    if(!cfg().model)throw new Error('Set a model name in Settings first.');
+    ctl=new AbortController();busy(true);
+    await chat(cfg(),built,t=>{out.textContent+=t;},ctl.signal);
+  }catch(e){if(e.name!=='AbortError')out.textContent+='\n['+(e.message==='Failed to fetch'?'Cannot reach the model. Is Ollama running? See README.':e.message)+']';}
+  finally{busy(false);}
+}
+$('test').onclick=async()=>{try{const m=await listModels(cfg());$('ml').textContent='';m.forEach(x=>{const o=document.createElement('option');o.value=x;$('ml').append(o);});$('st').textContent='Connected. '+m.length+' model(s) found.';if(!$('model').value&&m[0])$('model').value=m[0];save();}catch(e){$('st').textContent='Failed: '+e.message;}};
+$('stop').onclick=()=>{if(ctl)ctl.abort();};
+$('cpy').onclick=()=>{try{navigator.clipboard.writeText($('out').textContent);}catch(e){}};
+$('app').onclick=()=>{const t=$('text');t.value+=(t.value?'\n\n':'')+$('out').textContent;save();};
+$('rep').onclick=()=>{const t=$('text');t.value=t.value.slice(0,rng[0])+$('out').textContent+t.value.slice(rng[1]);save();};
+const dl=(n,x,y)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([x],{type:y}));a.download=n;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+$('ext').onclick=()=>dl(slug($('title').value)+'.txt',($('title').value?$('title').value+'\n\n':'')+$('text').value,'text/plain');
+$('exm').onclick=()=>dl(slug($('title').value)+'.md','# '+($('title').value||'Untitled')+'\n\n'+($('notes').value?'## Notes\n\n'+$('notes').value+'\n\n':'')+'## Manuscript\n\n'+$('text').value,'text/markdown');
+$('exj').onclick=()=>{save();dl(slug($('title').value)+'.owos.json',JSON.stringify(ls.get('owos2:p')),'application/json');};
+$('imp').onclick=()=>$('file').click();
+$('file').onchange=async e=>{try{ls.set('owos2:p',JSON.parse(await e.target.files[0].text()));load();acts();}catch(x){$('out').textContent='[Not a valid project file]';}};
+$('skill').onchange=()=>{if($('skill').value==='biography')$('memoir').checked=true;acts();save();};
+document.addEventListener('input',save);
+load();acts();
+</script></body></html>
